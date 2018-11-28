@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const addShip = () => {
+
     return (
         <div className="add-ship-container">
-            <button id="ship-button">Add Ship</button>
+            <Link to="/ships"><button id="ship-button">Add Ship</button></Link>
         </div>
     )
 };

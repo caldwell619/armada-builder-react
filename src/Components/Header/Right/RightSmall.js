@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const right = (props) => {
     return (
         <div>
             <div id="myLinks">
-                <a href="#">Fleet Builder</a>
-                <a href="">Head to Head</a>
-                <a href="#">Contact</a>
+                <Link to="/ships">Fleet Builder</Link>
+                <Link to="/ships">Head to Head</Link>
+                <Link to="/ships">Contact</Link>
             </div>
-            <a href = "#" className="icon" onClick={props.click}><i className = "fa fa-bars" ></i></a>
+            <Link to="/ships" className="icon"><i className = "fa fa-bars" ></i></Link>
         </div>
     )
 }

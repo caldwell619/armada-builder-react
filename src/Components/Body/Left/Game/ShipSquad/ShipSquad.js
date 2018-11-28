@@ -3,6 +3,7 @@ import AddShip from './AddShip/AddShip';
 import AddSquadron from './AddSquadron/AddSquadron';
 
 const shipSquad = () => {
+
     return (
         <div className="button-container">
             <AddShip/>

@@ -482,7 +482,7 @@ card display - right side
     background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(images/home-page-background-1.png);
     text-align: center;
     background-size: cover;
-    height: 130vh;
+    height: 100vh;
     overflow: scroll;
 }
 
@@ -557,6 +557,7 @@ textarea {
 
 .selector-container {
     overflow: scroll;
+    height: 100vh;
 }
 
 /****************

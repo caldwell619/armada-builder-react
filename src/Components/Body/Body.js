@@ -6,7 +6,7 @@ const body = () => {
     return (
         <main>
             <Left/>
-            <Right/>
+            <Right faction="imperial"/>
         </main>
 
     )

@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const right = (props) => {
     return (
         <div className="nav-container">
             <ul className="nav-links">
                 <li>
-                    <a href="#">Fleet Builder</a>
+                    <Link to="/ships">Fleet Builder</Link>
                 </li>
                 <li>
-                    <a href="#">Head to Head</a>
+                    <Link to="/ships">Head to Head</Link>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <Link to="/ships">Contact</Link>
                 </li>
             </ul>
         </div>
