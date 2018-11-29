@@ -8,9 +8,6 @@ const ships = ({faction}) => {
         console.log(s.title);
         console.log(s.points);
         };
-
-
-
     return (
         <div className="cards-container">
             {cards.ship.map(s => {

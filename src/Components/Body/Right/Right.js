@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Ships from './Ships'
 import Squadrons from './Squadrons'
 import AssaultCards from './AssaultCards'
@@ -16,6 +16,7 @@ const right = ({faction}) => {
             <Route path='/Navigation' component={NavigationCards}/>
         </div>
     )
+
 };
 
 export default right;
