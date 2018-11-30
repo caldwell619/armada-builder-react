@@ -1,5 +1,5 @@
 # Component Pathing #
-`src
+src
 |_Components
   |_Header
   | |_HeaderSm
@@ -23,7 +23,7 @@
       |_AssaultCards
       |_DefenseCards
       |_NavigationCards
-  `
+  
   
 # Basic Explanation #
 ## Left Side ##
