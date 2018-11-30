@@ -1,14 +1,14 @@
 # Component Pathing #
 src
 |_Components
-  |_Header
-  | |_HeaderSm
-  | |_HeaderMd
-  |_Body
-    |_Left
-      |_FleetDisplay
-        |_Name
-        |_Points
+  - |_Header
+  - | |_HeaderSm
+  - | |_HeaderMd
+  - |_Body
+    - |_Left
+      - |_FleetDisplay
+        - |_Name
+        - |_Points
       |_Game
         |_SelectedShips
         |_ShipSquad
