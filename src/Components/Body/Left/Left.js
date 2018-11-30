@@ -6,7 +6,7 @@ const left = (props) => {
     return (
         <div className="selector-container span-1-of-4">
             <FleetDisplay/>
-            <Game click={props.click}/>
+            <Game click={props.click} shipInfo={props.shipInfo}/>
         </div>
 
     )

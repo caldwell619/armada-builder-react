@@ -5,12 +5,23 @@ import Right from './Right/Right'
 class body extends React.Component {
     //determining if the div is supposed to be shown
     state = {
-        isShowing: false
+        isShowing: false,
+        selectedShips: [
+            {
+                name: "Billy",
+                points: 23,
+                upgrades: {
+
+                },
+                imagePath: ""
+            }
+        ]
     };
     //function for changing the isShowing boolean on click
     changeShip =() => {
         const doesShow = this.state.isShowing;
         this.setState({isShowing: !doesShow});
+        console.log(this.title)
     };
     render() {
         //deciding whether or not to display the left side
@@ -18,8 +29,8 @@ class body extends React.Component {
         //rendering the left, if the condition is met
         return (
             <main>
-                <Left click={this.state.isShowing}/>
-                <Right click={this.changeShip}/>
+                <Left click={this.state.isShowing} shipInfo={this.state.selectedShips}/>
+                <Right click={this.changeShip} shipInfo={this.state.selectedShips}/>
             </main>
 
         )

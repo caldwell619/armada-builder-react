@@ -7,7 +7,7 @@ import SelectedShips from './SelectedShips'
 const game = (props) => {
     return (
         <div>
-            <SelectedShips click={props.click}/>
+            <SelectedShips click={props.click} shipInfo={props.shipInfo}/>
             <ShipSquad/>
             <Objectives/>
             <BottomButtons/>
