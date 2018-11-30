@@ -4,10 +4,10 @@ import Objectives from './Objectives'
 import BottomButtons from './BottomButtons'
 import SelectedShips from './SelectedShips'
 
-const game = () => {
+const game = (props) => {
     return (
         <div>
-            <SelectedShips/>
+            <SelectedShips click={props.click}/>
             <ShipSquad/>
             <Objectives/>
             <BottomButtons/>

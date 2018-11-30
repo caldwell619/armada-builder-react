@@ -14,16 +14,11 @@ class body extends React.Component {
     };
     render() {
         //deciding whether or not to display the left side
-        let left = null;
-        if (!this.state.isShowing){
-            left = (
-                <Left/>
-            )
-        }
+
         //rendering the left, if the condition is met
         return (
             <main>
-                {left}
+                <Left click={this.state.isShowing}/>
                 <Right click={this.changeShip}/>
             </main>
 
