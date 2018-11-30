@@ -1,28 +1,28 @@
 # Component Pathing #
 - src
- - |_Components
-  - |_Header
-  - | |_HeaderSm
-  - | |_HeaderMd
-  - |_Body
-    - |_Left
-      - |_FleetDisplay
-        - |_Name
-        - |_Points
-      - |_Game
-        - |_SelectedShips
-        - |_ShipSquad
-          - |_AddShip
-          - |_AddSquadron
-        - |_Objectives
-          - |_ObjectiveButtons
-        - |_BottomButtons
-    - |_Right
-      - |_Ships
-      - |_Squadrons
-      - |_AssaultCards
-      - |_DefenseCards
-      - |_NavigationCards
+ - Components
+  - Header
+    - HeaderSm
+    - HeaderMd
+  - Body
+    - Left
+      - FleetDisplay
+        - Name
+        - Points
+      - Game
+        - SelectedShips
+        - ShipSquad
+          - AddShip
+          - AddSquadron
+        - Objectives
+          - ObjectiveButtons
+        - BottomButtons
+    - Right
+      - Ships
+      - Squadrons
+      - AssaultCards
+      - DefenseCards
+      - NavigationCards
   
   
 # Basic Explanation #
