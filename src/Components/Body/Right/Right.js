@@ -6,17 +6,16 @@ import AssaultCards from './AssaultCards'
 import DefenseCards from './DefenseCards'
 import NavigationCards from './NavigationCards'
 
-const right = ({faction}) => {
+const right = (props) => {
     return (
         <div className="card-display span-3-of-4">
-            <Route path='/ships' render={() => <Ships faction={faction}/>}/>
-            <Route path='/squadrons' render={() => <Squadrons faction={faction}/>}/>
+            <Route path='/ships' render={() => <Ships click={props.click}/>}/>
+            <Route path='/squadrons' render={() => <Squadrons/>}/>
             <Route path='/assault' component={AssaultCards}/>
             <Route path='/defense' component={DefenseCards}/>
             <Route path='/Navigation' component={NavigationCards}/>
         </div>
     )
-
 };
 
 export default right;

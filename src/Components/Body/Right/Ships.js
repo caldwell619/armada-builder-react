@@ -1,20 +1,15 @@
 import React from 'react';
 import {cards} from '../../../data/cards.js'
 
-const ships = ({faction}) => {
 
-    //accessing the title of the clicked on ship
-    const funcTest = (s) => {
-        console.log(s.title);
-        console.log(s.points);
-        };
+const ship = (props) => {
     return (
         <div className="cards-container">
             {cards.ship.map(s => {
-                if (s.faction === faction) {
+                if (s.faction === "imperial") {
                     return (
-                        <div className="ship-card span-1-of-3" onClick={funcTest.bind(this, s)}>
-                            <img key={s.id} src={"/images/cards/ship/" + faction + "/" + s.image} alt="img"/>
+                        <div className="ship-card span-1-of-3" onClick={props.click}>
+                            <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="img"/>
                         </div>
                     )
                 }
@@ -23,4 +18,4 @@ const ships = ({faction}) => {
     )
 };
 
-export default ships;
+export default ship;
