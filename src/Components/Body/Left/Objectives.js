@@ -1,5 +1,5 @@
 import React from 'react';
-import ObjectiveButtons from './ObjectiveButtons/ObjectiveButtons'
+import ObjectiveButtons from './ObjectiveButtons'
 
 
 const objectives = () => {

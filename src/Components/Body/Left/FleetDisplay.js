@@ -1,6 +1,6 @@
 import React from 'react';
-import Name from './Name/Name';
-import Points from './Points/Points'
+import Name from './Name';
+import Points from './Points'
 
 const fleetDisplay = () => {
     return (

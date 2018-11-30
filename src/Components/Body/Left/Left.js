@@ -1,6 +1,6 @@
 import React from 'react';
-import FleetDisplay from './FleetDisplay/FleetDisplay';
-import Game from './Game/Game'
+import FleetDisplay from './FleetDisplay';
+import Game from './Game'
 
 const left = () => {
     return (

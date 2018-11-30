@@ -1,6 +1,6 @@
 import React from 'react';
-import AddShip from './AddShip/AddShip';
-import AddSquadron from './AddSquadron/AddSquadron';
+import AddShip from './AddShip';
+import AddSquadron from './AddSquadron';
 
 const shipSquad = () => {
 

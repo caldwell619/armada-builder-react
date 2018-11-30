@@ -1,8 +1,8 @@
 import React from 'react';
-import ShipSquad from './ShipSquad/ShipSquad'
-import Objectives from './Objectives/Objectives'
-import BottomButtons from './BottomButtons/BottomButtons'
-import SelectedShips from './SelectedShips/SelectedShips'
+import ShipSquad from './ShipSquad'
+import Objectives from './Objectives'
+import BottomButtons from './BottomButtons'
+import SelectedShips from './SelectedShips'
 
 const game = () => {
     return (
