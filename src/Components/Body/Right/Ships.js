@@ -6,14 +6,16 @@ class ship extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            selectedShips: [
-                {name: "Henry"}
-            ]
+            selectedShips: []
         }
     }
     addShip = (s) => {
         const newState = [...this.state.selectedShips];
-        newState[0].name = s.title;
+        newState.push({});
+        newState.map(count => {
+            count.name = s.title;
+        });
+
         this.setState({
             selectedShips: newState
         });
