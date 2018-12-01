@@ -2,21 +2,19 @@ import React from 'react';
 import {cards} from '../../../data/cards.js'
 
 const selectedShips = (props) => {
-    let shipDiv = null;
-    if (props.click) {
-        shipDiv = (
+    return (
+        <div className="selected-ships">
             <div className="cards-container">
                 {props.shipInfo.map(s => {
                     return (
-                        <div>{s.name}</div>
+                        <div>
+                            <div>{s.name}</div>
+                            <div>{s.points}</div>
+                        </div>
+
                     )
                 })}
             </div>
-        )
-    }
-    return (
-        <div className="selected-ships">
-            {shipDiv}
         </div>
     )
 };

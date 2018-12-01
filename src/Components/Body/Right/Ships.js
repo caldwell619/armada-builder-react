@@ -4,8 +4,9 @@ import {cards} from '../../../data/cards.js'
 
 class ship extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
     }
+
 
     render (){
         return (
@@ -13,7 +14,7 @@ class ship extends React.Component {
                 {cards.ship.map(s => {
                     if (s.faction === "imperial") {
                         return (
-                            <div className="ship-card span-1-of-3" onClick={this.click} key={s.id}>
+                            <div className="ship-card span-1-of-3" onClick={this.props.click}  key={s.id}>
                                 <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="img"/>
                             </div>
                         )

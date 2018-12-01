@@ -3,6 +3,9 @@ import Left from './Left/Left'
 import Right from './Right/Right'
 
 class body extends React.Component {
+    constructor(props){
+        super(props);
+    }
     //determining if the div is supposed to be shown
     state = {
         isShowing: false,
@@ -13,15 +16,22 @@ class body extends React.Component {
                 upgrades: {
 
                 },
-                imagePath: ""
-            }
+                imagePath: "/images/cards/ship/imperial/Gladiator-ii.png"
+            },
+            {
+                name: "Billy",
+                points: 23,
+            },
         ]
     };
-    //function for changing the isShowing boolean on click
-    changeShip =() => {
-        const doesShow = this.state.isShowing;
-        this.setState({isShowing: !doesShow});
-        console.log(this.title)
+    //function for changing the name
+    changeShip = (s) => {
+        console.log(s.name);
+        const newState = [...this.state.selectedShips];
+        newState[0].name = "Jimbo";
+        this.setState({
+            selectedShips: newState
+        });
     };
     render() {
         //deciding whether or not to display the left side
