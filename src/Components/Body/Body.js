@@ -3,32 +3,20 @@ import Left from './Left/Left'
 import Right from './Right/Right'
 
 class body extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
+        this.state = {
+            isShowing: false,
+            selectedShips: [
+                {name: "Billy"}
+            ]
+
+        };
     }
     //determining if the div is supposed to be shown
-    state = {
-        isShowing: false,
-        selectedShips: [
-            {
-                name: "Billy",
-                points: 23,
-                upgrades: {
 
-                },
-                imagePath: "/images/cards/ship/imperial/Gladiator-ii.png"
-            },
-            {
-                name: "Billy",
-                points: 23,
-            },
-        ]
-    };
     //function for changing the name
-    changeShip = (s) => {
-        console.log(s.name);
-        const newState = [...this.state.selectedShips];
-        newState[0].name = "Jimbo";
+    changeShip = (newState) => {
         this.setState({
             selectedShips: newState
         });
