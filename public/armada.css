@@ -1,9 +1,7 @@
 /************************
    basic formatting
    ************************/
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     font-family: sans-serif;
@@ -11,13 +9,9 @@ body {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-ul {
-    margin: 0;
-}
+ul { margin: 0; }
 
 /************************
 header bar
@@ -31,16 +25,13 @@ header {
     margin-left: 10px;
     margin-top: 10px;
 }
-.nav-container {
-    float: right;
-}
-nav {
-    background-color: black;
-}
 
-.armada-logo img {
-    height: 60px;
-}
+.nav-container { float: right; }
+
+nav { background-color: black; }
+
+.armada-logo img { height: 60px; }
+
 .nav-container {
     height: 65px;
     display: flex;
@@ -48,8 +39,6 @@ nav {
 }
 
 .nav-links {
-    /*float: right;*/
-    /*margin-top: 20px;*/
     background-color: black;
     text-align: center;
     padding: 0;
@@ -70,27 +59,24 @@ nav {
     font-family: "Fjalla One", sans-serif;
 }
 
-.nav-links li a:hover {
-    border-bottom: 1px solid white;
-}
+.nav-links li a:hover { border-bottom: 1px solid white; }
 
 .armada-logo-container {
     height: 70px;
     display: flex;
     align-items: center;
 }
+
 .armada-logo {
     float: left;
     margin-left: 10px;
     margin-top: 10px;
     width: 25%;
 }
-#armada-logo {
-    width: 25%;
-}
-.nav-container {
-    float: right;
-}
+
+#armada-logo { width: 25%; }
+
+.nav-container { float: right; }
 
 /* Style the navigation menu */
 .topnav {
@@ -100,9 +86,8 @@ nav {
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-    display: none;
-}
+.topnav #myLinks { display: none; }
+
 #myLinks a {
     color: white;
     margin: 15px;
@@ -129,21 +114,16 @@ nav {
 }
 
 /* Style the active link (or home/logo) */
-.active {
-    color: white;
-}
-.armada-logo-img {
-    height: 65px;
-}
-.tablet-nav {
-    display: none;
-}
+.active { color: white; }
+
+.armada-logo-img { height: 65px; }
+
+.tablet-nav { display: none; }
 /************************
 home page
 ************************/
-main {
-    clear: both;
-}
+main { clear: both; }
+
 .home-container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.32), #000), url(src/images/home-page/rebel-background.png);
     text-align: center;
@@ -158,7 +138,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-f
+
 .faction {
     float: right;
     margin: 0;
@@ -170,23 +150,17 @@ f
     transition: .3s;
 }
 
-.faction img:hover {
-    transform: scale(1.1);
-}
+.faction img:hover { transform: scale(1.1); }
 
 /************************
 imperial fleet
 ************************/
-button {
-    border-radius: 5px;
-}
+button { border-radius: 5px; }
 
 /************************
 fleet display - left side
 ************************/
-.selector-container {
-    float: left;
-}
+.selector-container { float: left; }
 
 #fleet-name {
     font-size: 27px;
@@ -209,33 +183,34 @@ fleet display - left side
     height: 100px;
     margin: 15px 0 10px 15px;
 }
-.span-1-of-3 {
-    width: 100%;
-}
-.span-1-of-2 {
-    width: 100%;
-}
-.span-3-of-4 {
-    width: 100%;
-}
+
+.span-1-of-3 { width: 100%; }
+
+.span-1-of-2 { width: 100%; }
+
+.span-3-of-4 { width: 100%; }
 
 #fleet-name {
     font-size: 22px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #fleet-total {
     width: 30%;
     font-size: 40px;
 }
-.big-points-container {
-    margin-top: 10px;
-}
-.big-points-container > div {
-    margin: 15px 0;
-}
-.big-points-container * {
-    font-family: 'Orbitron', sans-serif;
-}
+
+.big-points-container { margin-top: 10px; }
+
+.big-points-container > div { margin: 15px 0; }
+
+.big-points-container * { font-family: 'Orbitron', sans-serif; }
 
 .points-container {
     display: flex;
@@ -267,9 +242,7 @@ Max Points
 /************************
 selected fleet
 ************************/
-.selected-ships {
-    padding: 10px;
-}
+.selected-ships { padding: 10px; }
 
 .ship-img {
     height: 40px;
@@ -277,12 +250,9 @@ selected fleet
     overflow: hidden;
     display: inline-block;
     border-radius: 5px;
-
 }
 
-.ship > div {
-    width: 50%;
-}
+.ship > div { width: 50%; }
 
 .ship-img img {
     max-height: 330px;
@@ -294,7 +264,6 @@ selected fleet
     vertical-align: middle;
     display: inline-block;
     margin: auto 0;
-
 }
 
 .ship-name p {
@@ -310,20 +279,24 @@ selected fleet
     width: 20%;
     position: absolute;
     top: 5px;
-    right: 0px;
+    right: 0;
     transition: all .3s;
 }
-.delete:active {
-    transform: scale(.9);
+.delete:active { transform: scale(.9); }
+
+.span-4-of-12 { width: 25%; }
+
+.span-7-of-12 { width: 50%; }
+
+.chosen-ship {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.span-4-of-12 {
-    width: 25%;
-}
+.chosen-ship-container { margin: 20px 0; }
 
-.span-7-of-12 {
-    width: 50%;
-}
+.chosen-ship-container:first-child{ margin-top: 0; }
 
 /************************
 upgrade bar
@@ -334,13 +307,11 @@ upgrade bar
 }
 
 .upgrade-bar button {
-    background: none;
     border: none;
     background-color: gray;
     margin: 3px;
-    padding: 5px 5px 0px 5px;
-    transition: background-color 0.3s;
-    transition: transform 0.3s;
+    padding: 5px 5px 0 5px;
+    transition: all 0.3s;
 
 }
 
@@ -349,9 +320,7 @@ upgrade bar
     transform: scale(1.1);
 }
 
-.upgrade-bar button img {
-    height: 20px;
-}
+.upgrade-bar button img { height: 20px; }
 
 /************************
 add ship
@@ -432,29 +401,18 @@ objectives
     background: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-
 }
 
-.obj-button:hover {
-    background-color: #d3d2d2;
-
-}
+.obj-button:hover { background-color: #d3d2d2; }
 
 /************************
 action bar
 ************************/
-.action-bar {
-    margin-bottom: 20px;
-}
+.action-bar { margin-bottom: 20px; }
 
-.action-bar > button {
-    font-size: 20px;
-}
+.action-bar > button { font-size: 20px; }
 
-#print-button {
-    text-transform: uppercase;
-
-}
+#print-button { text-transform: uppercase; }
 
 #back-button {
     background: none;
@@ -486,9 +444,8 @@ card display - right side
     overflow: scroll;
 }
 
-.card {
-    display: inline-block;
-}
+.card { display: inline-block; }
+
 .card a {
     width: 100%;
     height: 100%;
@@ -500,54 +457,35 @@ card display - right side
     transition: transform 0.3s;
 }
 
-.ship-card {
-    display: inline-block;
-}
+.ship-card { display: inline-block; }
 
 .ship-card img {
     height: 840px;
     margin: 10px;
 }
 
-.card img:hover {
-    transform: scale(1.1)
-}
+.card img:hover { transform: scale(1.1) }
 
-.squad-card {
-    display: inline-block;
-}
+.squad-card { display: inline-block; }
 
 .squad-card img {
     height: 370px;
     margin: 10px;
 }
 
-.assault-card {
-
-}
 
 /**********************
 Conatct Me
 **********************/
-label {
-    float: left;
-}
+label { float: left; }
 
-textarea {
-    float: left;
-}
+textarea { float: left; }
 
-#message {
-    clear: left;
-}
+#message { clear: left; }
 
-#submit {
-    clear: both;
-}
+#submit { clear: both; }
 
-.span-1-of-4 {
-    width: 100%;
-}
+.span-1-of-4 { width: 100%; }
 
 .selected-ship-container {
     position: relative;
@@ -564,81 +502,54 @@ Media Queries
 ****************/
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 680px) {
-    .ship-card img {
-        height: 400px;
-    }
-    .selector-container {
-        height: 100vh;
-    }
-    .tablet-nav {
-        display: block;
-    }
-    .small-nav {
-        display: none;
-    }
-    .span-1-of-4 {
-        width: 25%;
-    }
-    .span-1-of-2 {
-        width: 50%;
-    }
-    #empire-container {
-        float: left;
-    }
-    #rebel-container {
-        float: right;
-    }
-    .selector-container {
-        margin: 0 auto;
-    }
-    .span-3-of-4 {
-        width: 75%;
-    }
-    .span-1-of-3 {
-        width: 50%;
-    }
-    #fleet-total {
-        font-size: 28px;
-    }
+    .ship-card img { height: 365px; }
+
+    .selector-container { height: 100vh; }
+
+    .tablet-nav { display: block; }
+
+    .small-nav { display: none; }
+
+    .span-1-of-4 { width: 35%; }
+
+    .span-1-of-2 { width: 50%; }
+
+    #empire-container { float: left; }
+
+    #rebel-container { float: right; }
+
+    .selector-container { margin: 0 auto; }
+
+    .span-3-of-4 { width: 65%; }
+
+    .span-1-of-3 { width: 50%; }
+
+    #fleet-total { font-size: 28px; }
+
     .ship-name p {
         margin-left: 5px;
         font-size: 10px;
     }
-    .logo-container {
-        display: block;
-    }
-    .big-points-container > div {
-        width: 100%;
-    }
-    .big-points-container {
-        padding: 5px;
-    }
+    .logo-container { display: block; }
 
-    #fleet-total {
-        width: 45%;
-    }
-    .max-points label {
-        width: 45%;
-    }
+    .big-points-container > div { width: 100%; }
 
+    .big-points-container { padding: 5px; }
 
-    .card img {
-        height: 300px;
-    }
+    #fleet-total { width: 25%; }
 
-    #fleet-name
-    .selected-ships {
-        padding: 0;
-    }
+    .max-points label { width: 45%; }
 
-    .nav-links {
-        text-align: right;
-    }
+    .card img { height: 300px; }
+
+    .selected-ships { padding: 0; }
+
+    .nav-links { text-align: right; }
 
     #fleet-name {
         width: 100%;
         margin: 0 auto;
-        font-size: 15px;
+        font-size: 25px;
     }
 
     .points-display {
@@ -652,10 +563,8 @@ Media Queries
         margin: 5px 0 5px 10px;
     }
 
-    #squad-button {
-        font-size: 12px;
+    #squad-button { font-size: 12px; }
 
-    }
     #squad-button {
         display: flex;
         align-items: center;
@@ -669,41 +578,26 @@ Media Queries
         /*align-items: center;*/
     /*}*/
 
-    .add-ship-container {
-        margin-bottom: 0;
-    }
-    #squad-button span {
-        padding: 8px;
-    }
-    #ship-button {
-        font-size: 15px;
-    }
-    #fleet-name {
+    .add-ship-container { margin-bottom: 0; }
 
-    }
+    #squad-button span { padding: 8px; }
+
+    #ship-button { font-size: 15px; }
 
     .add-squadron-container {
         margin-bottom: 5px;
         padding: 10px 0;
     }
 
-    .objective-selector-container {
-        padding: 0;
-    }
+    .objective-selector-container { padding: 0; }
 
-    .objective-selector-container > ul {
-        padding: 0;
-    }
-    .action-bar > button {
-        font-size: 13px;
-    }
-    #export-button {
-        font-size: 13px;
-    }
+    .objective-selector-container > ul { padding: 0; }
 
-    .obj-button {
-        font-size: 14px;
-    }
+    .action-bar > button { font-size: 13px; }
+
+    #export-button { font-size: 13px; }
+
+    .obj-button { font-size: 14px; }
 
     .export-container {
         float: none;
@@ -713,41 +607,32 @@ Media Queries
     /* Ship Cards */
 
     .ship-img {
-        width: 25px;
-        height: 25px;
+        width: 80px;
+        height: 38px;
     }
-    .delete {
-        font-size: 25px;
-    }
-    .upgrade-bar > button img {
-        height: 10px;
-    }
+    .delete { font-size: 25px; }
 
-    .ship-name {
-        width: 50%;
-    }
+    .upgrade-bar > button img { height: 10px; }
+
+    .ship-name { width: 50%; }
 }
 @media screen and (min-width: 767px) {
-    .ship-name {
-        width: 55%;
-    }
+    .ship-name { width: 55%; }
     .ship-name p {
         font-size: 18px;
         margin-left: 8px;
     }
+
     .ship-img {
-        width: 35px;
-        height: 45px;
+        width: 110px;
+        height: 38px;
     }
-    .ship-name span {
-        font-size: 35px;
-    }
-    .card img {
-        height: 420px;
-    }
-    .fleet-display img {
-        margin-bottom: 20px;
-    }
+
+    .ship-name span { font-size: 35px; }
+
+    .card img { height: 420px; }
+
+    .fleet-display img { margin-bottom: 20px; }
 }
 @media screen and (min-width: 1200px) {
     .span-1-of-3 {
