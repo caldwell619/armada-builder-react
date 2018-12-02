@@ -1,11 +1,11 @@
 import React from 'react';
 
-const points = () => {
+const points = (props) => {
     return (
         <div className="row big-points-container">
             <div className="points-container col span-1-of-2">
                 <div className="current-points">Current Points:</div>
-                <div className="points-display">0</div>
+                <div className="points-display">{props.points}</div>
             </div>
             <div className="max-points col span-1-of-2">
                 <label htmlFor="fleet-total">Max Points:</label>

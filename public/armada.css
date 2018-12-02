@@ -298,6 +298,10 @@ selected fleet
 
 .chosen-ship-container:first-child{ margin-top: 0; }
 
+.chosen-card-container {
+
+}
+
 /************************
 upgrade bar
 ************************/
@@ -618,6 +622,7 @@ Media Queries
 }
 @media screen and (min-width: 767px) {
     .ship-name { width: 55%; }
+
     .ship-name p {
         font-size: 18px;
         margin-left: 8px;

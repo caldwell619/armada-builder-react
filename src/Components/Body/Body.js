@@ -6,19 +6,19 @@ class body extends React.Component {
     constructor(){
         super();
         this.state = {
-            isShowing: false,
-            selectedShips: [
-                {name: "Billy"}
-            ]
+            selectedShips: [],
+            totalPoints: 0,
+            maxAllowablePoints: 400
 
         };
     }
     //determining if the div is supposed to be shown
 
     //function for changing the name
-    changeShip = (newState) => {
+    changeShip = (newState, currentPoints) => {
         this.setState({
-            selectedShips: newState
+            selectedShips: newState,
+            totalPoints: currentPoints
         });
     };
     render() {
@@ -27,8 +27,8 @@ class body extends React.Component {
         //rendering the left, if the condition is met
         return (
             <main>
-                <Left click={this.state.isShowing} shipInfo={this.state.selectedShips}/>
-                <Right click={this.changeShip} shipInfo={this.state.selectedShips}/>
+                <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
+                <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
             </main>
 
         )
