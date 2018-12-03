@@ -3,7 +3,7 @@ import Left from './Left/Left'
 import Right from './Right/Right'
 
 class body extends React.Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
             selectedShips: [],
@@ -12,6 +12,7 @@ class body extends React.Component {
 
         };
     }
+
     //determining if the div is supposed to be shown
 
     //function for changing the name
@@ -40,25 +41,34 @@ class body extends React.Component {
             selectedShips: ships,
             totalPoints: points
         });
-
-
-        console.log(this.state.selectedShips);
     };
 
-    render() {
-        //deciding whether or not to display the left side
+    toggleHandler = () => {
+        const ships = this.state.selectedShips;
+        ships.map(count => {
+            let areUpgradesShowing = count.upgradesShown;
+            if (areUpgradesShowing) {
+                this.setState({upgradesShown: !areUpgradesShowing})
+            }
+        })
+    };
 
-        //rendering the left, if the condition is met
-        return (
-            <main>
-                <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler}/>
-                <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
-            </main>
 
-        )
-    }
+
+render(){
+    //deciding whether or not to display the left side
+
+    //rendering the left, if the condition is met
+    return (
+        <main>
+            <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler}
+                  toggle={this.toggleHandler}/>
+            <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
+        </main>
+
+    )
 }
-
+}
 
 
 export default body;

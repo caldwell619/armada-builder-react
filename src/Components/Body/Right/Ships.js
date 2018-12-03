@@ -21,7 +21,9 @@ class ship extends React.Component {
                 name: s.title,
                 points: s.points,
                 id: uniqid(),
-                imagePath: "/images/cards/ship/imperial/" + s.image
+                imagePath: "/images/cards/ship/imperial/" + s.image,
+                upgrades: Object.keys(s.upgrades),
+                upgradesShown: false
             };
             updatedShips.push(ship);
         }
@@ -37,6 +39,26 @@ class ship extends React.Component {
     };
 
     render (){
+        let noMoreShipsDiv = null;
+        if (400 - this.props.points < 22){
+            noMoreShipsDiv = (
+                <div className="crawl-container">
+                    <div className="fade"></div>
+
+                    <section className="star-wars">
+                        <div className="crawl">
+                            <div className="title">
+                                <p>Star Wars:</p>
+                                <h1>Armada</h1>
+                            </div>
+                            <p>You are out of points</p>
+
+
+                        </div>
+                    </section>
+                </div>
+            )
+        }
 
         return (
             <div className="cards-container">
@@ -51,6 +73,7 @@ class ship extends React.Component {
                         }
                     }
                 })}
+                {noMoreShipsDiv}
             </div>
         )
     }
