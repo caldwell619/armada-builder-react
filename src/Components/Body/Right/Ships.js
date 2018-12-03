@@ -37,15 +37,18 @@ class ship extends React.Component {
     };
 
     render (){
+
         return (
             <div className="cards-container">
                 {cards.ship.map(s => {
                     if (s.faction === "imperial") {
-                        return (
-                            <div className="ship-card span-1-of-3" onClick={this.addShip.bind(this, s)} key={s.id}>
-                                <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="card"/>
-                            </div>
-                        )
+                        if (s.points < 400 - this.props.points){
+                            return (
+                                <div className="ship-card span-1-of-3" onClick={this.addShip.bind(this, s)} key={s.id}>
+                                    <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="card"/>
+                                </div>
+                            )
+                        }
                     }
                 })}
             </div>
