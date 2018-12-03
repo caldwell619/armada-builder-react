@@ -275,11 +275,6 @@ selected fleet
 
 .delete {
     font-size: 35px;
-    display: inline-block;
-    width: 20%;
-    position: absolute;
-    top: 5px;
-    right: 0;
     transition: all .3s;
 }
 .delete:active { transform: scale(.9); }
@@ -621,7 +616,7 @@ Media Queries
     .ship-name { width: 50%; }
 }
 @media screen and (min-width: 767px) {
-    .ship-name { width: 55%; }
+    .ship-name { width: 45%; }
 
     .ship-name p {
         font-size: 18px;

@@ -9,7 +9,7 @@ import NavigationCards from './NavigationCards'
 const right = (props) => {
     return (
         <div className="card-display span-3-of-4">
-            <Route path='/ships' render={() => <Ships click={props.click}/>} shipInfo={props.selectedShips} points={props.points}/>
+            <Route path='/ships' render={() => <Ships click={props.click}/>} shipInfo={props.shipInfo} points={props.points}/>
             <Route path='/squadrons' render={() => <Squadrons/>}/>
             <Route path='/assault' component={AssaultCards}/>
             <Route path='/defense' component={DefenseCards}/>

@@ -7,7 +7,7 @@ const left = (props) => {
     return (
         <div className="selector-container span-1-of-4">
             <FleetDisplay points={props.points}/>
-            <Game shipInfo={props.shipInfo}/>
+            <Game shipInfo={props.shipInfo} delete={props.delete}/>
         </div>
 
     )

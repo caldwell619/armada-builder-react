@@ -1,11 +1,11 @@
 import React from 'react';
 import {cards} from '../../../data/cards.js'
-var uniqid = require('uniqid');
+let uniqid = require('uniqid');
 
 
 class ship extends React.Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             selectedShips: [],
             totalPoints: 0
@@ -13,22 +13,31 @@ class ship extends React.Component {
     }
 
     addShip = (s) => {
-        let newState = this.state.selectedShips;
+        //define new state
+        //pass down props
+        console.log(this.props.shipInfo);
+        let updatedShips = this.state.selectedShips;
         let currentPoints = this.state.totalPoints;
-        let ship = {
-            name: s.title,
-            points: s.points,
-            id: uniqid(),
-            imagePath: "/images/cards/ship/imperial/" + s.image
-        };
+        //stopping the addition of new ships if points exceed max
+        if (currentPoints + s.points < 400){
             currentPoints += s.points;
-            newState.push(ship);
-
-        this.setState({
-            totalPoints: currentPoints,
-            selectedShips: newState,
+            let ship = {
+                name: s.title,
+                points: s.points,
+                id: uniqid(),
+                imagePath: "/images/cards/ship/imperial/" + s.image
+            };
+            updatedShips.push(ship);
+        }
+        //using function to change the state before setting it
+        //asynchronous behavior requires the setState to  be a function
+        this.setState((state, props) => {
+            props.click(updatedShips, currentPoints);
+         return ({
+                 totalPoints:  currentPoints,
+                 selectedShips: updatedShips
+                })
         });
-        this.props.click(this.state.selectedShips, this.state.totalPoints);
     };
 
     render (){
