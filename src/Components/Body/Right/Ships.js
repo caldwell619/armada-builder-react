@@ -6,18 +6,14 @@ let uniqid = require('uniqid');
 class ship extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            selectedShips: [],
-            totalPoints: 0
-        }
     }
 
     addShip = (s) => {
         //define new state
         //pass down props
         console.log(this.props.shipInfo);
-        let updatedShips = this.state.selectedShips;
-        let currentPoints = this.state.totalPoints;
+        let updatedShips = this.props.shipInfo;
+        let currentPoints = this.props.points;
         //stopping the addition of new ships if points exceed max
         if (currentPoints + s.points < 400){
             currentPoints += s.points;
