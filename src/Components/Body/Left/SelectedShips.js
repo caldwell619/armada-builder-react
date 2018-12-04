@@ -9,9 +9,26 @@ class selectedShips extends React.Component {
         this.props.delete(s.id, s.points);
     };
 
-    /**
-     {s.upgrades.map(a => {})
-     **/
+    toggleHandler = (id) => {
+        const shipIndex = this.props.shipInfo.findIndex(index => {
+            return index.id === id
+        });
+        const newShips = [...this.props.shipInfo];
+
+        if (!newShips[shipIndex.upgradesShown]){
+            newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown;
+        } else if(!newShips[shipIndex.upgradesShown]) {
+            newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown
+        };
+
+
+        this.props.toggle(newShips);
+
+
+
+    };
+
+
 
     render(){
 
@@ -20,12 +37,12 @@ class selectedShips extends React.Component {
                 <div className="chosen-cards-container">
                     {this.props.shipInfo.map(s => {
                         return (
-                            <div className="chosen-ship-container" onClick={this.props.toggle}>
+                            <div className="chosen-ship-container" >
                                 <div key={s.id} className="chosen-ship">
                                     <div className={"span-4-of-12 ship-img"}>
                                         <img src={s.imagePath} alt="Ship Card"/>
                                     </div>
-                                    <div className={"span-7-of-12 ship-name"}>{s.name}</div>
+                                    <div className={"span-7-of-12 ship-name"} onClick={this.toggleHandler.bind(this, s.id)}>{s.name}</div>
                                     <div className="delete ion-trash-a" onClick={this.deleteShip.bind(this, s)}/>
                                 </div>
                                 <div className="upgrade-bar" key={s.id + "-upgradeBar"}>

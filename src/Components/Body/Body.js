@@ -23,6 +23,7 @@ class body extends React.Component {
         });
     };
 
+
     deleteShipHandler = (id, s) => {
         const shipIndex = this.state.selectedShips.findIndex(index => {
             return index.id === id
@@ -43,13 +44,10 @@ class body extends React.Component {
         });
     };
 
-    toggleHandler = () => {
-        const ships = this.state.selectedShips;
-        ships.map(count => {
-            let areUpgradesShowing = count.upgradesShown;
-            if (areUpgradesShowing) {
-                this.setState({upgradesShown: !areUpgradesShowing})
-            }
+    //put this method in selectedShips
+    upgradeToggleHandler = (upgradeState) => {
+        this.setState({
+            selectedShips: upgradeState
         })
     };
 
@@ -61,8 +59,7 @@ render(){
     //rendering the left, if the condition is met
     return (
         <main>
-            <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler}
-                  toggle={this.toggleHandler}/>
+            <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
             <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
         </main>
 

@@ -43,8 +43,7 @@ class ship extends React.Component {
         if (400 - this.props.points < 22){
             noMoreShipsDiv = (
                 <div className="crawl-container">
-                    <div className="fade"></div>
-
+                    <div className="fade"/>
                     <section className="star-wars">
                         <div className="crawl">
                             <div className="title">
@@ -52,8 +51,6 @@ class ship extends React.Component {
                                 <h1>Armada</h1>
                             </div>
                             <p>You are out of points</p>
-
-
                         </div>
                     </section>
                 </div>
@@ -66,8 +63,8 @@ class ship extends React.Component {
                     if (s.faction === "imperial") {
                         if (s.points < 400 - this.props.points){
                             return (
-                                <div className="ship-card span-1-of-3" onClick={this.addShip.bind(this, s)} key={s.id}>
-                                    <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="card"/>
+                                <div className="ship-card span-1-of-3" key={s.id}>
+                                    <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="card" onClick={this.addShip.bind(this, s)}/>
                                 </div>
                             )
                         }
