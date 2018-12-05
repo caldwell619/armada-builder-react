@@ -44,11 +44,17 @@ class body extends React.Component {
         });
     };
 
-    //put this method in selectedShips
     upgradeToggleHandler = (upgradeState) => {
         this.setState({
             selectedShips: upgradeState
         })
+    };
+
+    upgradeAddHandler = (upgradedState) => {
+        this.setState({
+            selectedShips: upgradedState
+        })
+        console.log(this.state.selectedShips)
     };
 
 
@@ -60,7 +66,7 @@ render(){
     return (
         <main>
             <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}/>
+            <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler}/>
         </main>
 
     )

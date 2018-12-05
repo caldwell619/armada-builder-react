@@ -36,7 +36,7 @@ class selectedShips extends React.Component {
                                     <div className="delete ion-trash-a" onClick={this.deleteShip.bind(this, ship)}/>
                                 </div>
                                 <div className="upgrade-bar" key={ship.id + "-upgradeBar"}>
-                                    {ship.upgrades.map(upgradeType => {
+                                    {ship.availableUpgrades.map(upgradeType => {
                                         if (ship.upgradesShown){
                                         return (
                                             <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
@@ -48,6 +48,14 @@ class selectedShips extends React.Component {
                                     }
                                     })}
                                 </div>
+                                {ship.equippedUpgrades.map(upgrade => {
+                                    return (
+                                        <div className="equipped-upgrades">
+                                            {upgrade.commander}
+                                        </div>
+                                    )
+                                })}
+
                             </div>
                         )
                     })}

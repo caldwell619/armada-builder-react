@@ -13,8 +13,6 @@ const supportTeam = () => {
                         </div>
                     )
                 }
-
-
             })}
         </div>
     )

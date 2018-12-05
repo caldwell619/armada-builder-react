@@ -7,13 +7,11 @@ const title = () => {
             {cards.title.map((card) => {
                 if (card.faction === "imperial"){
                     return (
-                        <div className="ship-card span-1-of-3" key={card.id}>
+                        <div className="squad-card span-1-of-3" key={card.id}>
                             <img src={`/images/cards/upgrades/title/imperial/${card.image}`} alt="img"/>
                         </div>
                     )
                 }
-
-
             })}
         </div>
     )

@@ -587,7 +587,7 @@ Media Queries
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 680px) {
 
-    .ship-card img { height: 310px; }
+    .ship-card img { height: 210px; }
 
     .squad-card img { height: 270px;}
 
@@ -609,7 +609,7 @@ Media Queries
 
     .span-3-of-4 { width: 65%; }
 
-    .span-1-of-3 { width: 50%; }
+    .span-1-of-3 { width: 33%; }
 
     #fleet-total { font-size: 28px; }
 
@@ -636,6 +636,7 @@ Media Queries
     #fleet-name {
         width: 100%;
         margin: 0 auto;
+        padding: 15px;
         font-size: 25px;
     }
 
@@ -705,7 +706,7 @@ Media Queries
 }
 @media screen and (min-width: 767px) {
 
-    .ship-card img { height: 365px; }
+    .ship-card img { height: 200px; }
 
     .squad-card img { height: 300px;}
 
@@ -730,6 +731,7 @@ Media Queries
 
 @media screen and (min-width: 900px) {
     .squad-card img { height: 300px;}
+    .ship-card img { height: 230px;}
 }
 
 @media screen and (min-width: 1200px) {
@@ -737,4 +739,5 @@ Media Queries
         width: 33.33333%;
     }
     .squad-card img { height: 300px;}
+    .ship-card img { height: 300px;}
 }

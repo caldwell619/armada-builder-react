@@ -22,7 +22,8 @@ class ship extends React.Component {
                 points: s.points,
                 id: uniqid(),
                 imagePath: "/images/cards/ship/imperial/" + s.image,
-                upgrades: Object.keys(s.upgrades),
+                availableUpgrades: Object.entries(s.upgrades),
+                equippedUpgrades: [],
                 upgradesShown: false
             };
             updatedShips.push(ship);
