@@ -15,7 +15,7 @@ class Commander extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
 
-        newShips[shipIndex].equippedUpgrades.push({commander: card.title});
+        newShips[shipIndex].equippedUpgrades.commander = card.title;
 
         this.props.upgrade(newShips);
     };
