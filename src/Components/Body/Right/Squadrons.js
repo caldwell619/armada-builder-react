@@ -7,7 +7,7 @@ const display = ({faction}) => {
             {cards.squadron.map((s) => {
                 if (s.faction === "imperial") {
                     return (
-                        <div className="ship-card span-1-of-3">
+                        <div className="squad-card span-1-of-3">
                             <img src={"/images/cards/squadron/imperial/" + s.image} alt="img"/>
                         </div>
                     )

@@ -16,24 +16,12 @@ class selectedShips extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
 
-        // if (!newShips[shipIndex.upgradesShown]) {
-            newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown;
-        // }
-        // } else (!newShips[shipIndex.upgradesShown]) {
-        //     newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown
-        // };
-
+        newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown;
 
         this.props.toggle(newShips);
-
-
-
     };
 
-
-
     render(){
-
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
@@ -51,12 +39,11 @@ class selectedShips extends React.Component {
                                     {ship.upgrades.map(upgradeType => {
                                         if (ship.upgradesShown){
                                         return (
-                                            <button>
-                                                <Link to={`/ships/upgrades/commander`}>
+                                            <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
+                                                <button>
                                                     <img src={"/images/icons/" + upgradeType + ".png"} alt="upgrade icon"/>
-                                                </Link>
-
-                                            </button>
+                                                </button>
+                                            </Link>
                                         )
                                     }
                                     })}

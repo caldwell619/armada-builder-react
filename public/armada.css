@@ -25,6 +25,7 @@ header {
     margin-left: 10px;
     margin-top: 10px;
 }
+
 .header-container {
     background-color: black;
     height: 80px;
@@ -527,7 +528,7 @@ card display - right side
 .ship-card { display: inline-block; }
 
 .ship-card img {
-    height: 840px;
+    height: 450px;
     margin: 10px;
 }
 
@@ -567,9 +568,28 @@ textarea { float: left; }
 /****************
 Media Queries
 ****************/
+
+/* applies to screens 680 px and above (past mobile phone) */
+@media screen and (min-width: 500px) {
+    .ship-card img { height: 580px; }
+
+    .squad-card img { height: 250px;}
+
+    .squad-card img { height: 550px;}
+
+}
+
+
+
+
+
+
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 680px) {
-    .ship-card img { height: 365px; }
+
+    .ship-card img { height: 310px; }
+
+    .squad-card img { height: 270px;}
 
     .selector-container { height: 100vh; }
 
@@ -603,7 +623,7 @@ Media Queries
 
     .big-points-container { padding: 5px; }
 
-    #fleet-total { width: 25%; }
+    #fleet-total { width: 32%; }
 
     .max-points label { width: 45%; }
 
@@ -684,6 +704,11 @@ Media Queries
     .ship-name { width: 50%; }
 }
 @media screen and (min-width: 767px) {
+
+    .ship-card img { height: 365px; }
+
+    .squad-card img { height: 300px;}
+
     .ship-name { width: 45%; }
 
     .ship-name p {
@@ -702,8 +727,14 @@ Media Queries
 
     .fleet-display img { margin-bottom: 20px; }
 }
+
+@media screen and (min-width: 900px) {
+    .squad-card img { height: 300px;}
+}
+
 @media screen and (min-width: 1200px) {
     .span-1-of-3 {
         width: 33.33333%;
     }
+    .squad-card img { height: 300px;}
 }
