@@ -28,17 +28,17 @@ header {
 
 .header-container {
     background-color: black;
-    height: 80px;
+    height: 50px;
 }
 
 .nav-container { float: right; }
 
 nav { background-color: black; }
 
-.armada-logo img { height: 60px; }
+.armada-logo img { height: 35px; }
 
 .nav-container {
-    height: 65px;
+    height: 40px;
     display: flex;
     align-items: flex-end;
 }
@@ -185,7 +185,7 @@ fleet display - left side
 }
 
 .fleet-display img {
-    height: 100px;
+    height: 60px;
     margin: 15px 0 10px 15px;
 }
 
@@ -211,9 +211,6 @@ fleet display - left side
     font-size: 40px;
 }
 
-.big-points-container { margin-top: 10px; }
-
-.big-points-container > div { margin: 15px 0; }
 
 .big-points-container * { font-family: 'Orbitron', sans-serif; }
 
@@ -333,13 +330,13 @@ add ship
     /*margin-bottom: 20px;*/
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 #ship-button {
     border: none;
-    line-height: 50px;
+    line-height: 35px;
     width: 90%;
     font-weight: 300;
     font-family: 'Russo One', sans-serif;
@@ -541,7 +538,30 @@ card display - right side
     margin: 10px;
 }
 
+.assigned-upgrade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4% 0 2%;
+    margin:  5px 0 5px 50px;
+    border-left: 1px solid black;
 
+}
+
+.upgrade-name {
+    font-size: 15px;
+}
+
+.upgrade-img-container {
+    overflow: hidden;
+    height: 40px;
+}
+.upgrade-img {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    width: 60px;
+
+}
 /**********************
 Conatct Me
 **********************/
@@ -611,7 +631,7 @@ Media Queries
 
     .span-1-of-3 { width: 33%; }
 
-    #fleet-total { font-size: 28px; }
+    #fleet-total { font-size: 20px; }
 
     .ship-name p {
         margin-left: 5px;
@@ -625,7 +645,11 @@ Media Queries
 
     #fleet-total { width: 32%; }
 
-    .max-points label { width: 45%; }
+    .max-points label {
+        width: 45%;
+        font-size: 16px;
+    }
+
 
     .card img { height: 300px; }
 
@@ -637,14 +661,14 @@ Media Queries
         width: 100%;
         margin: 0 auto;
         padding: 15px;
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .points-display {
         display: block;
         margin: 5px 10px ;
         text-align: center;
-        font-size: 28px;
+        font-size: 20px;
     }
     .current-points {
         font-size: 16px;
@@ -698,7 +722,10 @@ Media Queries
         width: 80px;
         height: 38px;
     }
+
     .delete { font-size: 25px; }
+
+    .delete-upgrade { font-size: 20px; }
 
     .upgrade-bar > button img { height: 10px; }
 
@@ -726,7 +753,6 @@ Media Queries
 
     .card img { height: 420px; }
 
-    .fleet-display img { margin-bottom: 20px; }
 }
 
 @media screen and (min-width: 900px) {

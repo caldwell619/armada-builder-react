@@ -23,11 +23,11 @@ class ship extends React.Component {
                 id: uniqid(),
                 imagePath: "/images/cards/ship/imperial/" + s.image,
                 availableUpgrades: Object.keys(s.upgrades),
-                equippedUpgrades: {},
+                equippedUpgrades: [],
                 upgradesShown: false
             };
             updatedShips.push(ship);
-            console.log(ship)
+            // console.log(s.stringify());
         }
         //using function to change the state before setting it
         //asynchronous behavior requires the setState to  be a function

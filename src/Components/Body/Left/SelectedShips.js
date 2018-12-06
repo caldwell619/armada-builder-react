@@ -18,10 +18,12 @@ class selectedShips extends React.Component {
         const newShips = [...this.props.shipInfo];
 
         newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown;
+        console.log(newShips);
         this.props.toggle(newShips);
     };
 
     render() {
+
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
@@ -29,7 +31,7 @@ class selectedShips extends React.Component {
                         return (
                             <div className="chosen-ship-container">
                                 <div key={ship.id} className="chosen-ship">
-                                    <div className={"span-4-of-12 ship-img"}>
+                                    <div className="span-4-of-12 ship-img">
                                         <img src={ship.imagePath} alt="Ship Card"/>
                                     </div>
                                     <div className={"span-7-of-12 ship-name"}
@@ -51,12 +53,20 @@ class selectedShips extends React.Component {
                                     })}
                                 </div>
                                 <div className="equipped-upgrades">
-                                    <ul>
-                                        <li data-id="9">{ship.equippedUpgrades.commander}</li>
-                                        <li>{ship.equippedUpgrades.title}</li>
-                                    </ul>
+                                    {ship.equippedUpgrades.map(upgrade => {
+                                        return (
+                                            <div className="assigned-upgrade">
+                                                <div className="col span 4-of-12 upgrade-img-container">
+                                                    <img src={upgrade.imagePath} alt="upgrade" className="upgrade-img"/>
+                                                </div>
+                                                <div className="col span 7-of-12 upgrade-name">
+                                                    {upgrade.name}
+                                                </div>
+                                                <div className="delete-upgrade ion-trash-a"/>
 
-
+                                            </div>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         )

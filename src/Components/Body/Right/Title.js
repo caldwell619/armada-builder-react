@@ -12,7 +12,13 @@ class Title extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
 
-        newShips[shipIndex].equippedUpgrades.title = card.title;
+        newShips[shipIndex].equippedUpgrades[9] = {
+            name: card.title,
+            points: card.points,
+            imagePath: `/images/cards/upgrades/title/imperial/${card.image}`,
+            type: card.set,
+            id: card.id
+        };
         console.log(newShips[shipIndex].equippedUpgrades);
         this.props.upgrade(newShips);
     };

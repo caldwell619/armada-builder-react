@@ -15,7 +15,13 @@ class Commander extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
 
-        newShips[shipIndex].equippedUpgrades.commander = card.title;
+        newShips[shipIndex].equippedUpgrades[0] = {
+            name: card.title,
+            points: card.points,
+            imagePath: `/images/cards/upgrades/commander/imperial/${card.image}`,
+            type: card.set,
+            id: card.id
+        };
 
         this.props.upgrade(newShips);
     };
