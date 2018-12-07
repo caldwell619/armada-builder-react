@@ -48,10 +48,8 @@ class ship extends React.Component {
                     <section className="star-wars">
                         <div className="crawl">
                             <div className="title">
-                                <p>Star Wars:</p>
-                                <h1>Armada</h1>
                             </div>
-                            <p>You are out of points</p>
+                            <p>Out of points, you are</p>
                         </div>
                     </section>
                 </div>
