@@ -1,13 +1,14 @@
 import React from 'react';
-import ShipSquad from './ShipSquad'
-import Objectives from './Objectives'
-import BottomButtons from './BottomButtons'
-import SelectedShips from './SelectedShips'
+import PropTypes from 'prop-types';
+import ShipSquad from './ShipSquad';
+import Objectives from './Objectives';
+import BottomButtons from './BottomButtons';
+import SelectedShips from './SelectedShips';
 
-const game = () => {
+const game = (props) => {
     return (
-        <div>
-            <SelectedShips/>
+        <div className="functionality-buttons">
+            <SelectedShips upgradePoints={props.upgradePoints} shipInfo={props.shipInfo} delete ={props.delete} toggle={props.toggle}/>
             <ShipSquad/>
             <Objectives/>
             <BottomButtons/>
@@ -16,4 +17,8 @@ const game = () => {
     )
 };
 
+game.propTypes = {
+    click: PropTypes.func,
+    shipInfo: PropTypes.array
+}
 export default game;

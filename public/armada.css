@@ -1,9 +1,7 @@
 /************************
    basic formatting
    ************************/
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     font-family: sans-serif;
@@ -11,13 +9,9 @@ body {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-ul {
-    margin: 0;
-}
+ul { margin: 0; }
 
 /************************
 header bar
@@ -31,25 +25,25 @@ header {
     margin-left: 10px;
     margin-top: 10px;
 }
-.nav-container {
-    float: right;
-}
-nav {
+
+.header-container {
     background-color: black;
+    height: 50px;
 }
 
-.armada-logo img {
-    height: 60px;
-}
+.nav-container { float: right; }
+
+nav { background-color: black; }
+
+.armada-logo img { height: 35px; }
+
 .nav-container {
-    height: 65px;
+    height: 40px;
     display: flex;
     align-items: flex-end;
 }
 
 .nav-links {
-    /*float: right;*/
-    /*margin-top: 20px;*/
     background-color: black;
     text-align: center;
     padding: 0;
@@ -70,27 +64,24 @@ nav {
     font-family: "Fjalla One", sans-serif;
 }
 
-.nav-links li a:hover {
-    border-bottom: 1px solid white;
-}
+.nav-links li a:hover { border-bottom: 1px solid white; }
 
 .armada-logo-container {
     height: 70px;
     display: flex;
     align-items: center;
 }
+
 .armada-logo {
     float: left;
     margin-left: 10px;
     margin-top: 10px;
     width: 25%;
 }
-#armada-logo {
-    width: 25%;
-}
-.nav-container {
-    float: right;
-}
+
+#armada-logo { width: 25%; }
+
+.nav-container { float: right; }
 
 /* Style the navigation menu */
 .topnav {
@@ -100,9 +91,8 @@ nav {
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-    display: none;
-}
+.topnav #myLinks { display: none; }
+
 #myLinks a {
     color: white;
     margin: 15px;
@@ -129,21 +119,16 @@ nav {
 }
 
 /* Style the active link (or home/logo) */
-.active {
-    color: white;
-}
-.armada-logo-img {
-    height: 65px;
-}
-.tablet-nav {
-    display: none;
-}
+.active { color: white; }
+
+.armada-logo-img { height: 65px; }
+
+.tablet-nav { display: none; }
 /************************
 home page
 ************************/
-main {
-    clear: both;
-}
+main { clear: both; }
+
 .home-container {
     background-image: linear-gradient(rgba(0, 0, 0, 0.32), #000), url(src/images/home-page/rebel-background.png);
     text-align: center;
@@ -158,7 +143,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-f
+
 .faction {
     float: right;
     margin: 0;
@@ -170,23 +155,17 @@ f
     transition: .3s;
 }
 
-.faction img:hover {
-    transform: scale(1.1);
-}
+.faction img:hover { transform: scale(1.1); }
 
 /************************
 imperial fleet
 ************************/
-button {
-    border-radius: 5px;
-}
+button { border-radius: 5px; }
 
 /************************
 fleet display - left side
 ************************/
-.selector-container {
-    float: left;
-}
+.selector-container { float: left; }
 
 #fleet-name {
     font-size: 27px;
@@ -206,36 +185,34 @@ fleet display - left side
 }
 
 .fleet-display img {
-    height: 100px;
+    height: 60px;
     margin: 15px 0 10px 15px;
 }
-.span-1-of-3 {
-    width: 100%;
-}
-.span-1-of-2 {
-    width: 100%;
-}
-.span-3-of-4 {
-    width: 100%;
-}
+
+.span-1-of-3 { width: 100%; }
+
+.span-1-of-2 { width: 100%; }
+
+.span-3-of-4 { width: 100%; }
 
 #fleet-name {
     font-size: 22px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #fleet-total {
     width: 30%;
     font-size: 40px;
 }
-.big-points-container {
-    margin-top: 10px;
-}
-.big-points-container > div {
-    margin: 15px 0;
-}
-.big-points-container * {
-    font-family: 'Orbitron', sans-serif;
-}
+
+
+.big-points-container * { font-family: 'Orbitron', sans-serif; }
 
 .points-container {
     display: flex;
@@ -267,9 +244,7 @@ Max Points
 /************************
 selected fleet
 ************************/
-.selected-ships {
-    padding: 10px;
-}
+.selected-ships { padding: 10px; }
 
 .ship-img {
     height: 40px;
@@ -277,12 +252,9 @@ selected fleet
     overflow: hidden;
     display: inline-block;
     border-radius: 5px;
-
 }
 
-.ship > div {
-    width: 50%;
-}
+.ship > div { width: 50%; }
 
 .ship-img img {
     max-height: 330px;
@@ -294,7 +266,6 @@ selected fleet
     vertical-align: middle;
     display: inline-block;
     margin: auto 0;
-
 }
 
 .ship-name p {
@@ -306,41 +277,42 @@ selected fleet
 
 .delete {
     font-size: 35px;
-    display: inline-block;
-    width: 20%;
-    position: absolute;
-    top: 5px;
-    right: 0px;
     transition: all .3s;
 }
-.delete:active {
-    transform: scale(.9);
+.delete:active { transform: scale(.9); }
+
+.span-4-of-12 { width: 25%; }
+
+.span-7-of-12 { width: 50%; }
+
+.chosen-ship {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.span-4-of-12 {
-    width: 25%;
-}
+.chosen-ship-container { margin: 20px 0; }
 
-.span-7-of-12 {
-    width: 50%;
+.chosen-ship-container:first-child{ margin-top: 0; }
+
+.chosen-card-container {
+
 }
 
 /************************
 upgrade bar
 ************************/
 .upgrade-bar {
-    display: none;
+    display: block;
     padding-bottom: 5px;
 }
 
 .upgrade-bar button {
-    background: none;
     border: none;
     background-color: gray;
     margin: 3px;
-    padding: 5px 5px 0px 5px;
-    transition: background-color 0.3s;
-    transition: transform 0.3s;
+    padding: 5px 5px 0 5px;
+    transition: all 0.3s;
 
 }
 
@@ -349,9 +321,7 @@ upgrade bar
     transform: scale(1.1);
 }
 
-.upgrade-bar button img {
-    height: 20px;
-}
+.upgrade-bar button img { height: 20px; }
 
 /************************
 add ship
@@ -360,13 +330,13 @@ add ship
     /*margin-bottom: 20px;*/
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 #ship-button {
     border: none;
-    line-height: 50px;
+    line-height: 35px;
     width: 90%;
     font-weight: 300;
     font-family: 'Russo One', sans-serif;
@@ -432,29 +402,18 @@ objectives
     background: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-
 }
 
-.obj-button:hover {
-    background-color: #d3d2d2;
-
-}
+.obj-button:hover { background-color: #d3d2d2; }
 
 /************************
 action bar
 ************************/
-.action-bar {
-    margin-bottom: 20px;
-}
+.action-bar { margin-bottom: 20px; }
 
-.action-bar > button {
-    font-size: 20px;
-}
+.action-bar > button { font-size: 20px; }
 
-#print-button {
-    text-transform: uppercase;
-
-}
+#print-button { text-transform: uppercase; }
 
 #back-button {
     background: none;
@@ -471,6 +430,70 @@ action bar
     font-size: 20px;
 }
 
+
+
+/************************
+crawl
+************************/
+.crawl-container {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+}
+
+.star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: justify;
+}
+
+.crawl {
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+}
+
+.crawl > .title {
+    font-size: 90%;
+    text-align: center;
+}
+
+.crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+}
+
+@keyframes crawl {
+    0% {
+        top: -100px;
+        transform: rotateX(20deg)  translateZ(0);
+    }
+    100% {
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
+
 /************************
 card
 ************************/
@@ -479,16 +502,15 @@ card display - right side
 ************************/
 .card-display {
     float: right;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.26), #000), url(images/home-page-background-1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), #000), url(images/home-page-background-1.png);
     text-align: center;
     background-size: cover;
     height: 100vh;
     overflow: scroll;
 }
 
-.card {
-    display: inline-block;
-}
+.card { display: inline-block; }
+
 .card a {
     width: 100%;
     height: 100%;
@@ -500,54 +522,58 @@ card display - right side
     transition: transform 0.3s;
 }
 
-.ship-card {
-    display: inline-block;
-}
+.ship-card { display: inline-block; }
 
 .ship-card img {
-    height: 840px;
+    height: 450px;
     margin: 10px;
 }
 
-.card img:hover {
-    transform: scale(1.1)
-}
+.card img:hover { transform: scale(1.1) }
 
-.squad-card {
-    display: inline-block;
-}
+.squad-card { display: inline-block; }
 
 .squad-card img {
     height: 370px;
     margin: 10px;
 }
 
-.assault-card {
+.assigned-upgrade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4% 0 2%;
+    margin:  5px 0 5px 50px;
+    border-left: 1px solid black;
 
 }
 
+.upgrade-name {
+    font-size: 15px;
+}
+
+.upgrade-img-container {
+    overflow: hidden;
+    height: 40px;
+}
+.upgrade-img {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    width: 60px;
+
+}
 /**********************
 Conatct Me
 **********************/
-label {
-    float: left;
-}
+label { float: left; }
 
-textarea {
-    float: left;
-}
+textarea { float: left; }
 
-#message {
-    clear: left;
-}
+#message { clear: left; }
 
-#submit {
-    clear: both;
-}
+#submit { clear: both; }
 
-.span-1-of-4 {
-    width: 100%;
-}
+.span-1-of-4 { width: 100%; }
 
 .selected-ship-container {
     position: relative;
@@ -562,100 +588,95 @@ textarea {
 /****************
 Media Queries
 ****************/
+
+/* applies to screens 680 px and above (past mobile phone) */
+@media screen and (min-width: 500px) {
+    .ship-card img { height: 580px; }
+
+    .squad-card img { height: 250px;}
+
+    .squad-card img { height: 550px;}
+
+}
+
+
+
+
+
+
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 680px) {
-    .ship-card img {
-        height: 400px;
-    }
-    .selector-container {
-        height: 100vh;
-    }
-    .tablet-nav {
-        display: block;
-    }
-    .small-nav {
-        display: none;
-    }
-    .span-1-of-4 {
-        width: 25%;
-    }
-    .span-1-of-2 {
-        width: 50%;
-    }
-    #empire-container {
-        float: left;
-    }
-    #rebel-container {
-        float: right;
-    }
-    .selector-container {
-        margin: 0 auto;
-    }
-    .span-3-of-4 {
-        width: 75%;
-    }
-    .span-1-of-3 {
-        width: 50%;
-    }
-    #fleet-total {
-        font-size: 28px;
-    }
+
+    .ship-card img { height: 210px; }
+
+    .squad-card img { height: 180px;}
+
+    .selector-container { height: 100vh; }
+
+    .tablet-nav { display: block; }
+
+    .small-nav { display: none; }
+
+    .span-1-of-4 { width: 35%; }
+
+    .span-1-of-2 { width: 50%; }
+
+    #empire-container { float: left; }
+
+    #rebel-container { float: right; }
+
+    .selector-container { margin: 0 auto; }
+
+    .span-3-of-4 { width: 65%; }
+
+    .span-1-of-3 { width: 33%; }
+
+    #fleet-total { font-size: 20px; }
+
     .ship-name p {
         margin-left: 5px;
         font-size: 10px;
     }
-    .logo-container {
-        display: block;
-    }
-    .big-points-container > div {
-        width: 100%;
-    }
-    .big-points-container {
-        padding: 5px;
-    }
+    .logo-container { display: block; }
 
-    #fleet-total {
-        width: 45%;
-    }
+    .big-points-container > div { width: 100%; }
+
+    .big-points-container { padding: 5px; }
+
+    #fleet-total { width: 32%; }
+
     .max-points label {
         width: 45%;
+        font-size: 16px;
     }
 
 
-    .card img {
-        height: 300px;
-    }
+    .card img { height: 300px; }
 
-    #fleet-name
-    .selected-ships {
-        padding: 0;
-    }
+    .selected-ships { padding: 0; }
 
-    .nav-links {
-        text-align: right;
-    }
+    .nav-links { text-align: right; }
 
     #fleet-name {
         width: 100%;
         margin: 0 auto;
-        font-size: 15px;
+        padding: 15px;
+        font-size: 18px;
     }
 
     .points-display {
         display: block;
         margin: 5px 10px ;
         text-align: center;
-        font-size: 28px;
+        font-size: 20px;
     }
     .current-points {
         font-size: 16px;
         margin: 5px 0 5px 10px;
     }
 
-    #squad-button {
-        font-size: 12px;
+    #squad-button { font-size: 12px; }
 
-    }
     #squad-button {
         display: flex;
         align-items: center;
@@ -669,41 +690,26 @@ Media Queries
         /*align-items: center;*/
     /*}*/
 
-    .add-ship-container {
-        margin-bottom: 0;
-    }
-    #squad-button span {
-        padding: 8px;
-    }
-    #ship-button {
-        font-size: 15px;
-    }
-    #fleet-name {
+    .add-ship-container { margin-bottom: 0; }
 
-    }
+    #squad-button span { padding: 8px; }
+
+    #ship-button { font-size: 15px; }
 
     .add-squadron-container {
         margin-bottom: 5px;
         padding: 10px 0;
     }
 
-    .objective-selector-container {
-        padding: 0;
-    }
+    .objective-selector-container { padding: 0; }
 
-    .objective-selector-container > ul {
-        padding: 0;
-    }
-    .action-bar > button {
-        font-size: 13px;
-    }
-    #export-button {
-        font-size: 13px;
-    }
+    .objective-selector-container > ul { padding: 0; }
 
-    .obj-button {
-        font-size: 14px;
-    }
+    .action-bar > button { font-size: 13px; }
+
+    #export-button { font-size: 13px; }
+
+    .obj-button { font-size: 14px; }
 
     .export-container {
         float: none;
@@ -713,44 +719,51 @@ Media Queries
     /* Ship Cards */
 
     .ship-img {
-        width: 25px;
-        height: 25px;
-    }
-    .delete {
-        font-size: 25px;
-    }
-    .upgrade-bar > button img {
-        height: 10px;
+        width: 80px;
+        height: 38px;
     }
 
-    .ship-name {
-        width: 50%;
-    }
+    .delete { font-size: 25px; }
+
+    .delete-upgrade { font-size: 20px; }
+
+    .upgrade-bar > button img { height: 10px; }
+
+    .ship-name { width: 50%; }
 }
 @media screen and (min-width: 767px) {
-    .ship-name {
-        width: 55%;
-    }
+
+    .ship-card img { height: 200px; }
+
+    .squad-card img { height: 190px;}
+
+    .ship-name { width: 45%; }
+
     .ship-name p {
         font-size: 18px;
         margin-left: 8px;
     }
+
     .ship-img {
-        width: 35px;
-        height: 45px;
+        width: 110px;
+        height: 38px;
     }
-    .ship-name span {
-        font-size: 35px;
-    }
-    .card img {
-        height: 420px;
-    }
-    .fleet-display img {
-        margin-bottom: 20px;
-    }
+
+    .ship-name span { font-size: 35px; }
+
+    .card img { height: 420px; }
+
 }
+
+@media screen and (min-width: 900px) {
+    .squad-card img { height: 220px;}
+    .ship-card img { height: 230px;}
+}
+
 @media screen and (min-width: 1200px) {
     .span-1-of-3 {
         width: 33.33333%;
     }
+    .squad-card img { height: 300px;}
+    .ship-card img { height: 300px;}
 }
