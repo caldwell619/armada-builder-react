@@ -9,7 +9,6 @@ class selectedShips extends React.Component {
 
     deleteShip = (s) => {
         this.props.delete(s.id);
-
     };
 
     toggleHandler = (id) => {
@@ -17,14 +16,11 @@ class selectedShips extends React.Component {
             return index.id === id
         });
         const newShips = [...this.props.shipInfo];
-
         newShips[shipIndex].upgradesShown = !newShips[shipIndex].upgradesShown;
-        console.log(newShips);
         this.props.toggle(newShips);
     };
 
     render() {
-
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">

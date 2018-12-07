@@ -60,7 +60,7 @@ class body extends React.Component {
         });
         this.setState({
             selectedShips: ships,
-            totalPoints:counter
+            totalPoints: counter
         });
     };
 

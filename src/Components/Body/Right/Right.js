@@ -21,7 +21,7 @@ const right = (props) => {
             <Route path='/defense' component={DefenseCards}/>
             <Route path='/Navigation' component={NavigationCards}/>
             <Route path="/ships/:id/upgrades/commander" render={(routeProps) => <Commander {...routeProps}  shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
-            <Route path="/ships/:id/upgrades/title" render={(routeProps) => <Title {...routeProps}  shipInfo={props.shipInfo} upgrade={props.upgrade}/>}/>
+            <Route path="/ships/:id/upgrades/title" render={(routeProps) => <Title {...routeProps}  shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
             <Route path="/ships/:id/upgrades/turbolasers" component={Turbolasers}/>
         </div>
     )
