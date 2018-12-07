@@ -16,7 +16,6 @@ class ship extends React.Component {
         let currentPoints = this.props.points;
         //stopping the addition of new ships if points exceed max
         if (currentPoints + s.points < 400){
-            currentPoints += s.points;
             let ship = {
                 name: s.title,
                 points: s.points,
@@ -27,14 +26,14 @@ class ship extends React.Component {
                 upgradesShown: false
             };
             updatedShips.push(ship);
+            this.props.upgradePoints();
             // console.log(s.stringify());
         }
         //using function to change the state before setting it
         //asynchronous behavior requires the setState to  be a function
         this.setState((state, props) => {
-            props.click(updatedShips, currentPoints);
+            props.click(updatedShips);
          return ({
-                 totalPoints:  currentPoints,
                  selectedShips: updatedShips
                 })
         });

@@ -13,18 +13,30 @@ class body extends React.Component {
         };
     }
 
-    //determining if the div is supposed to be shown
+    pointsDeterminer = () => {
+        this.setState((totalPoints) => {
+            const stateCopy = [...this.state.selectedShips];
+            let counter = 0;
+            stateCopy.map(ship => {
+                counter += ship.points;
+                ship.equippedUpgrades.map(upgrade => {
+                    counter += upgrade.points;
+                });
+            });
+            return ({totalPoints: counter});
+        })
+    };
 
     //function for changing the name
-    changeShip = (newState, currentPoints) => {
+    changeShip = (newState) => {
         this.setState({
-            selectedShips: newState,
-            totalPoints: currentPoints
+            selectedShips: newState
         });
     };
 
-
-    deleteShipHandler = (id, s) => {
+    //deleting ships and accounting for the points deduction
+    deleteShipHandler = (id) => {
+        //checking index position to target specific ship
         const shipIndex = this.state.selectedShips.findIndex(index => {
             return index.id === id
         });
@@ -34,13 +46,21 @@ class body extends React.Component {
         const ships = [...this.state.selectedShips];
         ships[shipIndex] = individualShip;
 
-        let points = this.state.totalPoints;
-        points -= s;
-
         ships.splice(shipIndex, 1);
+
+        //points calculation based on state
+        let counter = 0;
+        ships.map(ship => {
+            //add all ship points
+            counter += ship.points;
+            ship.equippedUpgrades.map(upgrade => {
+                //add all upgrades assigned to ships
+                counter += upgrade.points;
+                });
+        });
         this.setState({
             selectedShips: ships,
-            totalPoints: points
+            totalPoints:counter
         });
     };
 
@@ -65,8 +85,8 @@ render(){
     //rendering the left, if the condition is met
     return (
         <main>
-            <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler}/>
+            <Left upgradePoints={this.pointsDeterminer} shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
+            <Right upgradePoints={this.pointsDeterminer} click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler}/>
         </main>
 
     )

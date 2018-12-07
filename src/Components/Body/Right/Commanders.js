@@ -15,14 +15,19 @@ class Commander extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
 
-        newShips[shipIndex].equippedUpgrades[0] = {
-            name: card.title,
-            points: card.points,
-            imagePath: `/images/cards/upgrades/commander/imperial/${card.image}`,
-            type: card.set,
-            id: card.id
-        };
+        let individualShipUpgrades = newShips[shipIndex].equippedUpgrades;
+        let currentPoints = this.props.points;
+        if (currentPoints + card.points < 400) {
+            individualShipUpgrades[0] = {
+                name: card.title,
+                points: card.points,
+                imagePath: `/images/cards/upgrades/commander/imperial/${card.image}`,
+                type: card.set,
+                id: card.id
+            }
+        }
 
+        this.props.upgradePoints();
         this.props.upgrade(newShips);
     };
 
@@ -31,12 +36,15 @@ class Commander extends React.Component {
         return (
             <div>
                 {cards.commander.map((card) => {
-                    if (card.faction === "imperial"){
-                        return (
-                            <div className="ship-card span-1-of-3" key={card.id} id={this.props.match.params.id}>
-                                <img src={"/images/cards/upgrades/commander/imperial/" + card.image} alt="img" onClick={this.addUpgradeHandler.bind(this, card)}/>
-                            </div>
-                        )
+                    if (card.faction === "imperial") {
+                        if (card.points < 400 - this.props.points){
+                            return (
+                                <div className="ship-card span-1-of-3" key={card.id}>
+                                    <img src={"/images/cards/upgrades/commander/imperial/" + card.image} alt="img"
+                                         onClick={this.addUpgradeHandler.bind(this, card)}/>
+                                </div>
+                            )
+                        }
                     }
                 })}
             </div>

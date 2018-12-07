@@ -8,7 +8,8 @@ class selectedShips extends React.Component {
     }
 
     deleteShip = (s) => {
-        this.props.delete(s.id, s.points);
+        this.props.delete(s.id);
+
     };
 
     toggleHandler = (id) => {
