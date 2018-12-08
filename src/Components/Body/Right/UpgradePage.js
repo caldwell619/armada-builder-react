@@ -24,8 +24,17 @@ class UpgradePage extends React.Component {
                 type: card.set,
                 id: card.id
             };
+            const type = this.props.match.params.type;
             newShips[shipIndex].upgradeMap.set(this.props.match.params.type, upgrade);
             individualShipUpgrades[0] = upgrade;
+            newShips[shipIndex].upgrades[type] = upgrade;
+            //currently changing all ships with the same name to have the same upgrades
+            newShips[shipIndex].upgradeTest.map(individualUpgrade => {
+                if (individualUpgrade.includes(type)){
+                    individualUpgrade[1] = upgrade;
+                }
+            })
+
         }
 
         this.props.upgradePoints();

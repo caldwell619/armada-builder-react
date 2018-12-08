@@ -21,10 +21,6 @@ class selectedShips extends React.Component {
     };
 
     render() {
-        // let upgradeDiv = null;
-        // write for loop for map here
-
-
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
@@ -56,25 +52,24 @@ class selectedShips extends React.Component {
                                 </div>
 
                                 <div className="equipped-upgrades">
-                                    {this.props.shipInfo.map(ship => {
-                                        for (let [upgradeType, upgradeCard] of ship.upgradeMap) {
-                                            if (upgradeCard != null) {
-                                                //only returning one div because of the arrow function above
-                                                return (
-                                                    <div className="assigned-upgrade" key={upgradeType}>
-                                                        <div className="col span 4-of-12 upgrade-img-container">
-                                                            <img src={upgradeCard.imagePath} alt="upgrade"
-                                                                 className="upgrade-img"/>
-                                                        </div>
-                                                        <div className="col span 7-of-12 upgrade-name">
-                                                            {upgradeCard.name}
-                                                        </div>
-                                                        <div className="delete-upgrade ion-trash-a"/>
+                                    {ship.upgradeTest.map(individualUpgrade => {
+                                        const equippedUpgrade = individualUpgrade[1];
+                                        if (equippedUpgrade != null){
+                                            return (
+                                                <div className="assigned-upgrade">
+                                                    <div className="col span 4-of-12 upgrade-img-container">
+                                                        <img src={equippedUpgrade.imagePath} alt="upgrade" className="gitupgrade-img"/>
                                                     </div>
-                                                )
-                                            }
+                                                    <div className="col span 7-of-12 upgrade-name">
+                                                        {equippedUpgrade.name}
+                                                    </div>
+                                                    <div className="delete-upgrade ion-trash-a"/>
+
+                                                </div>
+                                            )
                                         }
                                     })}
+
                                 </div>
                             </div>
                         )
