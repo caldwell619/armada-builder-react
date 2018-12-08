@@ -21,6 +21,10 @@ class selectedShips extends React.Component {
     };
 
     render() {
+        // let upgradeDiv = null;
+        // write for loop for map here
+
+
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
@@ -39,7 +43,8 @@ class selectedShips extends React.Component {
                                     {ship.availableUpgrades.map(upgradeType => {
                                         if (ship.upgradesShown) {
                                             return (
-                                                <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
+                                                <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}
+                                                      key={upgradeType}>
                                                     <button>
                                                         <img src={"/images/icons/" + upgradeType + ".png"}
                                                              alt="upgrade icon"/>
@@ -51,26 +56,23 @@ class selectedShips extends React.Component {
                                 </div>
 
                                 <div className="equipped-upgrades">
-                                    {ship.upgradeMap.forEach((upgradeCard, upgradeType) => {
-                                        if (upgradeCard === null){
-                                            return (
-                                                null
-                                            )
-                                        } else {
-                                            //console log running
-                                            console.log("Yes");
-                                            //return not rendering
-                                            return (
-                                                <div className="assigned-upgrade" key={upgradeType}>
-                                                    <div className="col span 4-of-12 upgrade-img-container">
-                                                        <img src={upgradeCard.imagePath} alt="upgrade" className="upgrade-img"/>
+                                    {this.props.shipInfo.map(ship => {
+                                        for (let [upgradeType, upgradeCard] of ship.upgradeMap) {
+                                            if (upgradeCard != null) {
+                                                //only returning one div because of the arrow function above
+                                                return (
+                                                    <div className="assigned-upgrade" key={upgradeType}>
+                                                        <div className="col span 4-of-12 upgrade-img-container">
+                                                            <img src={upgradeCard.imagePath} alt="upgrade"
+                                                                 className="upgrade-img"/>
+                                                        </div>
+                                                        <div className="col span 7-of-12 upgrade-name">
+                                                            {upgradeCard.name}
+                                                        </div>
+                                                        <div className="delete-upgrade ion-trash-a"/>
                                                     </div>
-                                                    <div className="col span 7-of-12 upgrade-name">
-                                                        {upgradeCard.name}
-                                                    </div>
-                                                    <div className="delete-upgrade ion-trash-a"/>
-                                                </div>
-                                            )
+                                                )
+                                            }
                                         }
                                     })}
                                 </div>
