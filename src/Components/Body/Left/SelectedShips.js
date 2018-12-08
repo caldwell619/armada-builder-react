@@ -26,7 +26,7 @@ class selectedShips extends React.Component {
                 <div className="chosen-cards-container">
                     {this.props.shipInfo.map(ship => {
                         return (
-                            <div className="chosen-ship-container">
+                            <div className="chosen-ship-container" key={ship.id}>
                                 <div key={ship.id} className="chosen-ship">
                                     <div className="span-4-of-12 ship-img">
                                         <img src={ship.imagePath} alt="Ship Card"/>
@@ -49,20 +49,29 @@ class selectedShips extends React.Component {
                                         }
                                     })}
                                 </div>
-                                <div className="equipped-upgrades">
-                                    {ship.equippedUpgrades.map(upgrade => {
-                                        return (
-                                            <div className="assigned-upgrade">
-                                                <div className="col span 4-of-12 upgrade-img-container">
-                                                    <img src={upgrade.imagePath} alt="upgrade" className="upgrade-img"/>
-                                                </div>
-                                                <div className="col span 7-of-12 upgrade-name">
-                                                    {upgrade.name}
-                                                </div>
-                                                <div className="delete-upgrade ion-trash-a"/>
 
-                                            </div>
-                                        )
+                                <div className="equipped-upgrades">
+                                    {ship.upgradeMap.forEach((upgradeCard, upgradeType) => {
+                                        if (upgradeCard === null){
+                                            return (
+                                                null
+                                            )
+                                        } else {
+                                            //console log running
+                                            console.log("Yes");
+                                            //return not rendering
+                                            return (
+                                                <div className="assigned-upgrade" key={upgradeType}>
+                                                    <div className="col span 4-of-12 upgrade-img-container">
+                                                        <img src={upgradeCard.imagePath} alt="upgrade" className="upgrade-img"/>
+                                                    </div>
+                                                    <div className="col span 7-of-12 upgrade-name">
+                                                        {upgradeCard.name}
+                                                    </div>
+                                                    <div className="delete-upgrade ion-trash-a"/>
+                                                </div>
+                                            )
+                                        }
                                     })}
                                 </div>
                             </div>

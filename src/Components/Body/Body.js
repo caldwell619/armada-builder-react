@@ -74,7 +74,7 @@ class body extends React.Component {
         this.setState({
             selectedShips: upgradedState
         })
-        console.log(this.state.selectedShips)
+        console.log(this.state.selectedShips[0]);
     };
 
 

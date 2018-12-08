@@ -12,8 +12,7 @@ class Title extends React.Component {
             return index.id === this.props.match.params.id
         });
         const newShips = [...this.props.shipInfo];
-
-        newShips[shipIndex].equippedUpgrades[9] = {
+        const upgrade = {
             name: card.title,
             points: card.points,
             imagePath: `/images/cards/upgrades/title/imperial/${card.image}`,
@@ -21,6 +20,8 @@ class Title extends React.Component {
             id: card.id,
             ship: card.ship
         };
+        // newShips[shipIndex].upgradeMap.set("title", upgrade);
+        newShips[shipIndex].equippedUpgrades[9] = upgrade;
         this.props.upgrade(newShips);
         this.props.upgradePoints()
     };
@@ -35,7 +36,9 @@ class Title extends React.Component {
                             return index.id === this.props.match.params.id
                         });
                         const newShips = [...this.props.shipInfo];
-
+                        if (card.ship === "multi"){
+                            console.log("yes");
+                        }
                         if (newShips[shipIndex] && newShips[shipIndex].type === card.ship) {
                             // console.log(ship.type);
                             // console.log(card.ship);

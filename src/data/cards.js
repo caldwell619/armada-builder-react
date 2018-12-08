@@ -2020,7 +2020,7 @@ export const cards = {
         {
             "id": 2672,
             "title": "The Grand Inquisitor",
-            "image": "swm26-the-grand-inquisitor.png",
+            "image": "the-grand-inquisitor.png",
             "set": "officer",
             "points": 4,
             "faction": "imperial",
@@ -2029,7 +2029,7 @@ export const cards = {
         {
             "id": 1084,
             "title": "Wulff Yularen",
-            "image": "wulff_yularen.png",
+            "image": "wulff-yularen.png",
             "set": "officer",
             "points": 7,
             "faction": "imperial",
@@ -2038,7 +2038,7 @@ export const cards = {
         {
             "id": 2791,
             "title": "Hondo Ohnaka",
-            "image": "swm27-hondo-ohnaka.png",
+            "image": "hondo-ohnaka.png",
             "set": "officer",
             "points": 2,
             "unique": true

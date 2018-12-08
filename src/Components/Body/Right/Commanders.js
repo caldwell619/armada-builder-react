@@ -18,13 +18,15 @@ class Commander extends React.Component {
         let individualShipUpgrades = newShips[shipIndex].equippedUpgrades;
         let currentPoints = this.props.points;
         if (currentPoints + card.points < 400) {
-            individualShipUpgrades[0] = {
+            const upgrade = {
                 name: card.title,
                 points: card.points,
                 imagePath: `/images/cards/upgrades/commander/imperial/${card.image}`,
                 type: card.set,
                 id: card.id
-            }
+            };
+            newShips[shipIndex].upgradeMap.set("commander", upgrade);
+            individualShipUpgrades[0] = upgrade;
         }
 
         this.props.upgradePoints();

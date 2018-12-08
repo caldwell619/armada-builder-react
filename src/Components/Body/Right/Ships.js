@@ -16,6 +16,8 @@ class ship extends React.Component {
         let currentPoints = this.props.points;
         //stopping the addition of new ships if points exceed max
         if (currentPoints + s.points < 400){
+            let upgradeArray = Object.entries(s.upgrades);
+            let shipMap = new Map(upgradeArray);
             let ship = {
                 name: s.title,
                 points: s.points,
@@ -24,6 +26,7 @@ class ship extends React.Component {
                 availableUpgrades: Object.keys(s.upgrades),
                 equippedUpgrades: [],
                 type: s.type,
+                upgradeMap: shipMap,
                 upgradesShown: false
             };
             updatedShips.push(ship);
