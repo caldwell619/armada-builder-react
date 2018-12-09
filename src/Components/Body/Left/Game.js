@@ -13,7 +13,6 @@ const game = (props) => {
             <Objectives/>
             <BottomButtons/>
         </div>
-
     )
 };
 
