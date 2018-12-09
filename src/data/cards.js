@@ -2313,7 +2313,7 @@ export const cards = {
         {
             "id": 1314,
             "title": "Veteran Gunners",
-            "image": "veterangunners.png",
+            "image": "veteran-gunners.png",
             "set": "weapons-team",
             "points": 5
         },
@@ -2323,7 +2323,7 @@ export const cards = {
         {
             "id": 2790,
             "title": "Cham Syndulla",
-            "image": "swm27-cham-syndulla.png",
+            "image": "cham-syndulla.png",
             "set": "weapons-team",
             "points": 5,
             "faction": "rebel",
@@ -2343,7 +2343,7 @@ export const cards = {
         {
             "id": 1013,
             "title": "Darth Vader",
-            "image": "darth-vader-boarding.png",
+            "image": "darth-vader.png",
             "set": "weapons-team",
             "points": 3,
             "faction": "imperial",
@@ -2353,7 +2353,7 @@ export const cards = {
         {
             "id": 2052,
             "title": "Boarding Engineers",
-            "image": "swm27-boarding-engineers.png",
+            "image": "boarding-engineers.png",
             "set": "weapons-team",
             "points": 2,
             "dual": "offensive-retrofit"
@@ -2361,7 +2361,7 @@ export const cards = {
         {
             "id": 2053,
             "title": "Boarding Troopers",
-            "image": "swm26-boarding-troopers.png",
+            "image": "boarding-troopers.png",
             "set": "weapons-team",
             "points": 3,
             "dual": "offensive-retrofit"
@@ -3049,7 +3049,7 @@ export const cards = {
         {
             "id": 2667,
             "title": "Pursuant",
-            "image": "swm26-pursuant.png",
+            "image": "pursuant.png",
             "set": "title",
             "points": 2,
             "faction": "imperial",
@@ -3109,7 +3109,7 @@ export const cards = {
         {
             "id": 2668,
             "title": "Squall",
-            "image": "swm26-squall.png",
+            "image": "squall.png",
             "set": "title",
             "points": 3,
             "faction": "imperial",
@@ -3119,7 +3119,7 @@ export const cards = {
         {
             "id": 2669,
             "title": "Stronghold",
-            "image": "swm26-stronghold.png",
+            "image": "stronghold.png",
             "set": "title",
             "points": 5,
             "faction": "imperial",

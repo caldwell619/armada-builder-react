@@ -8,25 +8,24 @@ class ship extends React.Component {
         super(props);
     }
 
-    addShip = (s) => {
+    addShip = (ship) => {
         //define new state
         //pass down props
         console.log(this.props.shipInfo);
-        let updatedShips = this.props.shipInfo;
+        let updatedShips = [...this.props.shipInfo];
         let currentPoints = this.props.points;
         //stopping the addition of new ships if points exceed max
-        if (currentPoints + s.points < 400){
-            let ship = {
-                name: s.title,
-                points: s.points,
+        if (currentPoints + ship.points < 400){
+            let chosenShip = {
+                name: ship.title,
+                points: ship.points,
                 id: uniqid(),
-                imagePath: "/images/cards/ship/imperial/" + s.image,
-                availableUpgrades: Object.keys(s.upgrades),
-                equippedUpgrades: [],
-                type: s.type,
+                imagePath: `/images/cards/ship/imperial/${ship.image}`,
+                upgrades: ship.upgrades,
+                type: ship.type,
                 upgradesShown: false
             };
-            updatedShips.push(ship);
+            updatedShips.push(chosenShip);
             this.props.upgradePoints();
             // console.log(s.stringify());
         }
@@ -59,12 +58,12 @@ class ship extends React.Component {
 
         return (
             <div className="cards-container">
-                {cards.ship.map(s => {
-                    if (s.faction === "imperial") {
-                        if (s.points < 400 - this.props.points){
+                {cards.ship.map(ship => {
+                    if (ship.faction === "imperial") {
+                        if (ship.points < 400 - this.props.points){
                             return (
-                                <div className="ship-card span-1-of-3" key={s.id}>
-                                    <img key={s.id} src={"/images/cards/ship/imperial/" + s.image} alt="card" onClick={this.addShip.bind(this, s)}/>
+                                <div className="ship-card span-1-of-3" key={ship.id}>
+                                    <img key={ship.id} src={"/images/cards/ship/imperial/" + ship.image} alt="card" onClick={this.addShip.bind(this, ship)}/>
                                 </div>
                             )
                         }

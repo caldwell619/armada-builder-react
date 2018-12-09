@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import Commander from './Commanders'
-import Title from './Title'
-import Turbolasers from './Turbolasers'
-import SupportTeam from './SupportTeam'
+import Commander from './Upgrades/Commanders'
+import Title from './Upgrades/Title'
+import Turbolasers from './Upgrades/Turbolasers'
+import SupportTeam from './Upgrades/SupportTeam'
 
 const Upgrades = () => {
     return (

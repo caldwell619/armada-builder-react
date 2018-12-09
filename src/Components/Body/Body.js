@@ -19,8 +19,12 @@ class body extends React.Component {
             let counter = 0;
             stateCopy.map(ship => {
                 counter += ship.points;
-                ship.equippedUpgrades.map(upgrade => {
-                    counter += upgrade.points;
+                //error here state update is one behind againgi
+                Object.values(ship.upgrades).map(upgrade => {
+                    if (upgrade != null){
+                        counter += upgrade.points;
+                    }
+
                 });
             });
             return ({totalPoints: counter});
@@ -53,9 +57,12 @@ class body extends React.Component {
         ships.map(ship => {
             //add all ship points
             counter += ship.points;
-            ship.equippedUpgrades.map(upgrade => {
-                //add all upgrades assigned to ships
-                counter += upgrade.points;
+            Object.values(ship.upgrades).map(upgrade => {
+                if (upgrade != null){
+                    //add all upgrades assigned to ships
+                    counter += upgrade.points;
+                }
+
                 });
         });
         this.setState({
@@ -73,7 +80,7 @@ class body extends React.Component {
     upgradeAddHandler = (upgradedState) => {
         this.setState({
             selectedShips: upgradedState
-        })
+        });
         console.log(this.state.selectedShips)
     };
 

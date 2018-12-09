@@ -36,7 +36,7 @@ class selectedShips extends React.Component {
                                     <div className="delete ion-trash-a" onClick={this.deleteShip.bind(this, ship)}/>
                                 </div>
                                 <div className="upgrade-bar" key={ship.id + "-upgradeBar"}>
-                                    {ship.availableUpgrades.map(upgradeType => {
+                                    {Object.keys(ship.upgrades).map(upgradeType => {
                                         if (ship.upgradesShown) {
                                             return (
                                                 <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
@@ -50,19 +50,21 @@ class selectedShips extends React.Component {
                                     })}
                                 </div>
                                 <div className="equipped-upgrades">
-                                    {ship.equippedUpgrades.map(upgrade => {
-                                        return (
-                                            <div className="assigned-upgrade">
-                                                <div className="col span 4-of-12 upgrade-img-container">
-                                                    <img src={upgrade.imagePath} alt="upgrade" className="upgrade-img"/>
+                                    {Object.values(ship.upgrades).map(upgrade => {
+                                        if (upgrade != null){
+                                            return (
+                                                <div className="assigned-upgrade">
+                                                    <div className="col span 4-of-12 upgrade-img-container">
+                                                        <img src={`/images/cards/upgrades/commander/imperial/${upgrade.image}`} alt="upgrade" className="upgrade-img"/>
+                                                    </div>
+                                                    <div className="col span 7-of-12 upgrade-name">
+                                                        {upgrade.title}
+                                                    </div>
+                                                    <div className="delete-upgrade ion-trash-a"/>
                                                 </div>
-                                                <div className="col span 7-of-12 upgrade-name">
-                                                    {upgrade.name}
-                                                </div>
-                                                <div className="delete-upgrade ion-trash-a"/>
+                                            )
+                                        }
 
-                                            </div>
-                                        )
                                     })}
                                 </div>
                             </div>

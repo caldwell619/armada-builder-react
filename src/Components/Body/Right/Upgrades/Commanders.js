@@ -1,5 +1,6 @@
 import React from 'react';
-import {cards} from '../../../data/cards.js'
+import {cards} from '../../../../data/cards.js'
+
 
 
 
@@ -14,17 +15,12 @@ class Commander extends React.Component {
             return index.id === this.props.match.params.id
         });
         const newShips = [...this.props.shipInfo];
+        console.log(newShips[shipIndex]);
 
-        let individualShipUpgrades = newShips[shipIndex].equippedUpgrades;
+        let upgrades = newShips[shipIndex].upgrades;
         let currentPoints = this.props.points;
         if (currentPoints + card.points < 400) {
-            individualShipUpgrades[0] = {
-                name: card.title,
-                points: card.points,
-                imagePath: `/images/cards/upgrades/commander/imperial/${card.image}`,
-                type: card.set,
-                id: card.id
-            }
+            upgrades.commander = card;
         }
 
         this.props.upgradePoints();
