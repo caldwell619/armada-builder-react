@@ -67,7 +67,7 @@ class ship extends React.Component {
                         if (ship.points < 400 - this.props.points){
                             return (
                                 <div className="ship-card span-1-of-3" key={ship.id}>
-                                    <img key={ship.id} src={"/images/cards/ship/imperial/" + ship.image} alt="card" onClick={this.addShip.bind(this, ship)}/>
+                                    <img src={"/images/cards/ship/imperial/" + ship.image} alt="card" onClick={this.addShip.bind(this, ship)}/>
                                 </div>
                             )
                         }

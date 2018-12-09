@@ -57,6 +57,7 @@ class body extends React.Component {
 
                 });
         });
+        console.log(this.state.selectedShips)
         this.setState({
             selectedShips: ships,
             totalPoints: counter

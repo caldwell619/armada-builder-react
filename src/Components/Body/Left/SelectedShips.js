@@ -21,6 +21,7 @@ class selectedShips extends React.Component {
     };
 
     render() {
+        console.log(this.props.shipInfo);
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
