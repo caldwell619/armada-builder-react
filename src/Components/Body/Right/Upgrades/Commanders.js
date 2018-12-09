@@ -1,5 +1,6 @@
 import React from 'react';
 import {cards} from '../../../../data/cards.js'
+import ship from "../Ships";
 
 
 
@@ -22,9 +23,18 @@ class Commander extends React.Component {
         if (currentPoints + card.points < 400) {
             upgrades.commander = card;
         }
+        let counter = 0;
+        newShips.forEach(ship => {
+            counter += ship.points;
+            Object.values(ship.upgrades).forEach(upgrade => {
+                console.log(upgrade);
+                if (upgrade != null){
+                    counter += upgrade.points;
+                }
+            });
+        });
 
-        this.props.upgradePoints();
-        this.props.upgrade(newShips);
+        this.props.upgrade(newShips, counter);
     };
 
 

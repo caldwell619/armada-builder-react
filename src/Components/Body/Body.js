@@ -9,34 +9,26 @@ class body extends React.Component {
             selectedShips: [],
             totalPoints: 0,
             maxAllowablePoints: 400
-
         };
     }
 
-    pointsDeterminer = () => {
-        this.setState((totalPoints) => {
-            const stateCopy = [...this.state.selectedShips];
-            let counter = 0;
-            stateCopy.map(ship => {
-                counter += ship.points;
-                //error here state update is one behind againgi
-                Object.values(ship.upgrades).map(upgrade => {
-                    if (upgrade != null){
-                        counter += upgrade.points;
-                    }
-
-                });
-            });
-            return ({totalPoints: counter});
-        })
-    };
+    // pointsDeterminer = () => {
+    //
+    // };
 
     //function for changing the name
-    changeShip = (newState) => {
-        this.setState({
-            selectedShips: newState
-        });
-    };
+    addShip = (updatedSelectedShips, newTotalPoints) => {
+        this.setState(
+                //state update is one behind again
+
+
+            {
+                selectedShips: updatedSelectedShips,
+                totalPoints: newTotalPoints
+            }
+        )
+        };
+
 
     //deleting ships and accounting for the points deduction
     deleteShipHandler = (id) => {
@@ -54,10 +46,10 @@ class body extends React.Component {
 
         //points calculation based on state
         let counter = 0;
-        ships.map(ship => {
+        ships.forEach(ship => {
             //add all ship points
             counter += ship.points;
-            Object.values(ship.upgrades).map(upgrade => {
+            Object.values(ship.upgrades).forEach(upgrade => {
                 if (upgrade != null){
                     //add all upgrades assigned to ships
                     counter += upgrade.points;
@@ -77,11 +69,11 @@ class body extends React.Component {
         })
     };
 
-    upgradeAddHandler = (upgradedState) => {
+    upgradeAddHandler = (upgradedState, newPointTotal) => {
         this.setState({
-            selectedShips: upgradedState
+            selectedShips: upgradedState,
+            totalPoints: newPointTotal
         });
-        console.log(this.state.selectedShips)
     };
 
 
@@ -92,8 +84,8 @@ render(){
     //rendering the left, if the condition is met
     return (
         <main>
-            <Left upgradePoints={this.pointsDeterminer} shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right upgradePoints={this.pointsDeterminer} click={this.changeShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler}/>
+            <Left shipInfo={this.state.selectedShips} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
+            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler}/>
         </main>
 
     )
