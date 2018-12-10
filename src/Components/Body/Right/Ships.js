@@ -21,7 +21,7 @@ class ship extends React.Component {
                 points: ship.points,
                 id: uniqid(),
                 imagePath: `/images/cards/ship/imperial/${ship.image}`,
-                upgrades: ship.upgrades,
+                upgrades: {...ship.upgrades},
                 type: ship.type,
                 upgradesShown: false
             };
