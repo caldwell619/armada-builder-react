@@ -53,7 +53,7 @@ class GeneralUpgrade extends React.Component {
                             if (card.points < 400 - this.props.points) {
                                 return (
                                     <div className="ship-card span-1-of-3" key={card.id}>
-                                        <img src={`/images/cards/upgrades/${type}/imperial/${card.image}`} alt="img"
+                                        <img src={`/images/cards/upgrades/${type}/${card.image}`} alt="img"
                                              onClick={this.addUpgradeHandler.bind(this, card)}/>
                                     </div>
                                 )

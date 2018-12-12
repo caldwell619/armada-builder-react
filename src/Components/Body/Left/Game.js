@@ -8,7 +8,7 @@ import SelectedShips from './SelectedShips';
 const game = (props) => {
     return (
         <div className="functionality-buttons">
-            <SelectedShips shipInfo={props.shipInfo} delete ={props.delete} toggle={props.toggle}/>
+            <SelectedShips upgradeDelete={props.upgradeDelete} shipInfo={props.shipInfo} delete ={props.delete} toggle={props.toggle}/>
             <ShipSquad/>
             <Objectives/>
             <BottomButtons/>

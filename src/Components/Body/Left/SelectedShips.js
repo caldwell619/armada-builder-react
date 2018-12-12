@@ -11,6 +11,10 @@ class selectedShips extends React.Component {
         this.props.delete(s.id);
     };
 
+    deleteUpgrade = (ship, upgrade) => {
+        this.props.upgradeDelete(ship.id, upgrade.set)
+    };
+
     toggleHandler = (id) => {
         const shipIndex = this.props.shipInfo.findIndex(index => {
             return index.id === id
@@ -42,7 +46,7 @@ class selectedShips extends React.Component {
                                             return (
                                                 <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
                                                     <button>
-                                                        <img src={"/images/icons/" + upgradeType + ".png"}
+                                                        <img src={`/images/icons/${upgradeType}.png`}
                                                              alt="upgrade icon"/>
                                                     </button>
                                                 </Link>
@@ -56,12 +60,12 @@ class selectedShips extends React.Component {
                                             return (
                                                 <div className="assigned-upgrade">
                                                     <div className="col span 4-of-12 upgrade-img-container">
-                                                        <img src={`/images/cards/upgrades/commander/imperial/${upgrade.image}`} alt="upgrade" className="upgrade-img"/>
+                                                        <img src={`/images/cards/upgrades/${upgrade.set}/${upgrade.image}`} alt="upgrade" className="upgrade-img"/>
                                                     </div>
                                                     <div className="col span 7-of-12 upgrade-name">
                                                         {upgrade.title}
                                                     </div>
-                                                    <div className="delete-upgrade ion-trash-a"/>
+                                                    <div className="delete-upgrade ion-trash-a" onClick={this.deleteUpgrade.bind(this, ship, upgrade)}/>
                                                 </div>
                                             )
                                         }

@@ -29,7 +29,6 @@ class ship extends React.Component {
 
             updatedShips.forEach(ship => {
                 counter += ship.points;
-
             });
         }
         //using function to change the state before setting it

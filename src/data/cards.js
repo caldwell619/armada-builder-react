@@ -2764,7 +2764,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc30c-frigate"
+            "ship": ["mc30c-frigate"]
         },
         {
             "id": 1010,
@@ -2774,7 +2774,7 @@ export const cards = {
             "points": 3,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc75-cruiser"
+            "ship": ["mc75-cruiser"]
         },
         {
             "id": 1232,
@@ -2784,7 +2784,7 @@ export const cards = {
             "points": 5,
             "faction": "imperial",
             "unique": true,
-            "ship": "imperial-class-star-destroyer"
+            "ship": ["imperial-class-star-destroyer"]
         },
         {
             "id": 1326,
@@ -2794,7 +2794,7 @@ export const cards = {
             "points": 2,
             "faction": "rebel",
             "unique": true,
-            "ship": "gr-75"
+            "ship": ["gr-75"]
         },
         {
             "id": 1391,
@@ -2804,7 +2804,7 @@ export const cards = {
             "points": 3,
             "faction": "imperial",
             "unique": true,
-            "ship": "arquitens"
+            "ship": ["arquitens"]
         },
         {
             "id": 1280,
@@ -2814,7 +2814,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "imperial-class-star-destroyer"
+            "ship": ["imperial-class-star-destroyer"]
         },
         {
             "id": 1107,
@@ -2824,7 +2824,7 @@ export const cards = {
             "points": 5,
             "faction": "imperial",
             "unique": true,
-            "ship": "victory-class-star-destroyer"
+            "ship": ["victory-class-star-destroyer"]
         },
         {
             "id": 1239,
@@ -2834,7 +2834,7 @@ export const cards = {
             "points": 5,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-cruiser"
+            "ship": ["mc80-cruiser"]
         },
         {
             "id": 1118,
@@ -2844,7 +2844,7 @@ export const cards = {
             "points": 10,
             "faction": "imperial",
             "unique": true,
-            "ship": "gladiator-class-star-destroyer"
+            "ship": ["gladiator-class-star-destroyer"]
         },
         {
             "id": 1233,
@@ -2854,7 +2854,7 @@ export const cards = {
             "points": 10,
             "faction": "imperial",
             "unique": true,
-            "ship": "imperial-class-star-destroyer"
+            "ship": ["imperial-class-star-destroyer"]
         },
         {
             "id": 1110,
@@ -2864,7 +2864,7 @@ export const cards = {
             "points": 6,
             "faction": "rebel",
             "unique": true,
-            "ship": "corvette"
+            "ship": ["corvette"]
         },
         {
             "id": 1108,
@@ -2874,7 +2874,7 @@ export const cards = {
             "points": 12,
             "faction": "imperial",
             "unique": true,
-            "ship": "victory-class-star-destroyer"
+            "ship": ["victory-class-star-destroyer"]
         },
         {
             "id": 1327,
@@ -2884,7 +2884,7 @@ export const cards = {
             "points": 4,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-liberty"
+            "ship": ["mc80-liberty"]
         },
         {
             "id": 1238,
@@ -2894,7 +2894,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc30c-frigate"
+            "ship": ["mc30c-frigate"]
         },
         {
             "id": 1116,
@@ -2904,7 +2904,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "assault-frigate"
+            "ship": ["assault-frigate"]
         },
         {
             "id": 2788,
@@ -2914,7 +2914,7 @@ export const cards = {
             "points": 4,
             "faction": "rebel",
             "unique": true,
-            "ship": "hammerhead"
+            "ship": ["hammerhead"]
         },
         {
             "id": 1397,
@@ -2924,7 +2924,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "arquitens"
+            "ship": ["arquitens"]
         },
         {
             "id": 1240,
@@ -2934,7 +2934,7 @@ export const cards = {
             "points": 7,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-cruiser"
+            "ship": ["mc80-cruiser"]
         },
         {
             "id": 1235,
@@ -2944,7 +2944,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "raider-class-corvette"
+            "ship": ["raider-class-corvette"]
         },
         {
             "id": 1241,
@@ -2954,7 +2954,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-cruiser"
+            "ship": ["mc80-cruiser"]
         },
         {
             "id": 1119,
@@ -2964,7 +2964,7 @@ export const cards = {
             "points": 3,
             "faction": "imperial",
             "unique": true,
-            "ship": "gladiator-class-star-destroyer"
+            "ship": ["gladiator-class-star-destroyer"]
         },
         {
             "id": 1236,
@@ -2974,7 +2974,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "raider-class-corvette"
+            "ship": ["raider-class-corvette"]
         },
         {
             "id": 1324,
@@ -2984,7 +2984,7 @@ export const cards = {
             "points": 3,
             "faction": "imperial",
             "unique": true,
-            "ship": "interdictor"
+            "ship": ["interdictor"]
         },
         {
             "id": 1111,
@@ -2994,7 +2994,7 @@ export const cards = {
             "points": 2,
             "faction": "rebel",
             "unique": true,
-            "ship": "corvette"
+            "ship": ["corvette"]
         },
         {
             "id": 1328,
@@ -3004,7 +3004,7 @@ export const cards = {
             "points": 3,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-liberty"
+            "ship": ["mc80-liberty"]
         },
         {
             "id": 1329,
@@ -3014,7 +3014,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc80-liberty"
+            "ship": ["mc80-liberty"]
         },
         {
             "id": 1117,
@@ -3024,7 +3024,7 @@ export const cards = {
             "points": 5,
             "faction": "rebel",
             "unique": true,
-            "ship": "assault-frigate"
+            "ship": ["assault-frigate"]
         },
         {
             "id": 1401,
@@ -3034,7 +3034,7 @@ export const cards = {
             "points": 3,
             "faction": "rebel",
             "unique": true,
-            "ship": "pelta"
+            "ship": ["pelta"]
         },
         {
             "id": 1281,
@@ -3044,7 +3044,7 @@ export const cards = {
             "points": 7,
             "faction": "rebel",
             "unique": true,
-            "ship": "mc75-cruiser"
+            "ship": ["mc75-cruiser"]
         },
         {
             "id": 2667,
@@ -3054,7 +3054,7 @@ export const cards = {
             "points": 2,
             "faction": "imperial",
             "unique": true,
-            "ship": "quasar"
+            "ship": ["quasar"]
         },
         {
             "id": 1325,
@@ -3064,7 +3064,7 @@ export const cards = {
             "points": 1,
             "faction": "rebel",
             "unique": true,
-            "ship": "gr-75"
+            "ship": ["gr-75"]
         },
         {
             "id": 1113,
@@ -3074,7 +3074,7 @@ export const cards = {
             "points": 8,
             "faction": "rebel",
             "unique": true,
-            "ship": "nebulon-b"
+            "ship": ["nebulon-b"]
         },
         {
             "id": 1234,
@@ -3084,7 +3084,7 @@ export const cards = {
             "points": 3,
             "faction": "imperial",
             "unique": true,
-            "ship": "imperial-class-star-destroyer"
+            "ship": ["imperial-class-star-destroyer"]
         },
         {
             "id": 1114,
@@ -3094,7 +3094,7 @@ export const cards = {
             "points": 7,
             "faction": "rebel",
             "unique": true,
-            "ship": "nebulon-b"
+            "ship": ["nebulon-b"]
         },
         {
             "id": 1011,
@@ -3104,7 +3104,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "imperial-class-star-destroyer"
+            "ship": ["imperial-class-star-destroyer"]
         },
         {
             "id": 2668,
@@ -3114,7 +3114,7 @@ export const cards = {
             "points": 3,
             "faction": "imperial",
             "unique": true,
-            "ship": "quasar"
+            "ship": ["quasar"]
         },
         {
             "id": 2669,
@@ -3124,7 +3124,7 @@ export const cards = {
             "points": 5,
             "faction": "imperial",
             "unique": true,
-            "ship": "quasar"
+            "ship": ["quasar"]
         },
         {
             "id": 1323,
@@ -3134,7 +3134,7 @@ export const cards = {
             "points": 4,
             "faction": "imperial",
             "unique": true,
-            "ship": "gozanti"
+            "ship": ["gozanti"]
         },
         {
             "id": 1112,
@@ -3144,7 +3144,7 @@ export const cards = {
             "points": 3,
             "faction": "rebel",
             "unique": true,
-            "ship": "corvette"
+            "ship": ["corvette"]
         },
         {
             "id": 1322,
@@ -3154,7 +3154,7 @@ export const cards = {
             "points": 2,
             "faction": "imperial",
             "unique": true,
-            "ship": "gozanti"
+            "ship": ["gozanti"]
         },
         {
             "id": 1109,
@@ -3164,7 +3164,7 @@ export const cards = {
             "points": 8,
             "faction": "imperial",
             "unique": true,
-            "ship": "victory-class-star-destroyer"
+            "ship": ["victory-class-star-destroyer"]
         },
         {
             "id": 1115,
@@ -3174,7 +3174,7 @@ export const cards = {
             "points": 5,
             "faction": "rebel",
             "unique": true,
-            "ship": "nebulon-b"
+            "ship": ["nebulon-b"]
         },
         {
             "id": 1001,
@@ -3183,8 +3183,7 @@ export const cards = {
             "set": "title",
             "points": 5,
             "faction": "rebel",
-            "ship": "multi",
-            "ships": ["mc30c-frigate", "mc75-cruiser", "mc80-cruiser", "mc80-liberty"]
+            "ship": ["mc30c-frigate", "mc75-cruiser", "mc80-cruiser", "mc80-liberty"]
         },
         {
             "id": 1007,
@@ -3193,8 +3192,7 @@ export const cards = {
             "set": "title",
             "points": 5,
             "faction": "imperial",
-            "ship": "multi",
-            "ships": ["gladiator-class-star-destroyer", "imperial-class-star-destroyer", "victory-class-star-destroyer"]
+            "ship": ["gladiator-class-star-destroyer", "imperial-class-star-destroyer", "victory-class-star-destroyer"]
         },
         {
             "id": 2787,
