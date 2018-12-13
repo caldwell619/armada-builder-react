@@ -18,9 +18,28 @@ class WeaponsTeam extends React.Component{
         const upgrades = newShips[shipIndex].upgrades;
 
         const currentPoints = this.props.points;
+        let allCards = this.props.allCards;
+        let weaponsTeamCards = allCards["weapons-team"];
 
         if (currentPoints + card.points < 400) {
+            if (card.unique){
+                card.equipped = true;
+                //need to turn all instances of Vader to true so they wont show.
+
+
+                // weaponsTeamCards.forEach(individualCard => {
+                //     if (individualCard.title !== card.title){
+                //         card.equipped = false;
+                //     }
+                // });
+
+            } else {
+                console.log('Not unique')
+            }
+
+
             upgrades["weapons-team"] = card;
+
         }
 
         let counter = 0;
@@ -38,10 +57,11 @@ class WeaponsTeam extends React.Component{
 
 
     render(){
+        let allCards = this.props.allCards;
+
         return (
             <div>
-
-                {cards["weapons-team"].map((card) => {
+                {allCards["weapons-team"].map((card) => {
                     const shipIndex = this.props.shipInfo.findIndex(index => {
                         return index.id === this.props.match.params.id
                     });
@@ -50,14 +70,18 @@ class WeaponsTeam extends React.Component{
                         if (newShips[shipIndex]){
                             if (card.dual || !card.dual){
                                 //comparison problem
-                                if (newShips[shipIndex].upgrades["weapons-team"] === null && newShips[shipIndex].upgrades["offensive-retrofit"] === null){
-                                    return (
-                                        <div className="ship-card span-1-of-3" key={card.id}>
-                                            <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
-                                                 alt="img"
-                                                 onClick={this.addUpgradeHandler.bind(this, card)}/>
-                                        </div>
-                                    )
+                                if (newShips[shipIndex].dual === true){
+                                    if (card.equipped === false || card.equipped === undefined){
+                                        console.log(card);
+                                        return (
+                                            <div className="ship-card span-1-of-3" key={card.id}>
+                                                <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
+                                                     alt="img"
+                                                     onClick={this.addUpgradeHandler.bind(this, card)}/>
+                                            </div>
+                                        )
+                                    }
+
                                 } else if (!card.dual) {
                                     return (
                                         <div className="ship-card span-1-of-3" key={card.id}>

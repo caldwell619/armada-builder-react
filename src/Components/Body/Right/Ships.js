@@ -16,20 +16,23 @@ class ship extends React.Component {
         let counter = 0;
         //stopping the addition of new ships if points exceed max
         if (currentPoints + ship.points < 400){
-            let chosenShip = {
+            //refactor this later
+
+                let chosenShip = {
                 name: ship.title,
                 points: ship.points,
                 id: uniqid(),
                 imagePath: `/images/cards/ship/imperial/${ship.image}`,
                 upgrades: {...ship.upgrades},
                 type: ship.type,
+                dual: ship.dual,
                 upgradesShown: false
             };
-            updatedShips.push(chosenShip);
+                updatedShips.push(chosenShip);
+                updatedShips.forEach(ship => {
+                    counter += ship.points;
+                });
 
-            updatedShips.forEach(ship => {
-                counter += ship.points;
-            });
         }
         //using function to change the state before setting it
         //asynchronous behavior requires the setState to  be a function

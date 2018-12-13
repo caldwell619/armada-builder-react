@@ -368,7 +368,8 @@ class body extends React.Component {
                         "set": "weapons-team",
                         "points": 6,
                         "faction": "rebel",
-                        "unique": true
+                        "unique": true,
+                        "equipped": false
                     },
                     {
                         "id": 1315,
@@ -430,7 +431,8 @@ class body extends React.Component {
                         "points": 5,
                         "faction": "rebel",
                         "unique": true,
-                        "dual": "offensive-retrofit"
+                        "dual": "offensive-retrofit",
+                        "equipped": false
                     },
                     {
                         "id": 1005,
@@ -440,7 +442,8 @@ class body extends React.Component {
                         "points": 4,
                         "faction": "rebel",
                         "unique": true,
-                        "dual": "offensive-retrofit"
+                        "dual": "offensive-retrofit",
+                        "equipped": false
                     },
                     {
                         "id": 1013,
@@ -450,7 +453,8 @@ class body extends React.Component {
                         "points": 3,
                         "faction": "imperial",
                         "unique": true,
-                        "dual": "offensive-retrofit"
+                        "dual": "offensive-retrofit",
+                        "equipped": false
                     },
                     {
                         "id": 2052,
@@ -1291,7 +1295,7 @@ render(){
     return (
         <main>
             <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} cards={this.state.commanderCards}/>
+            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} commanderrCards={this.state.commanderCards} allCards={this.state.upgradeCards}/>
         </main>
 
     )

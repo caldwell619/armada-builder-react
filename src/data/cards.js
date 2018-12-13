@@ -210,6 +210,7 @@ export const cards = {
             "points": 100,
             "faction": "rebel",
             "size": "large",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -362,6 +363,7 @@ export const cards = {
             "points": 60,
             "faction": "rebel",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -380,6 +382,7 @@ export const cards = {
             "points": 59,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -398,6 +401,7 @@ export const cards = {
             "points": 54,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -415,6 +419,7 @@ export const cards = {
             "points": 56,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -433,6 +438,7 @@ export const cards = {
             "points": 62,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -451,6 +457,7 @@ export const cards = {
             "points": 28,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "officer": null,
                 "fleet-support": null,
@@ -467,6 +474,7 @@ export const cards = {
             "points": 23,
             "faction": "imperial",
             "size": "small",
+            "dual": false,
             "upgrades": {
                 "officer": null,
                 "fleet-support": null,
@@ -483,6 +491,7 @@ export const cards = {
             "points": 110,
             "faction": "imperial",
             "size": "large",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -523,6 +532,7 @@ export const cards = {
             "points": 112,
             "faction": "imperial",
             "size": "large",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -543,6 +553,7 @@ export const cards = {
             "points": 112,
             "faction": "imperial",
             "size": "large",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -563,6 +574,7 @@ export const cards = {
             "points": 93,
             "faction": "imperial",
             "size": "medium",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -582,6 +594,7 @@ export const cards = {
             "points": 90,
             "faction": "imperial",
             "size": "medium",
+            "dual": false,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -602,6 +615,7 @@ export const cards = {
             "points": 54,
             "faction": "imperial",
             "size": "medium",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -620,11 +634,12 @@ export const cards = {
             "points": 61,
             "faction": "imperial",
             "size": "medium",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
-                "weapons-team-2": null,
                 "weapons-team": null,
+                "weapons-team-2": null,
                 "offensive-retrofit": null,
                 "title": null
             }
@@ -638,6 +653,7 @@ export const cards = {
             "points": 44,
             "faction": "imperial",
             "size": "small",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -656,6 +672,7 @@ export const cards = {
             "points": 48,
             "faction": "imperial",
             "size": "small",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -674,6 +691,7 @@ export const cards = {
             "points": 73,
             "faction": "imperial",
             "size": "medium",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -693,6 +711,7 @@ export const cards = {
             "points": 85,
             "faction": "imperial",
             "size": "medium",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
@@ -715,6 +734,7 @@ export const cards = {
             "points": 220,
             "faction": "imperial",
             "size": "huge",
+            "dual": true,
             "upgrades": {
                 "commander": null,
                 "officer": null,
