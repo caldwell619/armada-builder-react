@@ -323,43 +323,6 @@ class body extends React.Component {
                         "unique": true
                     }
                 ],
-                "fleet-support": [
-                    {
-                        "id": 1294,
-                        "title": "Bomber Command Center",
-                        "image": "bomber-command-center.png",
-                        "set": "fleet-support",
-                        "points": 8
-                    },
-                    {
-                        "id": 1295,
-                        "title": "Comms Net",
-                        "image": "comms-net.png",
-                        "set": "fleet-support",
-                        "points": 2
-                    },
-                    {
-                        "id": 1298,
-                        "title": "Jamming Field",
-                        "image": "jamming-field.png",
-                        "set": "fleet-support",
-                        "points": 2
-                    },
-                    {
-                        "id": 1296,
-                        "title": "Repair Crews",
-                        "image": "repair-crews.png",
-                        "set": "fleet-support",
-                        "points": 4
-                    },
-                    {
-                        "id": 1297,
-                        "title": "Slicer Tools",
-                        "image": "slicer-tools.png",
-                        "set": "fleet-support",
-                        "points": 7
-                    }
-                ],
                 "weapons-team": [
                     {
                         "id": 1006,
@@ -581,51 +544,6 @@ class body extends React.Component {
                         "dual": "weapons-team"
                     }
                 ],
-                "defensive-retrofit": [
-                    {
-                        "id": 1093,
-                        "title": "Advanced Projectors",
-                        "image": "advanced-projectors.png",
-                        "set": "defensive-retrofit",
-                        "points": 6
-                    },
-                    {
-                        "id": 1218,
-                        "title": "Cluster Bombs",
-                        "image": "cluster-bombs.png",
-                        "set": "defensive-retrofit",
-                        "points": 5
-                    },
-                    {
-                        "id": 1018,
-                        "title": "Early Warning System",
-                        "image": "early-warning-system.png",
-                        "set": "defensive-retrofit",
-                        "points": 7
-                    },
-                    {
-                        "id": 1094,
-                        "title": "Electronic Countermeasures",
-                        "image": "electronic-countermeasures.png",
-                        "set": "defensive-retrofit",
-                        "points": 7
-                    },
-                    {
-                        "id": 1219,
-                        "title": "Redundant Shields",
-                        "image": "redundant-shields.png",
-                        "set": "defensive-retrofit",
-                        "points": 8,
-                        "modification": true
-                    },
-                    {
-                        "id": 1403,
-                        "title": "Reinforced Blast Doors",
-                        "image": "reinforced-blast-doors.png",
-                        "set": "defensive-retrofit",
-                        "points": 5
-                    }
-                ],
                 "experimental-retrofit": [
                     {
                         "id": 1300,
@@ -655,209 +573,6 @@ class body extends React.Component {
                         "title": "Targeting Scrambler",
                         "image": "targeting-scrambler.png",
                         "set": "experimental-retrofit",
-                        "points": 5
-                    }
-                ],
-                "ordnance": [
-                    {
-                        "id": 1102,
-                        "title": "Assault Concussion Missiles",
-                        "image": "assault-concussion-missiles.png",
-                        "set": "ordnance",
-                        "points": 7
-                    },
-                    {
-                        "id": 1223,
-                        "title": "Assault Proton Torpedoes",
-                        "image": "assault-proton-torpedoes.png",
-                        "set": "ordnance",
-                        "points": 5
-                    },
-                    {
-                        "id": 1103,
-                        "title": "Expanded Launchers",
-                        "image": "expanded-launchers.png",
-                        "set": "ordnance",
-                        "points": 13,
-                        "modification": true
-                    },
-                    {
-                        "id": 2789,
-                        "title": "External Racks",
-                        "image": "swm27-external-racks.png",
-                        "set": "ordnance",
-                        "points": 3
-                    },
-                    {
-                        "id": 1396,
-                        "title": "Flechette Torpedoes",
-                        "image": "flechette-torpedoes.png",
-                        "set": "ordnance",
-                        "points": 3
-                    },
-                    {
-                        "id": 1021,
-                        "title": "Ordnance Pods",
-                        "image": "ordnance-pods.png",
-                        "set": "ordnance",
-                        "points": 3
-                    },
-                    {
-                        "id": 1224,
-                        "title": "Rapid Reload",
-                        "image": "rapid-reload.png",
-                        "set": "ordnance",
-                        "points": 8,
-                        "modification": true
-                    },
-                    {
-                        "id": 1004,
-                        "title": "Wide-Area Barrage",
-                        "image": "wide-area-barrage.png",
-                        "set": "ordnance",
-                        "points": 2
-                    }
-                ],
-                "ion-cannons": [
-                    {
-                        "id": 1020,
-                        "title": "Heavy Ion Emplacements",
-                        "image": "heavy-ion-emplacements.png",
-                        "set": "ion-cannons",
-                        "points": 9
-                    },
-                    {
-                        "id": 1321,
-                        "title": "High-Capacity Ion Turbines",
-                        "image": "high-capacity-ion-turbines.png",
-                        "set": "ion-cannons",
-                        "points": 8,
-                        "modification": true
-                    },
-                    {
-                        "id": 1099,
-                        "title": "Ion Cannon Batteries",
-                        "image": "ion-cannon-batteries.png",
-                        "set": "ion-cannons",
-                        "points": 5
-                    },
-                    {
-                        "id": 1100,
-                        "title": "Leading Shots",
-                        "image": "leading-shots.png",
-                        "set": "ion-cannons",
-                        "points": 4
-                    },
-                    {
-                        "id": 1320,
-                        "title": "MS-1 Ion Cannons",
-                        "image": "ms-1-ion-cannons.png",
-                        "set": "ion-cannons",
-                        "points": 2
-                    },
-                    {
-                        "id": 1272,
-                        "title": "NK-7 Ion Cannons",
-                        "image": "nk-7-ion-cannons.png",
-                        "set": "ion-cannons",
-                        "points": 10
-                    },
-                    {
-                        "id": 1101,
-                        "title": "Overload Pulse",
-                        "image": "overload-pulse.png",
-                        "set": "ion-cannons",
-                        "points": 8
-                    },
-                    {
-                        "id": 1222,
-                        "title": "SW-7 Ion Batteries",
-                        "image": "sw-7-ion-batteries.png",
-                        "set": "ion-cannons",
-                        "points": 5
-                    }
-                ],
-                "turbolasers": [
-                    {
-                        "id": 1394,
-                        "title": "Dual Turbolaser Turrets",
-                        "image": "dual-turbolaser-turrets.png",
-                        "set": "turbolasers",
-                        "points": 5,
-                        "modification": true
-                    },
-                    {
-                        "id": 1095,
-                        "title": "Enhanced Armament",
-                        "image": "enhanced-armament.png",
-                        "set": "turbolasers",
-                        "points": 10,
-                        "modification": true
-                    },
-                    {
-                        "id": 1096,
-                        "title": "H9 Turbolasers",
-                        "image": "h9-turbolasers.png",
-                        "set": "turbolasers",
-                        "points": 8
-                    },
-                    {
-                        "id": 1220,
-                        "title": "Heavy Turbolaser Turrets",
-                        "image": "heavy-turbolaser-turrets.png",
-                        "set": "turbolasers",
-                        "points": 6
-                    },
-                    {
-                        "id": 3137,
-                        "title": "Quad Battery Turrets",
-                        "image": "quad-battery-turrets.png",
-                        "set": "turbolasers",
-                        "points": 5,
-                        "modification": true
-                    },
-                    {
-                        "id": 1319,
-                        "title": "Quad Turbolaser Cannons",
-                        "image": "quad-turbolaser-cannons.png",
-                        "set": "turbolasers",
-                        "points": 10
-                    },
-                    {
-                        "id": 1229,
-                        "title": "Slaved Turrets",
-                        "image": "slaved-turrets.png",
-                        "set": "turbolasers",
-                        "points": 6,
-                        "modification": true
-                    },
-                    {
-                        "id": 1318,
-                        "title": "Spinal Armament",
-                        "image": "spinal-armament.png",
-                        "set": "turbolasers",
-                        "points": 9,
-                        "modification": true
-                    },
-                    {
-                        "id": 1221,
-                        "title": "Turbolaser Reroute Circuits",
-                        "image": "turbolaser-reroute-circuits.png",
-                        "set": "turbolasers",
-                        "points": 7
-                    },
-                    {
-                        "id": 1097,
-                        "title": "XI7 Turbolasers",
-                        "image": "xi7-turbolasers.png",
-                        "set": "turbolasers",
-                        "points": 6
-                    },
-                    {
-                        "id": 1098,
-                        "title": "XX-9 Turbolasers",
-                        "image": "xx9-turbolasers.png",
-                        "set": "turbolasers",
                         "points": 5
                     }
                 ],
@@ -1276,10 +991,12 @@ class body extends React.Component {
     };
 
     upgradeAddHandler = (upgradedState, newPointTotal, cardUpdate) => {
-        this.setState({
-            selectedShips: upgradedState,
-            totalPoints: newPointTotal,
-            upgradeCards: cardUpdate
+        this.setState(() => {
+            return {
+                selectedShips: upgradedState,
+                totalPoints: newPointTotal,
+                upgradeCards: cardUpdate
+            }
         });
     };
 
