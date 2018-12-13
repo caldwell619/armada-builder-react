@@ -1073,129 +1073,127 @@ class body extends React.Component {
                     },
 
 
+                ],
+                "commander": [
+                    {
+                        "id": 1304,
+                        "title": "Admiral Konstantine",
+                        "image": "admiral-konstantine.png",
+                        "set": "commander",
+                        "points": 23,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1069,
+                        "title": "Admiral Motti",
+                        "image": "admiral-motti.png",
+                        "set": "commander",
+                        "points": 24,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1179,
+                        "title": "Admiral Ozzel",
+                        "image": "admiral-ozzel.png",
+                        "set": "commander",
+                        "points": 20,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1070,
+                        "title": "Admiral Screed",
+                        "image": "admiral-screed.png",
+                        "set": "commander",
+                        "points": 26,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 2670,
+                        "title": "Admiral Sloane",
+                        "image": "admiral-sloane.png",
+                        "set": "commander",
+                        "points": 24,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1180,
+                        "title": "Darth Vader",
+                        "image": "darth-vader-commander.png",
+                        "set": "commander",
+                        "points": 36,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1182,
+                        "title": "Emperor Palpatine",
+                        "image": "palpatine.png",
+                        "set": "commander",
+                        "points": 35,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1303,
+                        "title": "General Tagge",
+                        "image": "general-tagge.png",
+                        "set": "commander",
+                        "points": 25,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1284,
+                        "title": "Grand Admiral Thrawn",
+                        "image": "grand-admiral-thrawn.png",
+                        "set": "commander",
+                        "points": 32,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1073,
+                        "title": "Grand Moff Tarkin",
+                        "image": "tarkin.png",
+                        "set": "commander",
+                        "points": 38,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    },
+                    {
+                        "id": 1400,
+                        "title": "Moff Jerjerrod",
+                        "image": "moff-jerjerrod.png",
+                        "set": "commander",
+                        "points": 23,
+                        "faction": "imperial",
+                        "unique": true,
+                        "equipped": false
+                    }
                 ]
             },
-            commanderCards: [
-            {
-                "id": 1304,
-                "title": "Admiral Konstantine",
-                "image": "admiral-konstantine.png",
-                "set": "commander",
-                "points": 23,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1069,
-                "title": "Admiral Motti",
-                "image": "admiral-motti.png",
-                "set": "commander",
-                "points": 24,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1179,
-                "title": "Admiral Ozzel",
-                "image": "admiral-ozzel.png",
-                "set": "commander",
-                "points": 20,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1070,
-                "title": "Admiral Screed",
-                "image": "admiral-screed.png",
-                "set": "commander",
-                "points": 26,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 2670,
-                "title": "Admiral Sloane",
-                "image": "admiral-sloane.png",
-                "set": "commander",
-                "points": 24,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1180,
-                "title": "Darth Vader",
-                "image": "darth-vader-commander.png",
-                "set": "commander",
-                "points": 36,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1182,
-                "title": "Emperor Palpatine",
-                "image": "palpatine.png",
-                "set": "commander",
-                "points": 35,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1303,
-                "title": "General Tagge",
-                "image": "general-tagge.png",
-                "set": "commander",
-                "points": 25,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1284,
-                "title": "Grand Admiral Thrawn",
-                "image": "grand-admiral-thrawn.png",
-                "set": "commander",
-                "points": 32,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1073,
-                "title": "Grand Moff Tarkin",
-                "image": "tarkin.png",
-                "set": "commander",
-                "points": 38,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            },
-            {
-                "id": 1400,
-                "title": "Moff Jerjerrod",
-                "image": "moff-jerjerrod.png",
-                "set": "commander",
-                "points": 23,
-                "faction": "imperial",
-                "unique": true,
-                "equipped": false
-            }
-        ]
+
         }
     }
 
     //function for changing the name
     addShip = (updatedSelectedShips, newTotalPoints) => {
         this.setState(
-                //state update is one behind again
-
-
             {
                 selectedShips: updatedSelectedShips,
                 totalPoints: newTotalPoints
@@ -1281,7 +1279,7 @@ class body extends React.Component {
         this.setState({
             selectedShips: upgradedState,
             totalPoints: newPointTotal,
-            commanderCards: cardUpdate
+            upgradeCards: cardUpdate
         });
     };
 
@@ -1295,7 +1293,7 @@ render(){
     return (
         <main>
             <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} commanderrCards={this.state.commanderCards} allCards={this.state.upgradeCards}/>
+            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} allCards={this.state.upgradeCards}/>
         </main>
 
     )

@@ -18,29 +18,41 @@ class WeaponsTeam extends React.Component{
         const upgrades = newShips[shipIndex].upgrades;
 
         const currentPoints = this.props.points;
+        //cant spread over this
         let allCards = this.props.allCards;
-        let weaponsTeamCards = allCards["weapons-team"];
+        // let weaponsTeamCards = allCards["weapons-team"];
 
         if (currentPoints + card.points < 400) {
-            if (card.unique){
+            if (card.unique) {
                 card.equipped = true;
                 //need to turn all instances of Vader to true so they wont show.
+            }
 
+            Object.values(allCards.commander).forEach(commander => {
+                newShips.forEach(ship => {
+                    Object.values(ship.upgrades).forEach(equippedUpgrade => {
+                        if (equippedUpgrade !== null){
+                            //vader comparison goes here
+                            if (equippedUpgrade.title === commander.title){
+                                //happening asynchronously againnnnnnnn
+                                //but it does work
+                                commander.equipped = true;
+                            }
+                            // console.log(upgrade)
+                            // console.log(upgrades.title);
+                        }
+                    })
+                });
+            });
 
-                // weaponsTeamCards.forEach(individualCard => {
+            // weaponsTeamCards.forEach(individualCard => {
                 //     if (individualCard.title !== card.title){
                 //         card.equipped = false;
                 //     }
                 // });
 
-            } else {
-                console.log('Not unique')
-            }
-
-
             upgrades["weapons-team"] = card;
-
-        }
+            }
 
         let counter = 0;
         newShips.forEach(ship => {
@@ -51,8 +63,8 @@ class WeaponsTeam extends React.Component{
                 }
             });
         });
-
-        this.props.upgrade(newShips, counter);
+        //sending back the new values
+        this.props.upgrade(newShips, counter, allCards);
     };
 
 
@@ -72,7 +84,6 @@ class WeaponsTeam extends React.Component{
                                 //comparison problem
                                 if (newShips[shipIndex].dual === true){
                                     if (card.equipped === false || card.equipped === undefined){
-                                        console.log(card);
                                         return (
                                             <div className="ship-card span-1-of-3" key={card.id}>
                                                 <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
