@@ -23,9 +23,9 @@ const right = (props) => {
             <Route path='/assault' component={AssaultCards}/>
             <Route path='/defense' component={DefenseCards}/>
             <Route path='/Navigation' component={NavigationCards}/>
-            <Route path="/ships/:id/upgrades/commander" render={(routeProps) => <Commander {...routeProps} allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
+            <Route path="/ships/:id/upgrades/commander" render={(routeProps) => <Commander {...routeProps} allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} commanderCards={props.commanderCards}/>}/>
             <Route path="/ships/:id/upgrades/title" render={(routeProps) => <Title {...routeProps}  allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
-            <Route path="/ships/:id/upgrades/weapons-team" render={(routeProps) => <WeaponsTeam {...routeProps} allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
+            <Route path="/ships/:id/upgrades/weapons-team" render={(routeProps) => <WeaponsTeam {...routeProps} commanderCards={props.commanderCards} weaponsCards={props.weaponsCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
             <Route path="/ships/:id/upgrades/turbolasers" render={(routeProps) => <DefensiveRetrofit {...routeProps}  shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
         </div>
     )

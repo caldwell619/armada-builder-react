@@ -323,119 +323,6 @@ class body extends React.Component {
                         "unique": true
                     }
                 ],
-                "weapons-team": [
-                    {
-                        "id": 1006,
-                        "title": "Caitken and Shollan",
-                        "image": "caitken-and-shollan.png",
-                        "set": "weapons-team",
-                        "points": 6,
-                        "faction": "rebel",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1315,
-                        "title": "Fire-Control Team",
-                        "image": "fire-control-team.png",
-                        "set": "weapons-team",
-                        "points": 2
-                    },
-                    {
-                        "id": 1085,
-                        "title": "Flight Controllers",
-                        "image": "flight-controllers.png",
-                        "set": "weapons-team",
-                        "points": 6
-                    },
-                    {
-                        "id": 1086,
-                        "title": "Gunnery Team",
-                        "image": "gunnery-team.png",
-                        "set": "weapons-team",
-                        "points": 7
-                    },
-                    {
-                        "id": 1211,
-                        "title": "Ordnance Experts",
-                        "image": "ordnance-experts.png",
-                        "set": "weapons-team",
-                        "points": 4
-                    },
-                    {
-                        "id": 1210,
-                        "title": "Ruthless Strategists",
-                        "image": "ruthless-strategists.png",
-                        "set": "weapons-team",
-                        "points": 4
-                    },
-                    {
-                        "id": 1087,
-                        "title": "Sensor Team",
-                        "image": "sensor-team.png",
-                        "set": "weapons-team",
-                        "points": 5
-                    },
-                    {
-                        "id": 1314,
-                        "title": "Veteran Gunners",
-                        "image": "veteran-gunners.png",
-                        "set": "weapons-team",
-                        "points": 5
-                    },
-                    {
-                        "divider": true
-                    },
-                    {
-                        "id": 2790,
-                        "title": "Cham Syndulla",
-                        "image": "cham-syndulla.png",
-                        "set": "weapons-team",
-                        "points": 5,
-                        "faction": "rebel",
-                        "unique": true,
-                        "dual": "offensive-retrofit",
-                        "equipped": false
-                    },
-                    {
-                        "id": 1005,
-                        "title": "Jyn Erso",
-                        "image": "jyn-erso.png",
-                        "set": "weapons-team",
-                        "points": 4,
-                        "faction": "rebel",
-                        "unique": true,
-                        "dual": "offensive-retrofit",
-                        "equipped": false
-                    },
-                    {
-                        "id": 1013,
-                        "title": "Darth Vader",
-                        "image": "darth-vader.png",
-                        "set": "weapons-team",
-                        "points": 3,
-                        "faction": "imperial",
-                        "unique": true,
-                        "dual": "offensive-retrofit",
-                        "equipped": false
-                    },
-                    {
-                        "id": 2052,
-                        "title": "Boarding Engineers",
-                        "image": "boarding-engineers.png",
-                        "set": "weapons-team",
-                        "points": 2,
-                        "dual": "offensive-retrofit"
-                    },
-                    {
-                        "id": 2053,
-                        "title": "Boarding Troopers",
-                        "image": "boarding-troopers.png",
-                        "set": "weapons-team",
-                        "points": 3,
-                        "dual": "offensive-retrofit"
-                    }
-                ],
                 "offensive-retrofit": [
                     {
                         "id": 1230,
@@ -789,120 +676,232 @@ class body extends React.Component {
 
 
                 ],
-                "commander": [
-                    {
-                        "id": 1304,
-                        "title": "Admiral Konstantine",
-                        "image": "admiral-konstantine.png",
-                        "set": "commander",
-                        "points": 23,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1069,
-                        "title": "Admiral Motti",
-                        "image": "admiral-motti.png",
-                        "set": "commander",
-                        "points": 24,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1179,
-                        "title": "Admiral Ozzel",
-                        "image": "admiral-ozzel.png",
-                        "set": "commander",
-                        "points": 20,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1070,
-                        "title": "Admiral Screed",
-                        "image": "admiral-screed.png",
-                        "set": "commander",
-                        "points": 26,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 2670,
-                        "title": "Admiral Sloane",
-                        "image": "admiral-sloane.png",
-                        "set": "commander",
-                        "points": 24,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1180,
-                        "title": "Darth Vader",
-                        "image": "darth-vader-commander.png",
-                        "set": "commander",
-                        "points": 36,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1182,
-                        "title": "Emperor Palpatine",
-                        "image": "palpatine.png",
-                        "set": "commander",
-                        "points": 35,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1303,
-                        "title": "General Tagge",
-                        "image": "general-tagge.png",
-                        "set": "commander",
-                        "points": 25,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1284,
-                        "title": "Grand Admiral Thrawn",
-                        "image": "grand-admiral-thrawn.png",
-                        "set": "commander",
-                        "points": 32,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1073,
-                        "title": "Grand Moff Tarkin",
-                        "image": "tarkin.png",
-                        "set": "commander",
-                        "points": 38,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    },
-                    {
-                        "id": 1400,
-                        "title": "Moff Jerjerrod",
-                        "image": "moff-jerjerrod.png",
-                        "set": "commander",
-                        "points": 23,
-                        "faction": "imperial",
-                        "unique": true,
-                        "equipped": false
-                    }
-                ]
             },
-
+            weaponsCards: [
+            {
+                "id": 1006,
+                "title": "Caitken and Shollan",
+                "image": "caitken-and-shollan.png",
+                "set": "weapons-team",
+                "points": 6,
+                "faction": "rebel",
+                "unique": true,
+                "equipped": false
+            },
+            {
+                "id": 1315,
+                "title": "Fire-Control Team",
+                "image": "fire-control-team.png",
+                "set": "weapons-team",
+                "points": 2
+            },
+            {
+                "id": 1085,
+                "title": "Flight Controllers",
+                "image": "flight-controllers.png",
+                "set": "weapons-team",
+                "points": 6
+            },
+            {
+                "id": 1086,
+                "title": "Gunnery Team",
+                "image": "gunnery-team.png",
+                "set": "weapons-team",
+                "points": 7
+            },
+            {
+                "id": 1211,
+                "title": "Ordnance Experts",
+                "image": "ordnance-experts.png",
+                "set": "weapons-team",
+                "points": 4
+            },
+            {
+                "id": 1210,
+                "title": "Ruthless Strategists",
+                "image": "ruthless-strategists.png",
+                "set": "weapons-team",
+                "points": 4
+            },
+            {
+                "id": 1087,
+                "title": "Sensor Team",
+                "image": "sensor-team.png",
+                "set": "weapons-team",
+                "points": 5
+            },
+            {
+                "id": 1314,
+                "title": "Veteran Gunners",
+                "image": "veteran-gunners.png",
+                "set": "weapons-team",
+                "points": 5
+            },
+            {
+                "divider": true
+            },
+            {
+                "id": 2790,
+                "title": "Cham Syndulla",
+                "image": "cham-syndulla.png",
+                "set": "weapons-team",
+                "points": 5,
+                "faction": "rebel",
+                "unique": true,
+                "dual": "offensive-retrofit",
+                "equipped": false
+            },
+            {
+                "id": 1005,
+                "title": "Jyn Erso",
+                "image": "jyn-erso.png",
+                "set": "weapons-team",
+                "points": 4,
+                "faction": "rebel",
+                "unique": true,
+                "dual": "offensive-retrofit",
+                "equipped": false
+            },
+            {
+                "id": 1013,
+                "title": "Darth Vader",
+                "image": "darth-vader.png",
+                "set": "weapons-team",
+                "points": 3,
+                "faction": "imperial",
+                "unique": true,
+                "dual": "offensive-retrofit",
+                "equipped": false
+            },
+            {
+                "id": 2052,
+                "title": "Boarding Engineers",
+                "image": "boarding-engineers.png",
+                "set": "weapons-team",
+                "points": 2,
+                "dual": "offensive-retrofit"
+            },
+            {
+                "id": 2053,
+                "title": "Boarding Troopers",
+                "image": "boarding-troopers.png",
+                "set": "weapons-team",
+                "points": 3,
+                "dual": "offensive-retrofit"
+            }
+        ],
+            commanderCards: [
+                {
+                    "id": 1304,
+                    "title": "Admiral Konstantine",
+                    "image": "admiral-konstantine.png",
+                    "set": "commander",
+                    "points": 23,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1069,
+                    "title": "Admiral Motti",
+                    "image": "admiral-motti.png",
+                    "set": "commander",
+                    "points": 24,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1179,
+                    "title": "Admiral Ozzel",
+                    "image": "admiral-ozzel.png",
+                    "set": "commander",
+                    "points": 20,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1070,
+                    "title": "Admiral Screed",
+                    "image": "admiral-screed.png",
+                    "set": "commander",
+                    "points": 26,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 2670,
+                    "title": "Admiral Sloane",
+                    "image": "admiral-sloane.png",
+                    "set": "commander",
+                    "points": 24,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1180,
+                    "title": "Darth Vader",
+                    "image": "darth-vader-commander.png",
+                    "set": "commander",
+                    "points": 36,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1182,
+                    "title": "Emperor Palpatine",
+                    "image": "palpatine.png",
+                    "set": "commander",
+                    "points": 35,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1303,
+                    "title": "General Tagge",
+                    "image": "general-tagge.png",
+                    "set": "commander",
+                    "points": 25,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1284,
+                    "title": "Grand Admiral Thrawn",
+                    "image": "grand-admiral-thrawn.png",
+                    "set": "commander",
+                    "points": 32,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1073,
+                    "title": "Grand Moff Tarkin",
+                    "image": "tarkin.png",
+                    "set": "commander",
+                    "points": 38,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                },
+                {
+                    "id": 1400,
+                    "title": "Moff Jerjerrod",
+                    "image": "moff-jerjerrod.png",
+                    "set": "commander",
+                    "points": 23,
+                    "faction": "imperial",
+                    "unique": true,
+                    "equipped": false
+                }
+            ]
         }
     }
 
@@ -980,7 +979,8 @@ class body extends React.Component {
         // console.log(this.state.selectedShips)
         this.setState({
             selectedShips: ships,
-            totalPoints: counter
+            totalPoints: counter,
+
         });
     };
 
@@ -990,12 +990,14 @@ class body extends React.Component {
         })
     };
 
-    upgradeAddHandler = (upgradedState, newPointTotal, cardUpdate) => {
+    upgradeAddHandler = (upgradedState, newPointTotal, weaponsCardUpdate, commanderCardUpdate) => {
         this.setState(() => {
             return {
                 selectedShips: upgradedState,
                 totalPoints: newPointTotal,
-                upgradeCards: cardUpdate
+                commanderCards: commanderCardUpdate,
+                weaponsCards: weaponsCardUpdate
+
             }
         });
     };
@@ -1010,7 +1012,7 @@ render(){
     return (
         <main>
             <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}/>
-            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} allCards={this.state.upgradeCards}/>
+            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} weaponsCards={this.state.weaponsCards} commanderCards={this.state.commanderCards}/>
         </main>
 
     )

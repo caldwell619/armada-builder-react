@@ -15,7 +15,7 @@ class Commander extends React.Component {
 
 
         let allCards = this.props.allCards;
-        let commanderCards = allCards["commander"];
+        let commanderCards = [...this.props.commanderCards]
 
         let upgrades = newShips[shipIndex].upgrades;
         let currentPoints = this.props.points;
@@ -42,7 +42,7 @@ class Commander extends React.Component {
     render() {
         return (
             <div>
-                {this.props.allCards.commander.map(commander => {
+                {this.props.commanderCards.map(commander => {
                     if (commander.faction === "imperial") {
                         if (commander.points < 400 - this.props.points){
                             if (commander.equipped === false){
