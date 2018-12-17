@@ -10,6 +10,7 @@ import Title from './Upgrades/Title'
 import Turbolasers from './Upgrades/Turbolasers'
 import WeaponsTeam from './Upgrades/WeaponsTeam'
 import DefensiveRetrofit from './Upgrades/DefensiveRetrofit'
+import IonCannon from './Upgrades/IonCannon'
 
 
 
@@ -23,10 +24,11 @@ const right = (props) => {
             <Route path='/assault' component={AssaultCards}/>
             <Route path='/defense' component={DefenseCards}/>
             <Route path='/Navigation' component={NavigationCards}/>
-            <Route path="/ships/:id/upgrades/commander" render={(routeProps) => <Commander {...routeProps} allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} commanderCards={props.commanderCards}/>}/>
-            <Route path="/ships/:id/upgrades/title" render={(routeProps) => <Title {...routeProps}  allCards={props.allCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
-            <Route path="/ships/:id/upgrades/weapons-team" render={(routeProps) => <WeaponsTeam {...routeProps} commanderCards={props.commanderCards} weaponsCards={props.weaponsCards} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
+            <Route path="/ships/:id/upgrades/commander" render={(routeProps) => <Commander {...routeProps} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradeCards={props.upgradeCards}/>}/>
+            <Route path="/ships/:id/upgrades/title" render={(routeProps) => <Title {...routeProps} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints} upgradeCards={props.upgrades}/>}/>
+            <Route path="/ships/:id/upgrades/weapons-team" render={(routeProps) => <WeaponsTeam {...routeProps} shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints} upgradeCards={props.upgradeCards}/>}/>
             <Route path="/ships/:id/upgrades/turbolasers" render={(routeProps) => <DefensiveRetrofit {...routeProps}  shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
+            <Route path="/ships/:id/upgrades/turbolasers" render={() => <IonCannon shipInfo={props.shipInfo} upgrade={props.upgrade} points={props.points} upgradePoints={props.upgradePoints}/>}/>
         </div>
     )
 };

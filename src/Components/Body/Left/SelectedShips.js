@@ -12,7 +12,7 @@ class selectedShips extends React.Component {
     };
 
     deleteUpgrade = (ship, upgrade) => {
-        this.props.upgradeDelete(ship.id, upgrade.set)
+        this.props.upgradeDelete(ship.id, upgrade.set, upgrade.title)
     };
 
     toggleHandler = (id) => {
@@ -25,7 +25,6 @@ class selectedShips extends React.Component {
     };
 
     render() {
-        console.log(this.props.shipInfo);
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
