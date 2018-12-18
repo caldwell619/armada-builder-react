@@ -1,5 +1,5 @@
 import React from 'react';
-import {cards} from '../../../data/cards.js'
+import {cards} from '../../../../data/cards.js'
 
 const turbolasers = () => {
     return (
