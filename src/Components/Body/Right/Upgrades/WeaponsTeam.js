@@ -19,37 +19,25 @@ class WeaponsTeam extends React.Component{
         let upgradeCards = [...this.props.upgradeCards];
         if (currentPoints + card.points < 400) {
             upgrades["weapons-team"] = card;
+            if (currentPoints + card.points < 400) {
+                if (card.title === "Darth Vader"){
+                    upgradeCards.forEach(upgrade => {
+                        if (card.title === upgrade.title){
+                            console.log("meeting criteria:");
+                            console.log(upgrade);
+                            upgrade.equipped = true;
+                            upgrade.available = false;
+                        }
+                    })
+                }
+            }
             if (card.unique) {
                 card.equipped = true;
 
-                //grab all commander cards
-                upgradeCards.forEach(upgradeCard => {
-                    if (upgradeCard.set === "weapons-team"){
-                        //go through all chosen ships
-                        newShips.forEach(ship => {
-                            //turn the values of the upgrades to an array
-                            Object.values(ship.upgrades).forEach(equippedUpgrade => {
-                                //if its not empty
-                                if (equippedUpgrade !== null){
-                                    //makes comparison against clicked on card
-                                    if (equippedUpgrade.title === upgradeCard.title){
-                                        //sets the value equipped of the clicked on card in the commander array to true
-                                        upgradeCard.equipped = true;
-                                    }
-                                }
-                            })
-                        });
-                    }
-                });
-                upgradeCards.forEach(upgradeCard => {
-                    if (upgradeCard.set === "commander") {
-                        if (upgradeCard.title === card.title) {
-                            upgradeCard.equipped = true;
-                        }
-                    }
-                })
-            }
 
+
+            }
+            let upgradeType = card.set;
             let counter = 0;
             newShips.forEach(ship => {
                 counter += ship.points;
@@ -60,7 +48,7 @@ class WeaponsTeam extends React.Component{
                 });
             });
             //sending back the new values
-            this.props.upgrade(newShips, counter, upgradeCards);
+            this.props.upgrade(newShips, counter, upgradeCards, upgradeType);
         }
     };
 
@@ -80,7 +68,7 @@ class WeaponsTeam extends React.Component{
 
                                     if (newShips[shipIndex].dual === true){
                                         // console.log(card);
-                                        if (card.equipped === false || card.equipped === undefined){
+                                        if (card.equipped === undefined || card.equipped === false && card.available && card.available === true){
                                             return (
                                                 <div className="ship-card span-1-of-3" key={card.id}>
                                                     <img src={`/images/cards/upgrades/weapons-team/${card.image}`}

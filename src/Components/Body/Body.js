@@ -17,7 +17,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 10,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1205,
@@ -26,7 +27,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 5,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1308,
@@ -35,7 +37,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 2,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1307,
@@ -44,7 +47,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 3,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1012,
@@ -53,7 +57,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 5,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1206,
@@ -62,7 +67,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 2,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1309,
@@ -71,7 +77,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 7,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1078,
@@ -80,7 +87,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 3,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1104,
@@ -89,7 +97,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 7,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1014,
@@ -98,7 +107,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 7,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1399,
@@ -107,7 +117,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 2,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1008,
@@ -116,7 +127,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 5,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 2672,
@@ -125,7 +137,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 4,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1084,
@@ -134,7 +147,8 @@ class body extends React.Component {
                     "set": "officer",
                     "points": 7,
                     "faction": "imperial",
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 2791,
@@ -142,7 +156,8 @@ class body extends React.Component {
                     "image": "swm27-hondo-ohnaka.png",
                     "set": "officer",
                     "points": 2,
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1017,
@@ -150,7 +165,8 @@ class body extends React.Component {
                     "image": "strategic-adviser.png",
                     "set": "officer",
                     "points": 4,
-                    "unique": true
+                    "unique": true,
+                    "available": true
                 },
                 {
                     "id": 1311,
@@ -405,7 +421,7 @@ class body extends React.Component {
                     "points": 3,
                     "faction": "imperial",
                     "unique": true,
-                    "group": "vader",
+                    "available": true,
                     "dual": "weapons-team",
                     "equipped": false
                 },
@@ -672,56 +688,64 @@ class body extends React.Component {
                     "points": 6,
                     "faction": "rebel",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1315,
                     "title": "Fire-Control Team",
                     "image": "fire-control-team.png",
                     "set": "weapons-team",
-                    "points": 2
+                    "points": 2,
+                    "available": true
                 },
                 {
                     "id": 1085,
                     "title": "Flight Controllers",
                     "image": "flight-controllers.png",
                     "set": "weapons-team",
-                    "points": 6
+                    "points": 6,
+                    "available": true
                 },
                 {
                     "id": 1086,
                     "title": "Gunnery Team",
                     "image": "gunnery-team.png",
                     "set": "weapons-team",
-                    "points": 7
+                    "points": 7,
+                    "available": true
                 },
                 {
                     "id": 1211,
                     "title": "Ordnance Experts",
                     "image": "ordnance-experts.png",
                     "set": "weapons-team",
-                    "points": 4
+                    "points": 4,
+                    "available": true
                 },
                 {
                     "id": 1210,
                     "title": "Ruthless Strategists",
                     "image": "ruthless-strategists.png",
                     "set": "weapons-team",
-                    "points": 4
+                    "points": 4,
+                    "available": true
                 },
                 {
                     "id": 1087,
                     "title": "Sensor Team",
                     "image": "sensor-team.png",
                     "set": "weapons-team",
-                    "points": 5
+                    "points": 5,
+                    "available": true
                 },
                 {
                     "id": 1314,
                     "title": "Veteran Gunners",
                     "image": "veteran-gunners.png",
                     "set": "weapons-team",
-                    "points": 5
+                    "points": 5,
+                    "available": true
                 },
                 {
                     "divider": true
@@ -756,7 +780,7 @@ class body extends React.Component {
                     "points": 3,
                     "faction": "imperial",
                     "unique": true,
-                    "group": "vader",
+                    "available": true,
                     "dual": "offensive-retrofit",
                     "equipped": false
                 },
@@ -766,7 +790,8 @@ class body extends React.Component {
                     "image": "boarding-engineers.png",
                     "set": "weapons-team",
                     "points": 2,
-                    "dual": "offensive-retrofit"
+                    "dual": "offensive-retrofit",
+                    "available": true
                 },
                 {
                     "id": 2053,
@@ -774,7 +799,8 @@ class body extends React.Component {
                     "image": "boarding-troopers.png",
                     "set": "weapons-team",
                     "points": 3,
-                    "dual": "offensive-retrofit"
+                    "dual": "offensive-retrofit",
+                    "available": true
                 },
 
                 {
@@ -785,7 +811,8 @@ class body extends React.Component {
                     "points": 23,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1069,
@@ -795,7 +822,8 @@ class body extends React.Component {
                     "points": 24,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1179,
@@ -805,7 +833,8 @@ class body extends React.Component {
                     "points": 20,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1070,
@@ -815,7 +844,8 @@ class body extends React.Component {
                     "points": 26,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 2670,
@@ -825,7 +855,8 @@ class body extends React.Component {
                     "points": 24,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1180,
@@ -836,7 +867,8 @@ class body extends React.Component {
                     "faction": "imperial",
                     "unique": true,
                     "group": "vader",
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1182,
@@ -846,7 +878,8 @@ class body extends React.Component {
                     "points": 35,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1303,
@@ -856,7 +889,8 @@ class body extends React.Component {
                     "points": 25,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1284,
@@ -866,7 +900,8 @@ class body extends React.Component {
                     "points": 32,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1073,
@@ -876,7 +911,8 @@ class body extends React.Component {
                     "points": 38,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 },
                 {
                     "id": 1400,
@@ -886,10 +922,12 @@ class body extends React.Component {
                     "points": 23,
                     "faction": "imperial",
                     "unique": true,
-                    "equipped": false
+                    "equipped": false,
+                    "available": true
                 }
 
-            ]
+            ],
+            commanderChosen: false
         }
     }
 
@@ -902,7 +940,7 @@ class body extends React.Component {
                 totalPoints: newTotalPoints
             }
         )
-        };
+    };
 
     //deleting ships and accounting for the points deduction
     deleteShipHandler = (id) => {
@@ -916,20 +954,27 @@ class body extends React.Component {
         const upgradeCards = [...this.state.upgrades];
         const ships = [...this.state.selectedShips];
         ships[shipIndex] = individualShip;
-
+        let commanderChosen = this.state.commanderChosen;
         //use this to set values of equipped to true
         upgradeCards.forEach(card => {
             ships.forEach(ship => {
                 Object.values(ship.upgrades).forEach(upgrade => {
-                    if (upgrade != null){
-                        if (upgrade.title === card.title){
+                    if (upgrade != null) {
+                        if (upgrade.title === card.title) {
                             card.equipped = false;
+                            card.available = true;
                         }
                     }
                 })
+            });
+            Object.values(individualShip.upgrades).forEach(upgrade => {
+                if (upgrade != null) {
+                    if (upgrade.set === "commander") {
+                        commanderChosen = false;
+                    }
+                }
             })
         });
-
 
         ships.splice(shipIndex, 1);
 
@@ -939,17 +984,18 @@ class body extends React.Component {
             //add all ship points
             counter += ship.points;
             Object.values(ship.upgrades).forEach(upgrade => {
-                if (upgrade != null){
+                if (upgrade != null) {
                     //add all upgrades assigned to ships
                     counter += upgrade.points;
                 }
 
-                });
+            });
         });
         // console.log(this.state.selectedShips)
         this.setState({
             selectedShips: ships,
-            totalPoints: counter
+            totalPoints: counter,
+            commanderChosen: commanderChosen
         });
     };
 
@@ -966,49 +1012,24 @@ class body extends React.Component {
         ships[shipIndex] = individualShip;
         individualShip.upgrades[upgradeType] = null;
 
-        // ships.forEach(ship => {
-        //     Object.values(ship.upgrades).forEach(upgrade => {
-        //         if (upgrade !== null){
-        //             upgrades.forEach(globalUpgrade => {
-        //                 if (globalUpgrade.title === upgrade.title){
-        //                     console.log(upgrade);
-        //                 }
-        //             });
-        //             //gives all upgrades left that aren't deleted
-        //             console.log(upgrade);
-        //         }
-        //     })
-        // });
-
-        //if deleting commander
-        if (upgradeType === "commander"){
-            upgrades.forEach(card => {
-                if (card.set === "commander"){
-                    ships.forEach(ship => {
-                        Object.values(ship.upgrades).forEach(upgrade => {
-                            if (upgrade !== null){
-                                if (card.title !== upgrade.title){
-                                    card.equipped = false;
-                                } else {
-                                    card.equipped = false;
-                                }
-                            }
-                        })
-                    });
-                }
-            })
-        }
-        else if(upgradeType === "weapons-team"){
-            upgrades.forEach(card => {
-                if (upgradeTitle === "Darth Vader"){
-                    if (card.title === upgradeTitle){
-                        console.log(card);
-                        card.equipped = false;
+        //look for vader, if present turn all vader to equipped
+            if (upgradeTitle === "Darth Vader"){
+                upgrades.forEach(upgrade => {
+                    if (upgradeTitle === upgrade.title){
+                        upgrade.equipped = false;
+                        upgrade.available = true;
                     }
-                }
-            })
+                })
+            }
 
+
+
+
+        let commanderChosen = this.state.commanderChosen;
+        if (upgradeType === "commander") {
+            commanderChosen = false;
         }
+
 
         //points calculation based on state
         let counter = 0;
@@ -1016,18 +1037,18 @@ class body extends React.Component {
             //add all ship points
             counter += ship.points;
             Object.values(ship.upgrades).forEach(upgrade => {
-                if (upgrade != null){
+                if (upgrade != null) {
                     //add all upgrades assigned to ships
                     counter += upgrade.points;
                 }
-
-                });
+            });
         });
         // console.log(this.state.selectedShips)
         this.setState({
             selectedShips: ships,
             totalPoints: counter,
-            upgrades: upgrades
+            upgrades: upgrades,
+            commanderChosen: commanderChosen
 
         });
     };
@@ -1038,43 +1059,43 @@ class body extends React.Component {
         })
     };
 
-    upgradeAddHandler = (upgradedState, newPointTotal, updatedCards) => {
+    upgradeAddHandler = (upgradedState, newPointTotal, updatedCards, upgradeType) => {
         // const upgradeCards = [...this.state.upgrades];
         const ships = [...this.state.selectedShips];
-        updatedCards.forEach(card => {
-            ships.forEach(ship => {
-                Object.values(ship.upgrades).forEach(upgrade => {
-                    if (upgrade != null){
-                        if (upgrade.title === card.title){
-                            console.log(card);
-                            card.equipped = true;
-                        }
-                    }
-                })
-            })
-        });
+
+
+        let commanderChosen = this.state.commanderChosen;
+        if (upgradeType === "commander") {
+            commanderChosen = true;
+        }
         this.setState(() => {
             return {
                 selectedShips: upgradedState,
                 totalPoints: newPointTotal,
-                upgrades: updatedCards
+                upgrades: updatedCards,
+                commanderChosen: commanderChosen
             }
         });
     };
+
     // weaponsCardUpdate, commanderCardUpdate
 
-render(){
-    //deciding whether or not to display the left side
+    render() {
+        //deciding whether or not to display the left side
 
-    //rendering the left, if the condition is met
-    return (
-        <main>
-            <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler} points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler} commanderCards={this.state.commanderCards}/>
-            <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints} upgrade={this.upgradeAddHandler} upgradeCards={this.state.upgrades}/>
-        </main>
+        //rendering the left, if the condition is met
+        return (
+            <main>
+                <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
+                      points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
+                      commanderCards={this.state.commanderCards}/>
+                <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
+                       commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
+                       upgradeCards={this.state.upgrades}/>
+            </main>
 
-    )
-}
+        )
+    }
 }
 
 

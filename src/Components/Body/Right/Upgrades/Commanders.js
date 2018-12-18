@@ -1,4 +1,5 @@
 import React from 'react';
+import {cards} from "../../../../data/cards";
 
 
 class Commander extends React.Component {
@@ -12,26 +13,25 @@ class Commander extends React.Component {
         });
         const newShips = [...this.props.shipInfo];
         const upgradeCards = [...this.props.upgradeCards];
-        upgradeCards.forEach(upgrade => {
-            if (upgrade.set === "commander"){
-                console.log(upgrade);
-                upgrade.equipped = true;
-            }
-        });
+
+        let upgradeType = card.set;
         let upgrades = newShips[shipIndex].upgrades;
         let currentPoints = this.props.points;
         if (currentPoints + card.points < 400) {
             upgrades.commander = card;
-            // card.equipped = true;
-            upgradeCards.forEach(upgradeCard => {
-                // if (card.group && upgradeCard.group && card.group === upgradeCard.group){
-                //     upgradeCard.equipped = true;
-                // }
-                if (upgradeCard.title === card.title){
-                    console.log(card);
-                }
-            })
+            if (card.title === "Darth Vader"){
+                upgradeCards.forEach(upgrade => {
+                    if (card.title === upgrade.title){
+                        console.log("meeting criteria:");
+                        console.log(upgrade);
+                        upgrade.equipped = true;
+                        upgrade.available = false;
+                    }
+                })
+            }
         }
+
+
         let counter = 0;
         newShips.forEach(ship => {
             counter += ship.points;
@@ -42,7 +42,7 @@ class Commander extends React.Component {
             });
         });
 
-        this.props.upgrade(newShips, counter, upgradeCards);
+        this.props.upgrade(newShips, counter, upgradeCards, upgradeType);
     };
 
     render() {
@@ -52,13 +52,14 @@ class Commander extends React.Component {
                     if (commander.set === "commander") {
                         if (commander.faction === "imperial") {
                             if (commander.points < 400 - this.props.points) {
-                                if (commander.equipped === false) {
+                                if (this.props.commanderChosen === false && commander.available === true){
+                                    console.log(commander);
                                     return (
-                                        <div className="ship-card span-1-of-3" key={commander.id}>
-                                            <img src={`/images/cards/upgrades/commander/${commander.image}`} alt="img"
-                                                 onClick={this.addUpgradeHandler.bind(this, commander)}/>
-                                        </div>
-                                    )
+                                            <div className="ship-card span-1-of-3" key={commander.id}>
+                                                <img src={`/images/cards/upgrades/commander/${commander.image}`} alt="img"
+                                                     onClick={this.addUpgradeHandler.bind(this, commander)}/>
+                                            </div>
+                                        )
                                 }
                             }
                         }
