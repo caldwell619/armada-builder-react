@@ -2,8 +2,8 @@ import React from 'react';
 import {cards} from '../../../../data/cards.js'
 import Upgrade from '../IndividualUpgrade'
 
-class WeaponsTeam extends React.Component{
-    constructor(props){
+class WeaponsTeam extends React.Component {
+    constructor(props) {
         super()
     }
 
@@ -18,13 +18,17 @@ class WeaponsTeam extends React.Component{
 
         let upgradeCards = [...this.props.upgradeCards];
         if (currentPoints + card.points < 400) {
+
+            // if its vader, boarding troopers, etc..
+            // fill offensive retrofit slot as well
+
             upgrades["weapons-team"] = card;
             if (currentPoints + card.points < 400) {
-                if (card.title === "Darth Vader"){
+                if (card.title === "Darth Vader") {
+                    // going through all upgrades
                     upgradeCards.forEach(upgrade => {
-                        if (card.title === upgrade.title){
-                            console.log("meeting criteria:");
-                            console.log(upgrade);
+                        //if the title matches the card selected
+                        if (card.title === upgrade.title) {
                             upgrade.equipped = true;
                             upgrade.available = false;
                         }
@@ -35,9 +39,9 @@ class WeaponsTeam extends React.Component{
                 card.equipped = true;
 
 
-
             }
             let upgradeType = card.set;
+            // adding up the points based on the state upgrades
             let counter = 0;
             newShips.forEach(ship => {
                 counter += ship.points;
@@ -52,35 +56,21 @@ class WeaponsTeam extends React.Component{
         }
     };
 
-    render(){
+    render() {
         return (
             <div>
                 {this.props.upgradeCards.map((card) => {
+                    // could try using function above. call named function passing in card
                     if (card.set === "weapons-team") {
                         const shipIndex = this.props.shipInfo.findIndex(index => {
                             return index.id === this.props.match.params.id
                         });
                         const newShips = [...this.props.shipInfo];
-                        if (card.faction === "imperial" || !card.faction){
-                            if (newShips[shipIndex]){
-                                if (card.dual || !card.dual){
-                                    //comparison problem
+                        if (card.faction === "imperial" || !card.faction) {
+                            if (newShips[shipIndex]) {
+                                if (card.dual && newShips[shipIndex].dual === true) {
 
-                                    if (newShips[shipIndex].dual === true){
-                                        // console.log(card);
-                                        if (card.equipped === undefined || card.equipped === false && card.available && card.available === true){
-                                            return (
-                                                <div className="ship-card span-1-of-3" key={card.id}>
-                                                    <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
-                                                         alt="img"
-                                                         onClick={this.addUpgradeHandler.bind(this, card)}/>
-                                                </div>
-                                            )
-                                        } else {
-                                            console.log(card);
-                                        }
-
-                                    } else if (!card.dual) {
+                                    if (card.equipped === undefined || card.equipped === false && card.available && card.available === true) {
                                         return (
                                             <div className="ship-card span-1-of-3" key={card.id}>
                                                 <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
@@ -89,10 +79,22 @@ class WeaponsTeam extends React.Component{
                                             </div>
                                         )
                                     } else {
-                                        console.log(card)
+                                        console.log(card);
                                     }
+
+                                } else if (!card.dual) {
+                                    return (
+                                        <div className="ship-card span-1-of-3" key={card.id}>
+                                            <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
+                                                 alt="img"
+                                                 onClick={this.addUpgradeHandler.bind(this, card)}/>
+                                        </div>
+                                    )
+                                } else {
+                                    console.log(card)
                                 }
                             }
+
                         }
                     }
                 })}
@@ -100,4 +102,5 @@ class WeaponsTeam extends React.Component{
         )
     }
 }
+
 export default WeaponsTeam;

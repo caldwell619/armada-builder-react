@@ -545,9 +545,12 @@ card display - right side
     padding: 0 4% 0 2%;
     margin:  5px 0 5px 50px;
     border-left: 1px solid black;
-
+    width: 60%;
 }
-
+.equipped-upgrades {
+    display: flex;
+    justify-content: center;
+}
 .upgrade-name {
     font-size: 15px;
 }
