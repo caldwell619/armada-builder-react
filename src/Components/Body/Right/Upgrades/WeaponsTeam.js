@@ -1,6 +1,4 @@
 import React from 'react';
-import {cards} from '../../../../data/cards.js'
-import Upgrade from '../IndividualUpgrade'
 
 class WeaponsTeam extends React.Component {
     constructor(props) {
@@ -8,55 +6,27 @@ class WeaponsTeam extends React.Component {
     }
 
     addUpgradeHandler = (card) => {
-        //finding the index of targeted ship
-        const shipIndex = this.props.shipInfo.findIndex(index => {
+        //defining which ship to grab
+        const newShips = [...this.props.shipInfo];
+        const shipIndex = newShips.findIndex(index => {
             return (index.id === this.props.match.params.id);
         });
-        const newShips = [...this.props.shipInfo];
         const upgrades = newShips[shipIndex].upgrades;
-        const currentPoints = this.props.points;
+        // const stateGivenCards = [...this.props.upgradeCards];
 
-        let upgradeCards = [...this.props.upgradeCards];
-        if (currentPoints + card.points < 400) {
+        //getting the type of upgrade from the url
+        const path = this.props.match.path.split("/");
+        const upgradeType = path[path.length - 1];
 
-            // if its vader, boarding troopers, etc..
-            // fill offensive retrofit slot as well
+        //equipping card
+        upgrades[upgradeType] = card;
 
-            upgrades["weapons-team"] = card;
-            if (currentPoints + card.points < 400) {
-                if (card.title === "Darth Vader") {
-                    // going through all upgrades
-                    upgradeCards.forEach(upgrade => {
-                        //if the title matches the card selected
-                        if (card.title === upgrade.title) {
-                            upgrade.equipped = true;
-                            upgrade.available = false;
-                        }
-                    })
-                }
-            }
-            if (card.unique) {
-                card.equipped = true;
-
-
-            }
-            let upgradeType = card.set;
-            // adding up the points based on the state upgrades
-            let counter = 0;
-            newShips.forEach(ship => {
-                counter += ship.points;
-                Object.values(ship.upgrades).forEach(upgrade => {
-                    if (upgrade != null) {
-                        counter += upgrade.points;
-                    }
-                });
-            });
-            //sending back the new values
-            this.props.upgrade(newShips, counter, upgradeCards, upgradeType);
-        }
+        this.props.upgrade(newShips, card);
     };
 
     render() {
+
+        //starting point - change below to normalized data
         return (
             <div>
                 {this.props.upgradeCards.map((card) => {
