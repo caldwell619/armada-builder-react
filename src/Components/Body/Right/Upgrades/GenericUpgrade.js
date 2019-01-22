@@ -4,34 +4,23 @@ import {upgradeCards} from '../../../../data/cards.js'
 
 class GenericUpgrade extends React.Component {
     constructor(props) {
-        super();
+        super(props);
     }
 
     addUpgradeHandler = (card) => {
         //defining necessary variables
-        const shipIndex = this.props.shipInfo.findIndex(index => {
+        const newShips = [...this.props.shipInfo];
+        const shipIndex = newShips.findIndex(index => {
             return (index.id === this.props.match.params.id);
         });
-        const newShips = [...this.props.shipInfo];
         const upgradeCategory = this.props.match.params.upgradeType;
         const targetedShip = newShips[shipIndex];
 
         //equipping card
         targetedShip.upgrades[upgradeCategory] = card;
 
-        //counting up points
-        let counter = 0;
-        newShips.forEach(ship => {
-            counter += ship.points;
-            Object.values(ship.upgrades).forEach(upgrade => {
-                if (upgrade != null) {
-                    counter += upgrade.points;
-                }
-            });
-        });
-
         //sending back the new values
-        this.props.upgrade(newShips, counter, upgradeCards, card);
+        this.props.upgrade(newShips, card);
     };
 
     render() {
