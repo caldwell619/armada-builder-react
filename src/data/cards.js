@@ -619,7 +619,7 @@ const upgradeCards = [
     {
         "id": 2789,
         "title": "External Racks",
-        "image": "swm27-external-racks.png",
+        "image": "external-racks.png",
         "set": "ordnance",
         "points": 3
     },
@@ -655,7 +655,7 @@ const upgradeCards = [
     {
         "id": 1300,
         "title": "G-8 Experimental Projector",
-        "image": "experimental_projector.png",
+        "image": "g-8_experimental_projector.png",
         "set": "experimental-retrofit",
         "points": 8,
         "unique": true
@@ -735,7 +735,7 @@ const upgradeCards = [
     {
         "id": 2673,
         "title": "Disposable Capacitors",
-        "image": "swm26-disposable-capacitors.png",
+        "image": "disposable-capacitors.png",
         "set": "offensive-retrofit",
         "points": 3
     },
@@ -788,7 +788,7 @@ const upgradeCards = [
     {
         "id": 2790,
         "title": "Cham Syndulla",
-        "image": "swm27-cham-syndulla.png",
+        "image": "cham-syndulla.png",
         "set": "offensive-retrofit",
         "points": 5,
         "faction": "rebel",
@@ -808,7 +808,7 @@ const upgradeCards = [
     {
         "id": 1013,
         "title": "Darth Vader",
-        "image": "darth-vader-boarding.png",
+        "image": "darth-vader.png",
         "set": "offensive-retrofit",
         "points": 3,
         "faction": "imperial",
@@ -818,7 +818,7 @@ const upgradeCards = [
     {
         "id": 2052,
         "title": "Boarding Engineers",
-        "image": "swm27-boarding-engineers.png",
+        "image": "boarding-engineers.png",
         "set": "offensive-retrofit",
         "points": 2,
         "dual": "weapons-team"
@@ -826,7 +826,7 @@ const upgradeCards = [
     {
         "id": 2053,
         "title": "Boarding Troopers",
-        "image": "swm26-boarding-troopers.png",
+        "image": "boarding-troopers.png",
         "set": "offensive-retrofit",
         "points": 3,
         "dual": "weapons-team"
@@ -1140,7 +1140,7 @@ const upgradeCards = [
     {
         "id": 1076,
         "title": "Admiral Chiraneau",
-        "image": "admiral_chiraneau.png",
+        "image": "admiral-chiraneau.png",
         "set": "officer",
         "points": 10,
         "faction": "imperial",
@@ -1248,7 +1248,7 @@ const upgradeCards = [
     {
         "id": 2672,
         "title": "The Grand Inquisitor",
-        "image": "swm26-the-grand-inquisitor.png",
+        "image": "the-grand-inquisitor.png",
         "set": "officer",
         "points": 4,
         "faction": "imperial",
@@ -1257,7 +1257,7 @@ const upgradeCards = [
     {
         "id": 1084,
         "title": "Wulff Yularen",
-        "image": "wulff_yularen.png",
+        "image": "wulff-yularen.png",
         "set": "officer",
         "points": 7,
         "faction": "imperial",
@@ -1266,7 +1266,7 @@ const upgradeCards = [
     {
         "id": 2791,
         "title": "Hondo Ohnaka",
-        "image": "swm27-hondo-ohnaka.png",
+        "image": "hondo-ohnaka.png",
         "set": "officer",
         "points": 2,
         "unique": true
@@ -1559,6 +1559,10 @@ const upgradeCards = [
         "faction": "imperial",
         "unique": true
     },
+
+];
+
+const objectiveCards = [
     {
         "id": 1152,
         "title": "Dangerous Territory",
@@ -1703,7 +1707,7 @@ const upgradeCards = [
         "image": "targeting-beacons.png",
         "set": "assault"
     }
-]
+];
 
 const shipCards = [
     {
@@ -2218,6 +2222,7 @@ const shipCards = [
         "points": 120,
         "faction": "imperial",
         "size": "large",
+        "dual": true,
         "upgrades": {
             "commander": null,
             "officer": null,
@@ -3205,4 +3210,4 @@ const squadronCards = [
     }
 ];
 
-export {upgradeCards, shipCards, squadronCards};
+export {upgradeCards, shipCards, squadronCards, objectiveCards};

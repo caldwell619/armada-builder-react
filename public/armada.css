@@ -342,10 +342,14 @@ add ship
     font-family: 'Russo One', sans-serif;
     font-size: 25px;
     transition: all .4s;
+    cursor: pointer;
 }
 #ship-button:active{
     background-color: #515151;
     transform: scale(0.95);
+}
+#ship-button:hover {
+    background-color: rgba(0, 0, 0, 0.42);
 }
 
 #ship-button a {
@@ -371,6 +375,10 @@ add-squadron
     background: none;
     font-size: 20px;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+#squad-button:hover {
+    border: 1px solid gray;
 }
 
 #squad-button span {
@@ -402,6 +410,25 @@ objectives
     background: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    cursor: pointer;
+}
+.objective-selector-container {
+    display: flex;
+    justify-content: center;
+}
+.objective-selector-container ul {
+    width: 35%;
+}
+.action-bar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ship-name,
+.delete {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
 }
 
 .obj-button:hover { background-color: #d3d2d2; }
@@ -527,6 +554,7 @@ card display - right side
 .ship-card img {
     height: 450px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .card img:hover { transform: scale(1.1) }
@@ -548,8 +576,7 @@ card display - right side
     width: 60%;
 }
 .equipped-upgrades {
-    display: flex;
-    justify-content: center;
+
 }
 .upgrade-name {
     font-size: 15px;

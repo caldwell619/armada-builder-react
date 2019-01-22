@@ -81,7 +81,6 @@ class Ships extends React.Component {
             </div>
         )
     }
-
 }
 
 export default Ships;

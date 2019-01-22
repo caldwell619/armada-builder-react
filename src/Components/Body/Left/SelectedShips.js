@@ -6,8 +6,8 @@ class selectedShips extends React.Component {
         super();
     }
 
-    deleteShip = (s) => {
-        this.props.delete(s.id);
+    deleteShip = (ship) => {
+        this.props.delete(ship);
     };
 
     deleteUpgrade = (ship, upgrade) => {
@@ -25,6 +25,7 @@ class selectedShips extends React.Component {
 
     //try adding if upgrade is equipped, change icon color or something
     render() {
+
         return (
             <div className="selected-ships">
                 <div className="chosen-cards-container">
@@ -39,19 +40,21 @@ class selectedShips extends React.Component {
                                          onClick={this.toggleHandler.bind(this, ship.id)}>{ship.name}</div>
                                     <div className="delete ion-trash-a" onClick={this.deleteShip.bind(this, ship)}/>
                                 </div>
-                                <div className="upgrade-bar" key={ship.id + "-upgradeBar"}>
+                                <div className="upgrade-bar" key={`${ship.id}-upgradeBar`}>
                                     {Object.keys(ship.upgrades).map(upgradeType => {
                                         if (ship.upgradesShown) {
-                                            return (
-                                                <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
-                                                    <button>
-                                                        <img src={`/images/icons/${upgradeType}.png`}
-                                                             alt="upgrade icon"/>
-                                                    </button>
-                                                </Link>
-                                            )
+                                                    return (
+                                                        <Link to={`/ships/${ship.id}/upgrades/${upgradeType}`}>
+                                                            <button>
+                                                                <img src={`/images/icons/${upgradeType}.png`}
+                                                                     alt="upgrade icon"/>
+                                                            </button>
+                                                        </Link>
+                                                    )
+                                                }
+                                            })
+
                                         }
-                                    })}
                                 </div>
                                 <div className="equipped-upgrades">
                                     {Object.values(ship.upgrades).map(upgrade => {

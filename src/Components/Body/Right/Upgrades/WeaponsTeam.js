@@ -25,48 +25,35 @@ class WeaponsTeam extends React.Component {
     };
 
     render() {
+        const shipIndex = this.props.shipInfo.findIndex(index => {
+            return index.id === this.props.match.params.id
+        });
+        const newShips = [...this.props.shipInfo];
 
-        //starting point - change below to normalized data
+        //making cards to display
+        const weaponsCards = [];
+        this.props.upgradeCards.forEach(card => {
+            if (card.set === "weapons-team") {
+                if (!card.faction || card.faction === "imperial") {
+                    if (newShips[shipIndex] && newShips[shipIndex].dual === true) {
+                        weaponsCards.push(card);
+                    } else if (!card.dual) {
+                        weaponsCards.push(card);
+                    }
+                }
+            }
+        });
+
         return (
             <div>
-                {this.props.upgradeCards.map((card) => {
-                    // could try using function above. call named function passing in card
-                    if (card.set === "weapons-team") {
-                        const shipIndex = this.props.shipInfo.findIndex(index => {
-                            return index.id === this.props.match.params.id
-                        });
-                        const newShips = [...this.props.shipInfo];
-                        if (card.faction === "imperial" || !card.faction) {
-                            if (newShips[shipIndex]) {
-                                if (card.dual && newShips[shipIndex].dual === true) {
-
-                                    if (card.equipped === undefined || card.equipped === false && card.available && card.available === true) {
-                                        return (
-                                            <div className="ship-card span-1-of-3" key={card.id}>
-                                                <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
-                                                     alt="img"
-                                                     onClick={this.addUpgradeHandler.bind(this, card)}/>
-                                            </div>
-                                        )
-                                    } else {
-                                        console.log(card);
-                                    }
-
-                                } else if (!card.dual) {
-                                    return (
-                                        <div className="ship-card span-1-of-3" key={card.id}>
-                                            <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
-                                                 alt="img"
-                                                 onClick={this.addUpgradeHandler.bind(this, card)}/>
-                                        </div>
-                                    )
-                                } else {
-                                    console.log(card)
-                                }
-                            }
-
-                        }
-                    }
+                {weaponsCards.map(card => {
+                    return (
+                        <div className="ship-card span-1-of-3" key={card.id}>
+                            <img src={`/images/cards/upgrades/weapons-team/${card.image}`}
+                                 alt={card.title}
+                                 onClick={this.addUpgradeHandler.bind(this, card)}/>
+                        </div>
+                    )
                 })}
             </div>
         )

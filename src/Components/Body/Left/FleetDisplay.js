@@ -12,7 +12,4 @@ const fleetDisplay = (props) => {
     )
 };
 
-fleetDisplay.propTypes = {
-    points: PropTypes.number
-};
 export default fleetDisplay;
