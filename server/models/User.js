@@ -3,7 +3,10 @@ const { Schema } = mongoose;
 
 // template for all user instances
 const userSchema = new Schema({
-    googleId: String
+    googleId: String,
+    firstName: String,
+    lastName: String,
+    displayName: String
 });
 
 //creates users collection if not exists

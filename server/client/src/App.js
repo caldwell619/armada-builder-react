@@ -6,7 +6,10 @@ import Login from './Components/Body/Login'
 import {Route, Switch} from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
+import { BrowserRouter} from 'react-router-dom';
 import './App.css';
+import Profile from "./Components/Body/Profile";
+import Contact from "./Components/Body/Contact";
 
 class App extends Component {
 
@@ -18,12 +21,16 @@ class App extends Component {
 
     return (
       <div className="App">
-          <Header/>
-          <Switch>
-            <Route path='/builder/:faction' render={(routeProps) => <Body {...routeProps}/>}/>
-            <Route path='/login' render={() => <Login/>}/>
-            <Route path='/' render={(routeProps) => <Landing {...routeProps}/>}/>
-          </Switch>
+          <BrowserRouter>
+              <div>
+                  <Header/>
+                      <Route path='/builder/:faction' render={(routeProps) => <Body {...routeProps}/>}/>
+                      <Route path='/login' render={() => <Login/>}/>
+                      <Route path='/profile' render={() => <Profile/>}/>
+                      <Route path='/contact' render={() => <Contact/>}/>
+                      <Route path='/' exact render={(routeProps) => <Landing {...routeProps}/>}/>
+              </div>
+          </BrowserRouter>
       </div>
     );
   }

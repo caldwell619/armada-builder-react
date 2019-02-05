@@ -11,7 +11,7 @@ const game = (props) => {
             <SelectedShips commanderCards={props.commanderCards} upgradeDelete={props.upgradeDelete} shipInfo={props.shipInfo} faction={props.faction} delete={props.delete} toggle={props.toggle}/>
             <ShipSquad/>
             <Objectives/>
-            <BottomButtons/>
+            <BottomButtons shipInfo={props.shipInfo}/>
         </div>
     )
 };

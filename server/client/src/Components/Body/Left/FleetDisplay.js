@@ -6,7 +6,7 @@ import Points from './Points'
 const fleetDisplay = (props) => {
     return (
         <div className="fleet-display">
-            <Name faction={props.faction}/>
+            <Name faction={props.faction} nameChange={props.nameChange}/>
             <Points points={props.points}/>
         </div>
     )

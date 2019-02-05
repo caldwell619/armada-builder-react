@@ -212,13 +212,19 @@ class body extends React.Component {
         });
     };
 
-    render() {
+    nameChangeHandler = (event) => {
+        this.setState({
+            fleetName: event
+        });
+    };
 
+    render() {
+        console.log(this.state);
         return (
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
                       points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
-                      commanderCards={this.state.commanderCards} faction={this.state.faction}/>
+                      commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler}/>
                 <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
                        commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
                        upgradeCards={this.state.upgrades} faction={this.state.faction}/>
