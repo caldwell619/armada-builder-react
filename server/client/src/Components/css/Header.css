@@ -1,0 +1,8 @@
+
+.header-container li {
+    border-right: 1px solid white;
+    padding: 0 20px;
+}
+.header-container li:last-child {
+    border: none;
+}
