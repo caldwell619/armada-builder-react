@@ -1,12 +1,9 @@
 import { MAX_POINTS } from "../actions/types";
 
-export default (state = null, action) => {
+export default (state = 400, action) => {
     switch (action.type){
         case MAX_POINTS:
-            return {
-                ...state,
-                maxPoints: action.payload
-            };
+            return action.payload;
         default:
             return state
     }

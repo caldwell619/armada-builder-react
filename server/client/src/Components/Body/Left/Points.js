@@ -5,7 +5,7 @@ import * as actions from '../../../store/actions';
 class Points extends Component {
     maxPointsHandler = (event) => {
         this.props.maxPoints(Number(event.target.value))
-    }
+    };
     render(){
         let points = 400;
         if (this.props.maxPoints != null){
@@ -28,9 +28,8 @@ class Points extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
-        maxPoints: state.maxPoints
+        maxAllowedPoints: state.maxPoints
     }
 }
 export default connect(mapStateToProps, actions)(Points);

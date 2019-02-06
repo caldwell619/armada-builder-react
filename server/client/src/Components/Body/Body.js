@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import uniqueCards from '../../data/UniqueCards';
 import Left from './Left/Left'
 import Right from './Right/Right'
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
 
-class body extends React.Component {
+class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +18,10 @@ class body extends React.Component {
             fleetName: ''
         };
         this.upgradeCards = [...uniqueCards];
+    }
 
+    componentDidMount(){
+        this.props.findFaction(this.props.match.params.faction);
     }
 
     addShip = (updatedSelectedShips, newTotalPoints) => {
@@ -218,6 +223,7 @@ class body extends React.Component {
     };
 
     render() {
+        console.log(this.props.maxAllowablePoints);
         return (
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
@@ -233,5 +239,13 @@ class body extends React.Component {
     }
 }
 
+// ask for the state pieces that are relevant here
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        faction: state.faction,
+        maxAllowablePoints: state.maxAllowedPoints
 
-export default body;
+    }
+};
+export default connect(mapStateToProps, actions)(Body);
