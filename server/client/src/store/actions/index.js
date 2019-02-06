@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USERS, FETCH_SHIPS, UPDATE_NAME } from "./types";
+import {FETCH_USERS, FETCH_SHIPS, UPDATE_NAME, MAX_POINTS} from "./types";
 
 
 export const fetchUser = () => async (dispatch) => {
@@ -15,4 +15,8 @@ export const fetchFleet = () => async (dispatch) => {
 // incoming data comes in first arg
 export const updateName = (name) => dispatch => {
     dispatch({type: UPDATE_NAME, payload: name})
+};
+
+export const maxPoints = (points) => dispatch => {
+    dispatch({type: MAX_POINTS, payload: points})
 };

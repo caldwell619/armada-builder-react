@@ -44,7 +44,6 @@ class Profile extends Component {
     };
 
     render() {
-        console.log(this.props);
         return (
             <div>
                 {this.user()}
@@ -56,6 +55,7 @@ class Profile extends Component {
 
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
         user: state.auth,
         ships: state.fleets
