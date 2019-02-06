@@ -2,15 +2,12 @@ import React from 'react';
 import {squadronCards} from '../../../data/cards.js'
 
 class Squadrons extends React.Component{
-    constructor(props) {
-        super(props);
-    }
     render(){
-        let empireSquadrons = []
+        let empireSquadrons = [];
         squadronCards.forEach(squadron => {
 
             //refactor to pass empire as props
-            if (squadron.faction === "empire"){
+            if (squadron.faction === "imperial"){
                 empireSquadrons.push(squadron);
             }
         });

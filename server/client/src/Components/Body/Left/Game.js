@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ShipSquad from './ShipSquad';
 import Objectives from './Objectives';
 import BottomButtons from './BottomButtons';
@@ -16,8 +15,4 @@ const game = (props) => {
     )
 };
 
-game.propTypes = {
-    click: PropTypes.func,
-    shipInfo: PropTypes.array
-}
 export default game;

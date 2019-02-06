@@ -2,8 +2,6 @@ import React from 'react';
 import uniqueCards from '../../data/UniqueCards';
 import Left from './Left/Left'
 import Right from './Right/Right'
-import {Route} from 'react-router-dom';
-import Landing from "./Landing";
 
 class body extends React.Component {
     constructor(props) {
@@ -14,7 +12,8 @@ class body extends React.Component {
             maxAllowablePoints: 400,
             upgrades: [...uniqueCards],
             commanderChosen: false,
-            faction: this.props.match.params.faction
+            faction: this.props.match.params.faction,
+            fleetName: ''
         };
         this.upgradeCards = [...uniqueCards];
 
@@ -219,12 +218,11 @@ class body extends React.Component {
     };
 
     render() {
-        console.log(this.state);
         return (
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
                       points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
-                      commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler}/>
+                      commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
                 <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
                        commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
                        upgradeCards={this.state.upgrades} faction={this.state.faction}/>

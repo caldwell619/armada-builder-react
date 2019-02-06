@@ -3,9 +3,6 @@ import {upgradeCards} from '../../../../data/cards.js'
 
 
 class GenericUpgrade extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     addUpgradeHandler = (card) => {
         //defining necessary variables

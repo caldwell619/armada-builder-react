@@ -3,7 +3,7 @@ import Header from './Components/Header/Header'
 import Body from './Components/Body/Body'
 import Landing from './Components/Body/Landing'
 import Login from './Components/Body/Login'
-import {Route, Switch} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
 import { BrowserRouter} from 'react-router-dom';
