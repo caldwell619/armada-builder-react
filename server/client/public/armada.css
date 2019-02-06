@@ -40,11 +40,7 @@ nav { background-color: black; }
 
 .armada-logo img { height: 35px; }
 
-.nav-container {
-    height: 40px;
-    display: flex;
-    align-items: flex-end;
-}
+
 
 .nav-links {
     background-color: black;
