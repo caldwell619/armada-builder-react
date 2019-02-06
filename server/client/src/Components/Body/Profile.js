@@ -18,7 +18,7 @@ class Profile extends Component {
                 return;
             default:
                 return (
-                    <h1>Hello {name}</h1>
+                    <h1>Hello, {name}</h1>
                     // you are logged in here
                 )
         }
@@ -31,9 +31,10 @@ class Profile extends Component {
                 return (
                     <div>
                         {this.props.ships.map(fleet => {
+                            // add fleet name to db schema
                             return (
-                                <div className="ind-fleet">
-
+                                <div className="ind-fleet" key={fleet.id}>
+                                    Fleets!
                                 </div>
                             )
                         })}

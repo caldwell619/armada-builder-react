@@ -20,15 +20,9 @@ class BottomButtons extends Component{
         })
     };
     render(){
-        console.log(this.props);
         return (
             <div className="action-bar">
-                <div id="nav-fleet"/>
-                {/*<button id="print-button">print</button>*/}
                 <button id="save-button" onClick={this.postShips}>Save</button>
-                {/*<div className="export-container">*/}
-                {/*<button id="export-button">EXPORT</button>*/}
-                {/*</div>*/}
             </div>
         )
     }

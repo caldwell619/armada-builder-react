@@ -2,9 +2,6 @@ import React from 'react';
 import {objectiveCards} from '../../../data/cards.js'
 
 class Objectives extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const objType = this.props.match.params.objectiveType;

@@ -5,9 +5,6 @@ let uniqid = require('uniqid');
 
 
 class Ships extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     addShip = (ship) => {
 

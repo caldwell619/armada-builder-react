@@ -10,7 +10,7 @@ class Name extends Component {
                 <div className="row img-container">
                     <img src={`/images/home-page/${this.props.faction}-logo.png`} alt="logo"/>
                 </div>
-                <input type="text" name="fleet-name" onChange={this.inputValueHandler.bind(this)} placeholder="Name your Fleet" id="fleet-name"/>
+                <input type="text" name="fleet-name" onChange={this.inputValueHandler.bind(this)} value={this.props.name} placeholder="Name your Fleet" id="fleet-name"/>
             </div>
         )
     }

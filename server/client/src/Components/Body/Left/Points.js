@@ -9,7 +9,7 @@ const points = (props) => {
             </div>
             <div className="max-points col span-1-of-2">
                 <label htmlFor="fleet-total">Max Points:</label>
-                <input type="text" id="fleet-total" name="fleet-total" value="400"></input>
+                <input type="text" id="fleet-total" name="fleet-total" value="400"/>
             </div>
         </div>
     )
