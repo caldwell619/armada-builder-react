@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FETCH_USERS } from "./types";
-import { FETCH_SHIPS } from "./types";
+import { FETCH_USERS, FETCH_SHIPS, UPDATE_NAME } from "./types";
+
 
 export const fetchUser = () => async (dispatch) => {
     const res = await axios.get("/api/user");
@@ -10,4 +10,9 @@ export const fetchUser = () => async (dispatch) => {
 export const fetchFleet = () => async (dispatch) => {
     const res = await axios.get("/api/fleets");
     dispatch({type: FETCH_SHIPS, payload: res.data})
+};
+
+// incoming data comes in first arg
+export const updateName = (name) => dispatch => {
+    dispatch({type: UPDATE_NAME, payload: name})
 };
