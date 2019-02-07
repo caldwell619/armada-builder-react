@@ -4,7 +4,7 @@ import RightSmall from './Right/RightSmall';
 
 const header = () => {
     return (
-        <div className = "topnav small-nav">
+        <div className = "topnav small-nav row">
          <LeftSmall/>
          <RightSmall/>
         </div>

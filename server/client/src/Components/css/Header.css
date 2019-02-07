@@ -23,6 +23,16 @@
 .nav-links li a {
     font-size: 18px;
 }
+.menu-shown{
+    height: 60vh !important;
+}
+.link-container {
+    width: 50%;
+    float: left;
+}
+.menu-holder {
+    float: right;
+}
 
 @media screen and (min-width: 480px) {
     .header-container li {

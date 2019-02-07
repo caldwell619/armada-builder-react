@@ -1,0 +1,8 @@
+.selector-container {
+    height: 0vh;
+}
+@media screen and (min-width: 680px) {
+    .selector-container {
+        height: 80vh;
+    }
+}

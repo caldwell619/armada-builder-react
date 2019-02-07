@@ -223,7 +223,6 @@ class Body extends Component {
     };
 
     render() {
-        console.log(this.props.maxAllowablePoints);
         return (
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
@@ -241,7 +240,6 @@ class Body extends Component {
 
 // ask for the state pieces that are relevant here
 const mapStateToProps = state => {
-    console.log(state);
     return {
         faction: state.faction,
         maxAllowablePoints: state.maxAllowedPoints

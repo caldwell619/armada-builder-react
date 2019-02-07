@@ -99,7 +99,7 @@ nav { background-color: black; }
 }
 
 /* Style navigation menu links */
-.topnav a {
+.topnav i {
     color: black;
     /*padding: 20px;*/
     text-decoration: none;
@@ -108,13 +108,12 @@ nav { background-color: black; }
 }
 
 /* Style the hamburger menu */
-.topnav a.icon {
+.icon {
     background: #a6a6a6;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
 }
 
 /* Style the active link (or home/logo) */
@@ -190,7 +189,7 @@ fleet display - left side
 
 .span-1-of-3 { width: 100%; }
 
-.span-1-of-2 { width: 100%; }
+/*.span-1-of-2 { width: 100%; }*/
 
 .span-3-of-4 { width: 100%; }
 
@@ -609,7 +608,7 @@ textarea { float: left; }
 
 #submit { clear: both; }
 
-.span-1-of-4 { width: 100%; }
+/*.span-1-of-4 { width: 100%; }*/
 
 .selected-ship-container {
     position: relative;
@@ -619,6 +618,7 @@ textarea { float: left; }
 .selector-container {
     overflow: scroll;
     height: 80vh;
+    transition: all 0.5s ease-out;
 }
 
 /****************
@@ -719,7 +719,7 @@ Media Queries
 
     .small-nav { display: none; }
 
-    .span-1-of-4 { width: 35%; }
+    /*.span-1-of-4 { width: 35%; }*/
 
     .span-1-of-2 { width: 50%; }
 

@@ -1,3 +1,27 @@
 .ind-fleet {
     margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+.display-ship {
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    border: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display-upgrade {
+
+}
+.ship-col {
+    display: flex;
+    justify-content: center;
+    width: 23.8%;
+
+}
+.upgrade-col {
+
 }

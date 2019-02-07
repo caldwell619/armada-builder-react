@@ -4,3 +4,4 @@ export const UPDATE_NAME = 'UPDATE_NAME';
 export const MAX_POINTS = 'MAX_POINTS';
 export const ADD_SHIP = 'ADD_SHIP';
 export const FIND_FACTION = 'FIND_FACTION';
+export const MENU_DISPLAY = 'MENU_DISPLAY';

@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions';
+import '../../css/Header.css';
 
-const right = (props) => {
-    return (
-        <div>
-            <div id="myLinks">
-                <Link to="/ships">Fleet Builder</Link>
-                <Link to="/ships">Head to Head</Link>
-                <Link to="/ships">Contact</Link>
+class Right extends Component {
+
+    toggleMenu= () => {
+        this.props.menuDisplay()
+
+    };
+
+    render(){
+
+        return (
+            <div className={"col span-1-of-2 menu-holder"}>
+                <div id="myLinks">
+                    <Link to="/ships">Fleet Builder</Link>
+                    <Link to="/ships">Head to Head</Link>
+                    <Link to="/ships">Contact</Link>
+                </div>
+                <div className="icon" onClick={this.toggleMenu}><i className = "fa fa-bars" /></div>
             </div>
-            <Link to="/ships" className="icon"><i className = "fa fa-bars" ></i></Link>
-        </div>
-    )
+        )
+    }
+
 }
 
-export default right;
+const mapStateToProps = state => {
+    return {
+        ...state
+    }
+};
+
+export default connect(mapStateToProps, actions)(Right);
