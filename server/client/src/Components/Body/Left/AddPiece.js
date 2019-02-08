@@ -28,13 +28,17 @@ class AddPiece extends Component {
         let objShow = "";
         let shipRotate = "";
         let objRotate = "";
+        let shipButtonBoolean = true;
+        let objButtonBoolean = true;
         if (this.state.showShips){
             shipShow = "ship-show";
             shipRotate = "rotate";
+            shipButtonBoolean = false;
         }
         if (this.state.showObj){
             objShow = "obj-show";
             objRotate = "rotate";
+            objButtonBoolean = false
         }
         return (
             <React.Fragment>
@@ -47,12 +51,12 @@ class AddPiece extends Component {
                         <div className={`ship-squad-cont ${shipShow}`}>
                             <div className="add-piece-container col">
                                 <Link to={`/builder/${faction}/ships`}>
-                                    <button className="action-button">Add Ship</button>
+                                    <button className="action-button" disabled={shipButtonBoolean}>Add Ship</button>
                                 </Link>
                             </div>
                             <div className="add-piece-container col">
                                 <Link to={`/builder/${faction}/squadrons`}>
-                                    <button className="action-button">Add Squadron</button>
+                                    <button className="action-button" disabled={shipButtonBoolean}>Add Squadron</button>
                                 </Link>
                             </div>
                         </div>
@@ -66,17 +70,17 @@ class AddPiece extends Component {
                     <div className={`objective-selector-container ${objShow}`}>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/assault`}>
-                                <button className="action-button">Add Assault</button>
+                                <button className="action-button" disabled={objButtonBoolean}>Add Assault</button>
                             </Link>
                         </div>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/navigation`}>
-                                <button className="action-button">Add Navigation</button>
+                                <button className="action-button" disabled={objButtonBoolean}>Add Navigation</button>
                             </Link>
                         </div>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/defense`}>
-                                <button className="action-button">Add Defense</button>
+                                <button className="action-button" disabled={objButtonBoolean}>Add Defense</button>
                             </Link>
                         </div>
                     </div>
