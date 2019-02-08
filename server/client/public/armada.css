@@ -16,6 +16,14 @@ ul { margin: 0; }
 .col {
     margin: 0;
 }
+.desktop {
+    display: none;
+}
+@media screen and (min-width: 680px){
+    .desktop {
+        display: block;
+    }
+}
 /************************
 header bar
 ************************/
@@ -85,14 +93,14 @@ nav { background-color: black; }
 /* Style the navigation menu */
 .topnav {
     overflow: hidden;
-    background-color: black;
+    /*background-color: black;*/
     position: relative;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks { display: none; }
+.topnav #mobileLinks { display: none; }
 
-#myLinks a {
+#mobileLinks a {
     color: white;
     margin: 15px;
     font-family: "Fjalla One", sans-serif;
@@ -105,15 +113,6 @@ nav { background-color: black; }
     text-decoration: none;
     font-size: 25px;
     display: block;
-}
-
-/* Style the hamburger menu */
-.icon {
-    background: #a6a6a6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 22px;
 }
 
 /* Style the active link (or home/logo) */

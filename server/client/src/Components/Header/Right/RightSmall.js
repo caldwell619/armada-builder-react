@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux';
 import * as actions from '../../../store/actions';
 import '../../css/Header.css';
 
 class Right extends Component {
 
-    toggleMenu= () => {
+    toggleMenu = () => {
         this.props.menuDisplay()
 
     };
 
-    render(){
+    render() {
 
         return (
-            <div className={"col span-1-of-2 menu-holder"}>
-                <div id="myLinks">
-                    <Link to="/ships">Fleet Builder</Link>
-                    <Link to="/ships">Head to Head</Link>
-                    <Link to="/ships">Contact</Link>
+                <div className={"col span-1-of-2 menu-holder"}>
+                    <div className="icon" onClick={this.toggleMenu}><i className="fa fa-bars"/></div>
                 </div>
-                <div className="icon" onClick={this.toggleMenu}><i className = "fa fa-bars" /></div>
-            </div>
         )
     }
 

@@ -13,6 +13,22 @@
     justify-content: space-between;
     align-items: center;
 }
+.back-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.back-container button {
+    background-color: blue;
+    color: white;
+    /*padding: 20px;*/
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+}
 .display-upgrade {
 
 }
@@ -24,4 +40,20 @@
 }
 .upgrade-col {
 
+}
+.content-container {
+    width: 100%;
+    padding-right: 3%;
+    padding-left: 3%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.display-ship-img {
+    height: 60px;
+    overflow: hidden;
+    /*clip-path: polygon(0 0, 100% 0%, 100% 30%, 0 30%);*/
+}
+.display-ship-img img {
+    height: 100px;
 }

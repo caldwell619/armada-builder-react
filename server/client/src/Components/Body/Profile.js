@@ -5,11 +5,6 @@ import { Link, Redirect } from 'react-router-dom';
 import '../css/Profile.css'
 
 class Profile extends Component {
-    componentDidMount() {
-        setTimeout(() => {
-            // this.props.fetchFleet();
-        }, 1000)
-    }
 
     fetchUser = () => {
         let name = '';
@@ -51,11 +46,12 @@ class Profile extends Component {
             default:
                 return (
                     <div className="row">
+                        <h2>Your Saved Fleets:</h2>
                         {this.props.ships.map(fleet => {
                             return (
                                 <div className="col span-1-of-3">
                                     <div className="ind-fleet" key={fleet.id}>
-                                        <h3>{fleet.fleetName}</h3>
+                                        <h4>{fleet.fleetName}</h4>
                                         <div className="content-container">
                                             <Link to={`/profile/edit/${fleet._id}`}><button>Show</button></Link>
                                             <button onClick={this.deleteShip.bind(this, fleet)}>Delete</button>

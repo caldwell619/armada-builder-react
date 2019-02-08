@@ -16,6 +16,8 @@ class Right extends Component {
     render(){
         const faction = "imperial";
         return (
+            <React.Fragment>
+
             <div className="card-display span-3-of-4">
                 <Switch>
                     <Route path={`/builder/imperial/ships`} render={() => <Ships click={this.props.click} shipInfo={this.props.shipInfo} points={this.props.points} faction={this.props.faction} upgradePoints={this.props.upgradePoints}/>} />
@@ -32,6 +34,7 @@ class Right extends Component {
                     <Route path={`/builder/${faction}/:id/upgrades/:upgradeType`}  render={(routeProps) => <GenericUpgrade {...routeProps}  faction={this.props.faction} shipInfo={this.props.shipInfo} upgrade={this.props.upgrade} points={this.props.points} upgradePoints={this.props.upgradePoints}/>}/>
                 </Switch>
             </div>
+            </React.Fragment>
         )
     }
 }

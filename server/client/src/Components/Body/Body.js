@@ -4,6 +4,7 @@ import Left from './Left/Left'
 import Right from './Right/Right'
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions';
+import {Link} from "react-router-dom";
 
 class Body extends Component {
     constructor(props) {
@@ -224,6 +225,7 @@ class Body extends Component {
 
     render() {
         return (
+            <React.Fragment>
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
                       points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
@@ -232,6 +234,7 @@ class Body extends Component {
                        commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
                        upgradeCards={this.state.upgrades} faction={this.state.faction}/>
             </main>
+            </React.Fragment>
 
 
         )

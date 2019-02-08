@@ -3,7 +3,7 @@ import Header from './Components/Header/Header'
 import Body from './Components/Body/Body'
 import Landing from './Components/Body/Landing'
 import Login from './Components/Body/Login'
-import {Route} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
 import { BrowserRouter} from 'react-router-dom';
@@ -24,6 +24,7 @@ class App extends Component {
           <BrowserRouter>
               <div>
                   <Header/>
+
                       <Route path='/builder/:faction' render={(routeProps) => <Body {...routeProps}/>}/>
                       <Route path='/login' render={() => <Login/>}/>
                       <Route path='/profile' exact render={() => <Profile/>}/>
