@@ -58,6 +58,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .objective-selector-container {
     transition: all 0.6s ease-in-out;
