@@ -79,6 +79,9 @@ class Ships extends React.Component {
                             <div className="ship-card span-1-of-3" key={ship.id}>
                                 <img src={`/images/cards/ship/imperial/${ship.image}`} alt={ship.title}
                                      onClick={this.addShip.bind(this, ship)}/>
+                                <div className="add-ship-name">
+                                    <div>{ship.title}</div>
+                                </div>
                             </div>
                         )
                     })}

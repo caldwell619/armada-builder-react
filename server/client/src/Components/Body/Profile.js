@@ -51,11 +51,16 @@ class Profile extends Component {
                             return (
                                 <div className="col span-1-of-3">
                                     <div className="ind-fleet" key={fleet.id}>
-                                        <h4>{fleet.fleetName}</h4>
-                                        <div className="content-container">
-                                            <Link to={`/profile/edit/${fleet._id}`}><button>Show</button></Link>
-                                            <button onClick={this.deleteShip.bind(this, fleet)}>Delete</button>
+                                        <div className="disp-fleet-name">
+                                            <h4>{fleet.fleetName}</h4>
                                         </div>
+                                        <div className="disp-buttons">
+                                            <div className="buttons-cont">
+                                                <Link to={`/profile/edit/${fleet._id}`}><button id="show-button">Show</button></Link>
+                                                <button onClick={this.deleteShip.bind(this, fleet)} className="ion-trash-a" id="delete-button"/>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             )
@@ -79,7 +84,7 @@ class Profile extends Component {
 
         }
         return (
-            <div className={"content-container"}>
+            <div className={"content-container mobile-cont"}>
                 {this.fetchUser()}
                 {buildPrompt}
                 {this.fetchFleets()}

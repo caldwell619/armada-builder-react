@@ -15,3 +15,14 @@
 .mobile-cont {
     padding-top: 80px;
 }
+.add-ship-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-ship-name div {
+    color: white;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    font-family: 'Orbitron', sans-serif;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Left from "./Left";
+import '../../css/ActionButtons.css';
 
 class BottomButtons extends Component{
     postShips = () => {
@@ -26,18 +26,22 @@ class BottomButtons extends Component{
         let button = null;
         if (this.props.fleetName !== ""){
             button = (
-                <Link to={"/profile"} onClick={this.postShips}><button id="save-button" >Save</button></Link>
+                <Link to={"/profile"} onClick={this.postShips}><button id="save-button" className="save-button">Save</button></Link>
             )
         } else {
             button = (
-                <div>
-                    <p>Please name your fleet before saving</p>
-                    <button id="save-button" >Save</button>
+                <div className="save-button-global-cont">
+                    <div className="save-text">
+                        <p>Please name your fleet before saving</p>
+                    </div>
+                    <div className="save-button-cont">
+                        <button id="disabled-save-button" className="save-button" disabled={true}>Save</button>
+                    </div>
                 </div>
             )
         }
         return (
-            <div className="action-bar">
+            <div className="button-action-bar">
                 {button}
             </div>
         )

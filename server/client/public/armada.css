@@ -24,6 +24,9 @@ ul { margin: 0; }
         display: block;
     }
 }
+button {
+    cursor: pointer;
+}
 /************************
 header bar
 ************************/
@@ -183,7 +186,7 @@ fleet display - left side
 
 .fleet-display img {
     height: 60px;
-    margin: 15px 0 10px 15px;
+    margin-top: 7px;
 }
 
 .span-1-of-3 { width: 100%; }
@@ -395,35 +398,9 @@ add-squadron
 /************************
 objectives
 ************************/
-.objective-selector-container {
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
-    padding: 15px 0;
 
-}
 
-.obj-button {
-    display: block;
-    margin: 5px;
-    box-sizing: border-box;
-    width: 80%;
-    line-height: 40px;
-    font-family: 'Russo One', sans-serif;
-    font-size: 20px;
-    border: none;
-    background: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-.objective-selector-container {
-    display: flex;
-    justify-content: center;
-}
-.objective-selector-container ul {
-    width: 35%;
-}
-.action-bar{
+.button-action-bar{
     display: flex;
     justify-content: space-evenly;
 }
@@ -431,11 +408,8 @@ objectives
 .delete {
     cursor: pointer;
 }
-button {
-    cursor: pointer;
-}
 
-.obj-button:hover { background-color: #d3d2d2; }
+
 
 /************************
 action bar
@@ -708,7 +682,7 @@ Media Queries
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 680px) {
 
-    .ship-card img { height: 210px; }
+    .ship-card img { height: 55px; }
 
     .squad-card img { height: 180px;}
 
@@ -718,7 +692,7 @@ Media Queries
 
     .small-nav { display: none; }
 
-    /*.span-1-of-4 { width: 35%; }*/
+    .card-display { width: 70%; }
 
     .span-1-of-2 { width: 50%; }
 
@@ -727,8 +701,6 @@ Media Queries
     #rebel-container { float: right; }
 
     .selector-container { margin: 0 auto; }
-
-    .span-3-of-4 { width: 65%; }
 
     .span-1-of-3 { width: 33%; }
 
@@ -761,7 +733,7 @@ Media Queries
     #fleet-name {
         width: 100%;
         margin: 0 auto;
-        padding: 15px;
+        padding: 10px;
         font-size: 18px;
     }
 
@@ -834,7 +806,7 @@ Media Queries
 }
 @media screen and (min-width: 767px) {
 
-    .ship-card img { height: 200px; }
+    .ship-card img { height: 60px; }
 
     .squad-card img { height: 190px;}
 
@@ -858,7 +830,7 @@ Media Queries
 
 @media screen and (min-width: 900px) {
     .squad-card img { height: 220px;}
-    .ship-card img { height: 230px;}
+    .ship-card img { height: 65px;}
 }
 
 @media screen and (min-width: 1200px) {
@@ -866,5 +838,5 @@ Media Queries
         width: 33.33333%;
     }
     .squad-card img { height: 300px;}
-    .ship-card img { height: 300px;}
+    .ship-card img { height: 100px;}
 }
