@@ -55,15 +55,12 @@
 }
 
 .display-ship-img {
-    height: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    /*clip-path: polygon(0 0, 100% 0%, 100% 30%, 0 30%);*/
+    height: 70px;
 }
 .display-ship-img img {
-    height: 120px;
-    border-radius: 5px;
-    clip-path: circle(50% at 50% 50%);
+    height: 70px;
+    width: 160px;
+    border-radius: 10px;
 }
 .jumbotron h1 {
     padding-top: 5%;
