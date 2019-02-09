@@ -7,6 +7,7 @@ import addShipReducer from './addShipReducer';
 import findFaction from './factionReducer';
 import showMenu from './menuReducer';
 import leftMenu from './hideMenuReducer';
+import currentPointsReducer from './currentPointsReducer';
 
 export default combineReducers({
     auth: authReducer,
@@ -16,5 +17,6 @@ export default combineReducers({
     ships: addShipReducer,
     faction: findFaction,
     menuShown: showMenu,
-    leftMenu: leftMenu
+    leftMenu: leftMenu,
+    currentPoints: currentPointsReducer
 })
