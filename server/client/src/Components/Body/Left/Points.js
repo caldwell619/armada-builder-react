@@ -19,7 +19,7 @@ class Points extends Component {
                     <div className="points-display">{this.props.points}</div>
                 </div>
                 <div className="max-points col span-1-of-2">
-                    <label htmlFor="fleet-total">Max Points:</label>
+                    <label htmlFor="fleet-total" id={`max-points-label`}>Max Points:</label>
                     <input type="number" id="fleet-total" name="fleet-total" onChange={this.maxPointsHandler} value={points} placeholder="400"/>
                 </div>
             </div>

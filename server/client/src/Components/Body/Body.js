@@ -5,6 +5,9 @@ import Right from './Right/Right'
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions';
 import {Link} from "react-router-dom";
+import MobileLeft from "./Left/MobileLeft";
+import MobileRight from "./Right/MobileRight";
+import '../css/Mobile.css';
 
 class Body extends Component {
     constructor(props) {
@@ -230,9 +233,15 @@ class Body extends Component {
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
                       points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
                       commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
+                <MobileLeft shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
+                            points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
+                            commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
                 <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
                        commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
                        upgradeCards={this.state.upgrades} faction={this.state.faction}/>
+                <MobileRight click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
+                             commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
+                             upgradeCards={this.state.upgrades} faction={this.state.faction}/>
             </main>
             </React.Fragment>
 

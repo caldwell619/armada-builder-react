@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {FETCH_USERS, FETCH_SHIPS, UPDATE_NAME, MAX_POINTS, FIND_FACTION, MENU_DISPLAY} from "./types";
+import {FETCH_USERS, FETCH_SHIPS, UPDATE_NAME, MAX_POINTS, FIND_FACTION, MENU_DISPLAY, HIDE_MENU} from "./types";
 
 
 export const fetchUser = () => async (dispatch) => {
@@ -31,4 +31,7 @@ export const findFaction = (faction) => dispatch => {
 };
 export const menuDisplay = (display) => dispatch => {
     dispatch({type: MENU_DISPLAY, payload: display})
+};
+export const hideMenu = (display) => dispatch => {
+    dispatch({type: HIDE_MENU, payload:display})
 };

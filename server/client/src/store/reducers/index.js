@@ -6,6 +6,7 @@ import maxPointsReducer from './maxPointsReducer';
 import addShipReducer from './addShipReducer';
 import findFaction from './factionReducer';
 import showMenu from './menuReducer';
+import leftMenu from './hideMenuReducer';
 
 export default combineReducers({
     auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
     maxAllowedPoints: maxPointsReducer,
     ships: addShipReducer,
     faction: findFaction,
-    menuShown: showMenu
+    menuShown: showMenu,
+    leftMenu: leftMenu
 })

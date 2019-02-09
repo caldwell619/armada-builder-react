@@ -101,22 +101,11 @@ nav { background-color: black; }
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #mobileLinks { display: none; }
 
-#mobileLinks a {
-    color: white;
-    margin: 15px;
-    font-family: "Fjalla One", sans-serif;
-}
+
 
 /* Style navigation menu links */
-.topnav i {
-    color: black;
-    /*padding: 20px;*/
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-}
+
 
 /* Style the active link (or home/logo) */
 .active { color: white; }
@@ -177,21 +166,12 @@ fleet display - left side
     text-align: center;
 }
 
-.points-display {
-    display: inline-block;
-    /*margin-bottom: 30px;*/
-    margin-left: 20px;
-    font-size: 40px;
-}
+
 
 .fleet-display img {
     height: 60px;
     margin-top: 7px;
 }
-
-.span-1-of-3 { width: 100%; }
-
-/*.span-1-of-2 { width: 100%; }*/
 
 .span-3-of-4 { width: 100%; }
 
@@ -211,6 +191,11 @@ fleet display - left side
     font-size: 40px;
 }
 
+.drop-down-ship,
+.drop-down-obj {
+    font-family: 'Orbitron', sans-serif;
+
+}
 
 .big-points-container * { font-family: 'Orbitron', sans-serif; }
 
@@ -530,7 +515,7 @@ card display - right side
 .ship-card { display: inline-block; }
 
 .ship-card img {
-    height: 450px;
+    height: 70px;
     margin: 10px;
     cursor: pointer;
 }
@@ -638,7 +623,6 @@ Landing Page
     height: 20px;
 }
 label {
-    color: white;
     margin: 2vh 0;
     font-size: 20px;
 }

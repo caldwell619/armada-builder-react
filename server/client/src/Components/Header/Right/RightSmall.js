@@ -7,15 +7,19 @@ import '../../css/Header.css';
 class Right extends Component {
 
     toggleMenu = () => {
-        this.props.menuDisplay()
-
+        this.props.menuDisplay();
+        console.log("happened");
     };
 
     render() {
 
+        let rotate = "";
+        if (this.props.menuShown){
+            rotate = "rotate";
+        }
         return (
                 <div className={"col span-1-of-2 menu-holder"}>
-                    <div className="icon" onClick={this.toggleMenu}><i className="fa fa-bars"/></div>
+                    <div className="icon" onClick={this.toggleMenu}><i className={`ion-chevron-down ${rotate}`}/></div>
                 </div>
         )
     }

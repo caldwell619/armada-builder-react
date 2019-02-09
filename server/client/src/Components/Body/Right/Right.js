@@ -18,7 +18,7 @@ class Right extends Component {
         return (
             <React.Fragment>
 
-            <div className="card-display span-3-of-4">
+            <div className="card-display span-3-of-4 desktop">
                 <Switch>
                     <Route path={`/builder/imperial/ships`} render={() => <Ships click={this.props.click} shipInfo={this.props.shipInfo} points={this.props.points} faction={this.props.faction} upgradePoints={this.props.upgradePoints}/>} />
                     <Route path={`/builder/${faction}/squadrons`} render={() => <Squadrons faction={this.props.faction}/>}/>

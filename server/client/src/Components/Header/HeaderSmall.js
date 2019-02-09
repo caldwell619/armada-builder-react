@@ -1,27 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
 import LeftSmall from './Left/LeftSmall';
 import RightSmall from './Right/RightSmall';
-import {Link} from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
 
-const header = () => {
-    return (
-        <React.Fragment>
-            <div className="topnav small-nav row">
-                <div className="mobile-header-cont">
-                    <LeftSmall/>
-                    <RightSmall/>
-                </div>
-                <div id="mobileLinks">
-                    <ul>
-                        <li><Link to="/ships">Fleet Builder</Link></li>
-                        <li><Link to="/ships">Head to Head</Link></li>
-                        <li><Link to="/ships">Contact</Link></li>
+class Header extends Component {
+    user = () => {
+        switch (this.props.auth) {
+            case null:
+                return;
+            case false:
+                return (
+                    <ul className="mobile-nav-ul">
+                        <li><Link to="/">Fleet Builder</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><a href="/auth/google">Log In</a></li>
                     </ul>
+                );
+            default:
+                return (
+                    <ul className="mobile-nav-ul long-ul">
+                        <li><Link to="/">Fleet Builder</Link></li>
+                        <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/face-off">Head to Head</Link></li>
+                        <li><a href="/api/logout">Log Out</a></li>
+                    </ul>
+                )
+        }
+    };
+    render() {
+        let style = "";
+        if (this.props.menuShown){
+            style = "show-mobile-nav";
+        }
+
+        return (
+            <React.Fragment>
+                <div className="topnav small-nav row">
+                    <div className="mobile-header-cont">
+                        <LeftSmall/>
+                        <RightSmall/>
+                    </div>
+                    <div className={`mobile-links ${style}`}>
+                        {this.user()}
+                    </div>
                 </div>
-            </div>
 
-        </React.Fragment>
-    )
+            </React.Fragment>
+        )
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        menuShown: state.menuShown
+    }
 };
-
-export default header;
+export default withRouter(connect(mapStateToProps, actions)(Header));

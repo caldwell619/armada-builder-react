@@ -17,7 +17,9 @@ class Name extends Component {
                 <div className="row img-container">
                     <img src={`/images/home-page/${this.props.chosenFaction}-logo.png`} alt="logo"/>
                 </div>
-                <input type="text" name="fleet-name" onChange={this.inputValueHandler} value={this.props.fleetName} placeholder="Name your Fleet" id="fleet-name"/>
+                <div className="name-cont">
+                    <input type="text" name="fleet-name" onChange={this.inputValueHandler} value={this.props.fleetName} placeholder="Name your Fleet" id="fleet-name"/>
+                </div>
             </div>
         )
     }

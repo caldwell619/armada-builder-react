@@ -65,53 +65,19 @@ class Ships extends React.Component {
                 }
             }
         });
-// turn this to a component
-        let display = (
-            <div className="header">
-                <h1>Select the menu to get started</h1>
-            </div>
-        );
-        if (window.screen.width > 680){
-            display = (
-                <div>
-                    {empireShips.map(ship => {
-                        return (
-                            <div className="ship-card span-1-of-3" key={ship.id}>
-                                <img src={`/images/cards/ship/imperial/${ship.image}`} alt={ship.title}
-                                     onClick={this.addShip.bind(this, ship)}/>
-                                <div className="add-ship-name">
-                                    <div>{ship.title}</div>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-
-            )
-        } else {
-            // turn this to a component
-            display = (
-                <div>
-                    {empireShips.map(ship => {
-                        return (
-                            <div className="mobile span-1-of-3" key={ship.id}>
-                                <div className="container">
-                                    <div className="mobile-card">
-                                        <p>{ship.title}</p>
-                                        <button onClick={this.addShip.bind(this, ship)}>Add Ship</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            )
-        }
-
         return (
             <div className="cards-container">
-                {display}
+                {empireShips.map(ship => {
+                    return (
+                        <div className="ship-card span-1-of-3" key={ship.id}>
+                            <img src={`/images/cards/ship/imperial/${ship.image}`} alt={ship.title}
+                                 onClick={this.addShip.bind(this, ship)}/>
+                            <div className="add-ship-name">
+                                <div>{ship.title}</div>
+                            </div>
+                        </div>
+                    )
+                })}}
                 {noMoreShipsDiv}
             </div>
         )

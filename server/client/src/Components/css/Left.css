@@ -1,7 +1,25 @@
 .selector-container {
     width: 30%;
+    transition: all ease-in-out;
+    float: left;
 }
 #ship-button {
     background-color: white;
     border: 1px solid #a0a0a0;
+}
+.menu-hide {
+    /*width: 0;*/
+}
+.points-display {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#fleet-name {
+    width: 80%;
+    margin: 0;
+}
+#fleet-total {
+    font-size: 20px;
 }
