@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
-import '../../css/Header.css'
+import '../../css/Header.css';
+
 
 class Right extends Component {
     user = () => {
@@ -31,7 +32,7 @@ class Right extends Component {
     render(){
 
         return (
-            <div className="nav-container">
+            <div className="nav-container span-3-of-4">
                 {this.user()}
             </div>
         )

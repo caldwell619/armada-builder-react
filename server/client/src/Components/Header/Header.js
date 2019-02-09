@@ -5,7 +5,6 @@ import HeaderMd from './HeaderMd'
 const header = () => {
     return (
         <nav>
-            <div id="top"></div>
             <HeaderSmall/>
             <HeaderMd/>
         </nav>

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import uniqueCards from '../../data/UniqueCards';
 import Left from './Left/Left'
 import Right from './Right/Right'
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
+import {Link} from "react-router-dom";
+import MobileLeft from "./Left/MobileLeft";
+import MobileRight from "./Right/MobileRight";
+import '../css/Mobile.css';
 
-class body extends React.Component {
+class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +22,10 @@ class body extends React.Component {
             fleetName: ''
         };
         this.upgradeCards = [...uniqueCards];
+    }
 
+    componentDidMount(){
+        this.props.findFaction(this.props.match.params.faction);
     }
 
     addShip = (updatedSelectedShips, newTotalPoints) => {
@@ -219,19 +228,34 @@ class body extends React.Component {
 
     render() {
         return (
+            <React.Fragment>
             <main>
                 <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
                       points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
                       commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
+                <MobileLeft shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
+                            points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
+                            commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
                 <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
                        commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
                        upgradeCards={this.state.upgrades} faction={this.state.faction}/>
+                <MobileRight click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
+                             commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
+                             upgradeCards={this.state.upgrades} faction={this.state.faction}/>
             </main>
+            </React.Fragment>
 
 
         )
     }
 }
 
+// ask for the state pieces that are relevant here
+const mapStateToProps = state => {
+    return {
+        faction: state.faction,
+        maxAllowablePoints: state.maxAllowedPoints
 
-export default body;
+    }
+};
+export default connect(mapStateToProps, actions)(Body);

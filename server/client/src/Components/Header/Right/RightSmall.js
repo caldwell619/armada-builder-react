@@ -1,17 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux';
+import * as actions from '../../../store/actions';
+import '../../css/Header.css';
 
-const right = (props) => {
-    return (
-        <div>
-            <div id="myLinks">
-                <Link to="/ships">Fleet Builder</Link>
-                <Link to="/ships">Head to Head</Link>
-                <Link to="/ships">Contact</Link>
-            </div>
-            <Link to="/ships" className="icon"><i className = "fa fa-bars" ></i></Link>
-        </div>
-    )
+class Right extends Component {
+
+    toggleMenu = () => {
+        // toggle the header and hide the left menu if clicked
+        this.props.toggleHeaderMenu();
+        this.props.hideLeftMenu();
+    };
+
+    render() {
+
+        let rotate = "";
+        if (this.props.headerMenuShown){
+            rotate = "rotate";
+        }
+        return (
+                <div className={"col span-1-of-2 menu-holder"}>
+                    <div className="icon" onClick={this.toggleMenu}><i className={`ion-chevron-down ${rotate}`}/></div>
+                </div>
+        )
+    }
+
 }
 
-export default right;
+const mapStateToProps = state => {
+    return { headerMenuShown: state.headerMenuShown }
+};
+
+export default connect(mapStateToProps, actions)(Right);

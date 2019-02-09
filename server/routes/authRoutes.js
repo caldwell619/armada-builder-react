@@ -1,7 +1,8 @@
 const passport = require('passport');
 const mongoose = require('mongoose');
 const Fleet = mongoose.model('fleets');
-const postShips = require('../services/postShips');
+const shipActions = require('../services/shipActions');
+
 var bodyParser = require("body-parser");
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 
@@ -26,12 +27,16 @@ module.exports = (app) => {
         res.redirect("/")
     });
     app.post("/api/post", urlencodedParser, (req, res) => {
-        postShips.postShips(req.body);
-        res.send('done')
+        shipActions.postShips(req.body);
+        res.send("done");
     });
     app.get("/api/fleets", (req, res) => {
         // find returns all -- findOne returns one
         Fleet.find({owner: req.user.googleId}).then(result => res.send(result))
             .catch(error => {console.log(error)});
+    });
+    app.delete("/api/delete-fleet", (req, res) => {
+        shipActions.deleteFleet(req.body.fleetId);
+        res.send("done");
     })
 };

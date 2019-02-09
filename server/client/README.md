@@ -1,40 +1,7 @@
-# Component Pathing #
-- src
- - Components
-  - Header
-    - HeaderSm
-    - HeaderMd
-  - Body
-    - Left
-      - FleetDisplay
-        - Name
-        - Points
-      - Game
-        - SelectedShips
-        - ShipSquad
-          - AddShip
-          - AddSquadron
-        - Objectives
-          - ObjectiveButtons
-        - BottomButtons
-    - Right
-      - Ships
-      - Squadrons
-      - AssaultCards
-      - DefenseCards
-      - NavigationCards
-      - Upgrades
-        - Commander
-        - Officer
-        - Title
-        - OffensiveRetrofit
-        - DefensiveRetrofit
-        - WeaponsTeam
-        - etc...
-     
+# Muster the Fleet
+A fullstack, MongoDB, Express, React, and NodeJS stack application for building a fleet to play Star Wars: Armada
   
-  
-# Basic Explanation #
+
 ## Left Side ##
 - All buttons are `<Link to ="/x"/>` JSX from React Router
 - Upon click, path changes to designated card display 
