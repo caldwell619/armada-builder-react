@@ -55,6 +55,7 @@ class Header extends Component {
 
 const mapStateToProps = state => {
     return {
+        auth: state.auth,
         headerMenuShown: state.headerMenuShown
     }
 };
