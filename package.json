@@ -1,0 +1,20 @@
+{
+  "name": "armada-builder-react",
+  "version": "1.0.0",
+  "description": "A fullstack, MongoDB, Express, React, and NodeJS stack application for building a fleet to play Star Wars: Armada",
+  "main": "/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caldwell619/armada-builder-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caldwell619/armada-builder-react/issues"
+  },
+  "homepage": "https://github.com/caldwell619/armada-builder-react#readme"
+}
