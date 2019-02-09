@@ -21,8 +21,21 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //calling the function to handle routing
 require("./routes/authRoutes")(app);
+
+if (process.env.NODE_ENV === "production"){
+    // express will serve production assets ( main.js, main.css )
+    // look inside client/build to serve assets
+    app.use(express.static('client/build'));
+
+    // express will serve index.html if it doesnt recognize route
+    const path = require('path');
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

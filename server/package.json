@@ -5,11 +5,13 @@
   "scripts": {
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+
   },
-  "author": "",
+  "author": "Christopher Caldwell",
   "license": "ISC",
-  "description": "",
+  "description": "Deck building application for Star Wars: Armada",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
