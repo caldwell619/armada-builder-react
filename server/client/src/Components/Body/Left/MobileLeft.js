@@ -7,10 +7,17 @@ import * as actions from '../../../store/actions';
 import '../../css/Header.css';
 
 class MobileLeft extends Component{
+
+    // this both toggles the left menu, and hides the header
+    toggleLeftMenu =() => {
+        this.props.toggleLeftMenu();
+        this.props.hideHeaderMenu();
+    };
+
     render(){
         let style = "";
         let menuIcon = "ion-navicon-round";
-        if (this.props.leftMenu){
+        if (this.props.leftMenuShown){
             style = "menu-show-mobile";
             menuIcon = "ion-close-round";
         } else {
@@ -20,7 +27,7 @@ class MobileLeft extends Component{
         return (
             <React.Fragment>
                 <div className={"mobile-selector"}>
-                    <div className={`toggle-selector-main mobile`} onClick={this.props.hideMenu}>
+                    <div className={`toggle-selector-main mobile`} onClick={this.toggleLeftMenu}>
                         <span className={menuIcon}/>
                     </div>
                     <div className={`mobile-selector-container ${style} span-1-of-4 mobile`}>
@@ -36,7 +43,7 @@ class MobileLeft extends Component{
 const mapStateToProps = state => {
     return {
         menuShown: state.menuShown,
-        leftMenu: state.leftMenu
+        leftMenuShown: state.leftMenuShown
     }
 };
 export default connect(mapStateToProps, actions)(MobileLeft);

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import '../../css/ActionButtons.css';
+import * as actions from '../../../store/actions';
 
 
 class AddPiece extends Component {
@@ -12,6 +13,9 @@ class AddPiece extends Component {
             showObj: false
         }
     }
+    hideMenu = () => {
+        this.props.hideLeftMenu()
+    };
     toggleShip = () => {
         this.setState({
             showShips: !this.state.showShips
@@ -51,12 +55,12 @@ class AddPiece extends Component {
                         <div className={`ship-squad-cont ${shipShow}`}>
                             <div className="add-piece-container col">
                                 <Link to={`/builder/${faction}/ships`}>
-                                    <button className="action-button" disabled={shipButtonBoolean}>Add Ship</button>
+                                    <button className="action-button" disabled={shipButtonBoolean} onClick={this.hideMenu}>Add Ship</button>
                                 </Link>
                             </div>
                             <div className="add-piece-container col">
                                 <Link to={`/builder/${faction}/squadrons`}>
-                                    <button className="action-button" disabled={shipButtonBoolean}>Add Squadron</button>
+                                    <button className="action-button" disabled={shipButtonBoolean} onClick={this.hideMenu}>Add Squadron</button>
                                 </Link>
                             </div>
                         </div>
@@ -70,17 +74,17 @@ class AddPiece extends Component {
                     <div className={`objective-selector-container ${objShow}`}>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/assault`}>
-                                <button className="action-button" disabled={objButtonBoolean}>Add Assault</button>
+                                <button className="action-button" disabled={objButtonBoolean} onClick={this.hideMenu}>Add Assault</button>
                             </Link>
                         </div>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/navigation`}>
-                                <button className="action-button" disabled={objButtonBoolean}>Add Navigation</button>
+                                <button className="action-button" disabled={objButtonBoolean} onClick={this.hideMenu}>Add Navigation</button>
                             </Link>
                         </div>
                         <div className="add-piece-container col">
                             <Link to={`/builder/${faction}/objectives/defense`}>
-                                <button className="action-button" disabled={objButtonBoolean}>Add Defense</button>
+                                <button className="action-button" disabled={objButtonBoolean} onClick={this.hideMenu}>Add Defense</button>
                             </Link>
                         </div>
                     </div>
@@ -96,4 +100,4 @@ const mapStateToProps = state => {
         faction: state.faction
     }
 };
-export default connect(mapStateToProps)(AddPiece);
+export default connect(mapStateToProps, actions)(AddPiece);

@@ -16,18 +16,16 @@ import * as actions from '../../../store/actions';
 class MobileRight extends Component {
 
     hideMenu = () => {
-        if (this.props.leftMenu){
-            this.props.hideMenu()
-        }
+        this.props.hideLeftMenu();
+        this.props.hideHeaderMenu();
     };
-
 
     render(){
         const faction = "imperial";
         return (
             <React.Fragment>
 
-                <div className="mobile-card-display card-display span-3-of-4 mobile" onScroll={this.hideMenu} onClick={this.hideMenu}>
+                <div className="mobile-card-display card-display span-3-of-4 mobile" onTouchStart={this.hideMenu} onScroll={this.hideMenu} onClick={this.hideMenu}>
                     <Switch>
                         <Route path={`/builder/imperial/ships`} render={() => <Ships click={this.props.click} shipInfo={this.props.shipInfo} points={this.props.points} faction={this.props.faction} upgradePoints={this.props.upgradePoints}/>} />
                         <Route path={`/builder/${faction}/squadrons`} render={() => <Squadrons faction={this.props.faction}/>}/>
@@ -52,8 +50,8 @@ class MobileRight extends Component {
 const mapStateToProps = state => {
     return {
         faction: state.faction,
-        menuShown: state.menuShown,
-        leftMenu: state.leftMenu
+        headerMenuShown: state.headerMenuShown,
+        leftMenuShown: state.leftMenuShown
     }
 };
 export default withRouter(connect(mapStateToProps, actions)(MobileRight));

@@ -5,10 +5,12 @@ import updateNameReducer from './updateNameReducer';
 import maxPointsReducer from './maxPointsReducer';
 import addShipReducer from './addShipReducer';
 import findFaction from './factionReducer';
-import showMenu from './menuReducer';
-import leftMenu from './hideMenuReducer';
+import toggleHeaderReducer from './toggleHeaderReducer';
+import toggleLeftMenuReducer from './toggleLeftMenuReducer';
 import currentPointsReducer from './currentPointsReducer';
+import findUpgradesReducer from './availableUpgradesReducer';
 
+//defines global store state
 export default combineReducers({
     auth: authReducer,
     fleets: fleetReducer,
@@ -16,7 +18,9 @@ export default combineReducers({
     maxAllowedPoints: maxPointsReducer,
     ships: addShipReducer,
     faction: findFaction,
-    menuShown: showMenu,
-    leftMenu: leftMenu,
-    currentPoints: currentPointsReducer
+    headerMenuShown: toggleHeaderReducer,
+    leftMenuShown: toggleLeftMenuReducer,
+    currentPoints: currentPointsReducer,
+    availableUpgrades: findUpgradesReducer
+
 })

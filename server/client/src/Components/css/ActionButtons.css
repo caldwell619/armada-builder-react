@@ -80,3 +80,9 @@
 .rotate {
     transform: rotate(180deg);
 }
+@media screen and (min-width: 680px){
+    .toggle-selector-main {
+        display: none !important;
+    }
+}
+

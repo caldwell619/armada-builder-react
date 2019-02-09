@@ -5,10 +5,13 @@ import {
     UPDATE_NAME,
     MAX_POINTS,
     FIND_FACTION,
-    MENU_DISPLAY,
-    HIDE_MENU,
+    TOGGLE_HEADER,
+    LEFT_MENU_TOGGLE,
+    HIDE_LEFT_MENU,
+    HIDE_HEADER_MENU,
     ADD_SHIP,
     CURRENT_POINTS,
+    FIND_UPGRADES,
 } from "./types";
 
 
@@ -38,12 +41,22 @@ export const addShip = updatedSelectedShips => dispatch => {
 export const findFaction = faction => dispatch => {
     dispatch({type: FIND_FACTION, payload: faction})
 };
-export const menuDisplay = display => dispatch => {
-    dispatch({type: MENU_DISPLAY, payload: display})
+export const toggleLeftMenu = () => dispatch => {
+    dispatch({type: LEFT_MENU_TOGGLE})
 };
-export const hideMenu = display => dispatch => {
-    dispatch({type: HIDE_MENU, payload: display})
+export const toggleHeaderMenu = () => dispatch => {
+    dispatch({type: TOGGLE_HEADER})
+};
+
+export const hideLeftMenu = () => dispatch => {
+    dispatch({type: HIDE_LEFT_MENU})
+};
+export const hideHeaderMenu = () => dispatch => {
+    dispatch({type: HIDE_HEADER_MENU})
 };
 export const currentPoints = ship => dispatch => {
     dispatch({type: CURRENT_POINTS, payload: ship.points})
+};
+export const findUpgrades = card => dispatch => {
+    dispatch({type: FIND_UPGRADES, payload: card})
 };

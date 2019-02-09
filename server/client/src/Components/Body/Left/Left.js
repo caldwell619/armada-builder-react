@@ -14,13 +14,11 @@ class Left extends Component{
         }
     }
     toggleMenu = () => {
-        this.setState({
-            menuShown: !this.state.menuShown
-        })
+
     };
     render(){
         let style = null;
-        if (this.props.menuShown){
+        if (this.props.leftMenuShown){
             style = null;
         } else {
             style = "menu-hide"
@@ -42,7 +40,7 @@ class Left extends Component{
 
 const mapStateToProps = state => {
     return {
-        menuShown: state.menuShown
+        leftMenuShown: state.leftMenuShown
     }
 };
 export default connect(mapStateToProps, actions)(Left);

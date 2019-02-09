@@ -7,14 +7,15 @@ import '../../css/Header.css';
 class Right extends Component {
 
     toggleMenu = () => {
-        this.props.menuDisplay();
-        console.log("happened");
+        // toggle the header and hide the left menu if clicked
+        this.props.toggleHeaderMenu();
+        this.props.hideLeftMenu();
     };
 
     render() {
 
         let rotate = "";
-        if (this.props.menuShown){
+        if (this.props.headerMenuShown){
             rotate = "rotate";
         }
         return (
@@ -27,9 +28,7 @@ class Right extends Component {
 }
 
 const mapStateToProps = state => {
-    return {
-        ...state
-    }
+    return { headerMenuShown: state.headerMenuShown }
 };
 
 export default connect(mapStateToProps, actions)(Right);

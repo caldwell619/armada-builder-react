@@ -13,26 +13,26 @@ class Header extends Component {
             case false:
                 return (
                     <ul className="mobile-nav-ul">
-                        <li><Link to="/">Fleet Builder</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><a href="/auth/google">Log In</a></li>
+                        <li><Link to="/" onClick={this.props.toggleHeaderMenu}>Fleet Builder</Link></li>
+                        <li><Link to="/contact" onClick={this.props.toggleHeaderMenu}>Contact</Link></li>
+                        <li><a href="/auth/google" onClick={this.props.toggleHeaderMenu}>Log In</a></li>
                     </ul>
                 );
             default:
                 return (
                     <ul className="mobile-nav-ul long-ul">
-                        <li><Link to="/">Fleet Builder</Link></li>
-                        <li><Link to="/profile">Profile</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/face-off">Head to Head</Link></li>
-                        <li><a href="/api/logout">Log Out</a></li>
+                        <li><Link to="/" onClick={this.props.toggleHeaderMenu}>Fleet Builder</Link></li>
+                        <li><Link to="/profile" onClick={this.props.toggleHeaderMenu}>Profile</Link></li>
+                        <li><Link to="/contact" onClick={this.props.toggleHeaderMenu}>Contact</Link></li>
+                        <li><Link to="/face-off" onClick={this.props.toggleHeaderMenu}>Head to Head</Link></li>
+                        <li><a href="/api/logout" onClick={this.props.toggleHeaderMenu}>Log Out</a></li>
                     </ul>
                 )
         }
     };
     render() {
         let style = "";
-        if (this.props.menuShown){
+        if (this.props.headerMenuShown){
             style = "show-mobile-nav";
         }
 
@@ -55,7 +55,7 @@ class Header extends Component {
 
 const mapStateToProps = state => {
     return {
-        menuShown: state.menuShown
+        headerMenuShown: state.headerMenuShown
     }
 };
 export default withRouter(connect(mapStateToProps, actions)(Header));

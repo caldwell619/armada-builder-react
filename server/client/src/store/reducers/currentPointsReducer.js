@@ -4,7 +4,6 @@ export default (state = 0, action) => {
     switch(action.type) {
         case CURRENT_POINTS:
             let currentPoints = state + action.payload;
-            console.log(state);
             return currentPoints;
         default:
             return state
