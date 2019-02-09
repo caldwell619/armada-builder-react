@@ -21,6 +21,7 @@ class MobileRight extends Component {
         }
     };
 
+
     render(){
         const faction = "imperial";
         return (
