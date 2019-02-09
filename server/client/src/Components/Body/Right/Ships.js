@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {shipCards} from '../../../data/cards.js'
+import '../../css/Ships.css';
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions';
 
 let uniqid = require('uniqid');
 
 
-class Ships extends React.Component {
+class Ships extends Component {
 
-    addShip = (ship) => {
+    reduxAddShip = ship => {
+        this.props.addShip(ship);
+        this.props.currentPoints(ship);
+    };
+    addShip = ship => {
 
         //define new state
         let updatedShips = [...this.props.shipInfo];
@@ -41,7 +48,6 @@ class Ships extends React.Component {
     };
 
     render() {
-        console.log("here");
         let noMoreShipsDiv = null;
         if (400 - this.props.points < 22) {
             noMoreShipsDiv = (
@@ -69,16 +75,24 @@ class Ships extends React.Component {
             <div className="cards-container">
                 {empireShips.map(ship => {
                     return (
-                        <div className="ship-card span-1-of-3" key={ship.id}>
+                        <div className="ship-card span-1-of-3" key={ship.id} onClick={this.reduxAddShip.bind(this, ship)}>
                             <img src={`/images/cards/ship/imperial/${ship.image}`} alt={ship.title}
                                  onClick={this.addShip.bind(this, ship)}/>
+                            <div className="add-ship-name">
+                                <div>{ship.title}</div>
+                            </div>
                         </div>
                     )
-                })}
+                })}}
                 {noMoreShipsDiv}
             </div>
         )
     }
 }
 
-export default Ships;
+const mapStateToProps = state => {
+  return {
+      ships: state.ships
+  }
+};
+export default connect(mapStateToProps, actions)(Ships);

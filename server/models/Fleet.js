@@ -4,6 +4,8 @@ const { Schema } = mongoose;
 // template for all user instances
 const fleetSchema = new Schema({
     owner: String,
+    fleetName: String,
+    faction: String,
     ships: []
 });
 

@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import * as actions from '../../../../store/actions';
+import { connect } from 'react-redux';
 
 
-class Commander extends React.Component {
+class Commander extends Component {
     constructor(props) {
-        super();
+        super(props);
     }
+
+    reduxUpgrade = card => {
+        // console.log(this.props);
+        this.props.findUpgrades(card);
+    };
 
     addUpgradeHandler = (card) => {
         const shipIndex = this.props.shipInfo.findIndex(index => {
@@ -38,7 +45,7 @@ class Commander extends React.Component {
             <div>
                 {commanderCards.map(commander => {
                     return (
-                        <div className="ship-card span-1-of-3" key={commander.id}>
+                        <div className="ship-card span-1-of-3" key={commander.id} onClick={this.reduxUpgrade.bind(this, commander)}>
                             <img src={`/images/cards/upgrades/commander/${commander.image}`} alt={commander.title}
                                  onClick={this.addUpgradeHandler.bind(this, commander)}/>
                         </div>
@@ -50,4 +57,8 @@ class Commander extends React.Component {
     }
 }
 
-export default Commander;
+const mapStateToProps = state => {
+    console.log(state)
+    return {upgrades: state.availableUpgrades}
+};
+export default connect(mapStateToProps, actions)(Commander);
