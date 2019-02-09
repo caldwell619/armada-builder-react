@@ -1,20 +1,23 @@
 {
-  "name": "armada-builder-react",
+  "name": "server",
   "version": "1.0.0",
-  "description": "A fullstack, MongoDB, Express, React, and NodeJS stack application for building a fleet to play Star Wars: Armada",
-  "main": "/server/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caldwell619/armada-builder-react.git"
-  },
-  "author": "",
+  "author": "Christopher Caldwell",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/caldwell619/armada-builder-react/issues"
-  },
-  "homepage": "https://github.com/caldwell619/armada-builder-react#readme"
+  "description": "Deck building application for Star Wars: Armada",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9",
+    "nodemon": "^1.18.9",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0"
+  }
 }
