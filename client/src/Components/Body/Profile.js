@@ -57,7 +57,7 @@ class Profile extends Component {
                                         <div className="disp-buttons">
                                             <div className="buttons-cont">
                                                 <Link to={`/profile/edit/${fleet._id}`}><button id="show-button">Show</button></Link>
-                                                <button onClick={this.deleteShip.bind(this, fleet)} className="ion-trash-a" id="delete-button"/>
+                                                <button onClick={this.deleteShip.bind(this, fleet)} className="far fa-trash-alt" id="delete-button"/>
                                             </div>
                                         </div>
 

@@ -21,10 +21,11 @@ class MobileShowFleet extends Component{
     render(){
         const targetFleet = this.props.targetFleet;
         let faction = targetFleet.faction.charAt(0).toUpperCase() + targetFleet.faction.slice(1);
+        let shipPoints = 0;
         return (
                 <div className="content-container mobile mobile-cont">
                 <div className="row back-container">
-                    <Link to="/profile"><button className={"ion-arrow-left-a"}/></Link>
+                    <Link to="/profile"><button className={"fas fa-arrow-left"}/></Link>
                 </div>
                 <div className="content-container">
                     <div className="row fleet-name-display">
@@ -40,15 +41,20 @@ class MobileShowFleet extends Component{
                         {targetFleet.ships.map(ship => {
                             return (
                                 <section className="display-ship row" key={ship.id}>
-                                    <div>
+                                    <div className={`big-ship-cont`}>
+                                        <div className={`display-header-cont`}>
+                                            <h3>Ship:</h3>
+                                            <h3>Total Points: </h3>
+                                        </div>
                                         <div className="col ship-col">
                                             <div>
-                                                <h3>Ship:</h3>
                                                 <div className={"display-ship-img"}>
                                                     <img src={`${ship.imagePath}`} alt={ship.name} />
                                                 </div>
-                                                <div className='display-ship-name'>{ship.name}</div>
                                             </div>
+
+                                                <div className='display-ship-name'>{ship.name}</div>
+                                                <div className={`ship-points`}>{ship.points}</div>
                                         </div>
                                         <div className="col upgrade-col">
                                             <div>
@@ -56,14 +62,22 @@ class MobileShowFleet extends Component{
                                                 {Object.values(ship.upgrades).map(upgrade => {
                                                     if (upgrade !== null){
                                                         return (
-                                                            <div className="display-upgrade" key={upgrade.set}>{upgrade.title}</div>
+                                                            <React.Fragment>
+                                                                <div className="upgrade-cont">
+                                                                    <div className={"display-upgrade-img"} key={`img-${upgrade.set}`}>
+                                                                        <img src={`/images/cards/upgrades/${upgrade.set}/small-${upgrade.image}`} alt={upgrade.name}/>
+                                                                    </div>
+                                                                    <div className="display-upgrade" key={upgrade.set}>{upgrade.title}</div>
+                                                                    <div className="display-upgrade-points">{upgrade.points}</div>
+                                                                </div>
+
+                                                            </React.Fragment>
                                                         )
                                                     }
                                                 })}
                                             </div>
                                         </div>
                                     </div>
-                                    <Link to={`profile/show/${targetFleet._id}/edit`}><button>Edit</button></Link>
                                 </section>
                             )
                         })}

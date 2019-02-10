@@ -499,6 +499,7 @@ card display - right side
     background-size: cover;
     height: 100vh;
     overflow: scroll;
+    padding-bottom: 100px;
 }
 
 .card { display: inline-block; }
@@ -587,6 +588,11 @@ Landing Page
 .landing-img {
     height: 100px;
     transition: all 0.4s;
+}
+@media screen and (min-width: 600px){
+    .landing-img {
+        height: 100px;
+    }
 }
 .landing-img:hover {
     transform: scale(1.15);

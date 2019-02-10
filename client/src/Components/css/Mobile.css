@@ -19,6 +19,7 @@
     opacity: 0;
     overflow: scroll;
     z-index: 1;
+    padding-bottom: 120px;
 
 }
 .menu-show-mobile {
@@ -84,6 +85,9 @@
 .current-points {
     font-size: 15px;
     width: 50%;
+}
+.functionality-buttons {
+    overflow: scroll;
 }
 
 

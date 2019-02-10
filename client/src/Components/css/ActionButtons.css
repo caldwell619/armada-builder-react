@@ -14,10 +14,13 @@
     cursor: pointer;
 }
 .ship-squad-add {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*border: 1px solid #cbcbcb;*/
     margin-bottom: 30px;
+}
+.save-text {
+    font-family: 'Orbitron', sans-serif;
+}
+.save-text p {
+    text-align: center;
 }
 .save-button {
     padding: 10px;
@@ -29,6 +32,7 @@
     background-color: green;
     padding: 13px;
     font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
 }
 .save-button-cont {
     text-align: center;

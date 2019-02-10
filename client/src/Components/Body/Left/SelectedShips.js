@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 class selectedShips extends React.Component {
     constructor(props) {
-        super();
+        super(props);
     }
 
     deleteShip = (ship) => {
