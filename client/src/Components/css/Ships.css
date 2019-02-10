@@ -26,3 +26,10 @@
     /*font-weight: bold;*/
     font-family: 'Orbitron', sans-serif;
 }
+
+@media screen and (min-width: 690px){
+.card-display {
+    width: 65%;
+    }
+}
+

@@ -38,7 +38,7 @@ class selectedShips extends React.Component {
                                     </div>
                                     <div className={"span-7-of-12 ship-name"}
                                          onClick={this.toggleHandler.bind(this, ship.id)}>{ship.name}</div>
-                                    <div className="delete far fa-trash-alt" onClick={this.deleteShip.bind(this, ship)}>X</div>
+                                    <div className="delete far fa-trash-alt" onClick={this.deleteShip.bind(this, ship)}/>
                                 </div>
                                 <div className="upgrade-bar" key={`${ship.id}-upgradeBar`}>
                                     {Object.keys(ship.upgrades).map(upgradeType => {
@@ -67,7 +67,7 @@ class selectedShips extends React.Component {
                                                     <div className="col span 7-of-12 upgrade-name">
                                                         {upgrade.title}
                                                     </div>
-                                                    <div className="delete-upgrade ion-trash-a" onClick={this.deleteUpgrade.bind(this, ship, upgrade)}/>
+                                                    <div className="delete-upgrade far fa-trash-alt" onClick={this.deleteUpgrade.bind(this, ship, upgrade)}/>
                                                 </div>
                                             )
                                         }

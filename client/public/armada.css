@@ -246,13 +246,7 @@ selected fleet
     max-width: 100px;
 }
 
-.ship-name {
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-    margin: auto 0;
-    transition: all 0.4s;
-}
+
 
 .ship-name p {
     margin: 0 0 0 12px;
@@ -276,12 +270,6 @@ selected fleet
 .span-4-of-12 { width: 25%; }
 
 .span-7-of-12 { width: 50%; }
-
-.chosen-ship {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
 
 .chosen-ship-container { margin: 20px 0; }
 
@@ -538,8 +526,8 @@ card display - right side
     align-items: center;
     padding: 0 4% 0 2%;
     margin:  5px 0 5px 50px;
-    border-left: 1px solid black;
-    width: 60%;
+    border-left: 1px solid #464646;
+    width: 82%;
 }
 .equipped-upgrades {
 
@@ -553,8 +541,6 @@ card display - right side
     height: 40px;
 }
 .upgrade-img {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
     width: 60px;
 
 }

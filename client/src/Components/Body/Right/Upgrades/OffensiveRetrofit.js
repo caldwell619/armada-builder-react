@@ -37,7 +37,7 @@ class OffensiveRetroFit extends React.Component {
                 {offensiveCards.map((card) => {
                         return (
                             <div className="ship-card span-1-of-3" key={card.id}>
-                                <img src={`/images/cards/upgrades/offensive-retrofit/${card.image}`} alt={card.title} onClick={this.addUpgradeHandler.bind(this, card)}/>
+                                <img src={`/images/cards/upgrades/offensive-retrofit/small-${card.image}`} alt={card.title} onClick={this.addUpgradeHandler.bind(this, card)}/>
                             </div>
                         )
                 })}

@@ -26,7 +26,37 @@
     font-size: 16px;
 }
 
-
+#fleet-name {
+    padding: 10px;
+}
 @media screen and (min-width: 690px){
-
+    .save-text {
+        padding: 10px;
+    }
+    .menu-show-mobile {
+        width: 30%;
+    }
+}
+@media screen and (min-width: 800px){
+    .current-points {
+        margin: 5px 0;
+    }
+    .notify {
+        display: none;
+    }
+    .ship-img {
+        width: 70px;
+    }
+    .ship-img img {
+        max-height: 75px;
+    }
+    .ship-name {
+        font-size: 16px;
+    }
+    .selector-container {
+        width: 35%;
+    }
+    .upgrade-bar button img {
+        height: 14px;
+    }
 }

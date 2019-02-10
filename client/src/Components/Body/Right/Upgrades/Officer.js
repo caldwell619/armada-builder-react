@@ -87,7 +87,7 @@ class Officer extends React.Component {
                 {officerCards.map((card) => {
                         return (
                             <div className="ship-card span-1-of-3" key={card.id}>
-                                <img src={`/images/cards/upgrades/officer/${card.image}`} alt={card.title} onClick={this.addUpgradeHandler.bind(this, card)}/>
+                                <img src={`/images/cards/upgrades/officer/small-${card.image}`} alt={card.title} onClick={this.addUpgradeHandler.bind(this, card)}/>
                             </div>
                         )
                 })}

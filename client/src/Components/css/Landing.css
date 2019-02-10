@@ -1,5 +1,12 @@
-.title {
-    position: absolute;
-    top: 90px;
-    z-index: 1;
+.faction-cont {
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 2px;
+}
+
+
+
+@media screen and (min-width: 690px){
+    .landing-img {
+        height: 30vh;
+    }
 }
