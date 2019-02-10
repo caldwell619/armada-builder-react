@@ -187,7 +187,7 @@ fleet display - left side
 }
 
 #fleet-total {
-    width: 30%;
+    width: 40%;
     font-size: 40px;
 }
 
@@ -203,7 +203,7 @@ fleet display - left side
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
 }
 .points-display {
     display: flex;

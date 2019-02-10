@@ -78,13 +78,15 @@
 }
 .mobile-card-display {
     margin-top: 70px;
+    overflow: scroll;
+    overflow-scrolling: touch;
 }
 .ship-card {
     width: 40%;
 }
 .ship-card img {
-    height: 70px;
-    margin: 10px 0;
+    height: 45px;
+    margin: 5px 0;
     cursor: pointer;
     transition: all 0.6s;
 }
@@ -101,7 +103,6 @@
 }
 #max-points-label {
     font-size: 15px;
-    margin-right: 8px;
 }
 .current-points {
     font-size: 15px;

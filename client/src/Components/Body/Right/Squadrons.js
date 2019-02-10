@@ -1,5 +1,6 @@
 import React from 'react';
 import {squadronCards} from '../../../data/cards.js'
+import '../../css/Squadrons.css';
 
 class Squadrons extends React.Component{
     render(){
@@ -16,7 +17,7 @@ class Squadrons extends React.Component{
                 {empireSquadrons.map((squadron) => {
                         return (
                             <div className="squad-card span-1-of-3">
-                                <img src={`/images/cards.js/squadron/imperial/${squadron.image}`} alt={squadron.title}/>
+                                <img src={`/images/cards/squadron/imperial/small-${squadron.image}`} alt={squadron.title}/>
                             </div>
                         )
                 })}
