@@ -73,6 +73,7 @@ class Ships extends Component {
             }
         });
         return (
+            <React.Fragment>
             <div className="cards-container">
                 {empireShips.map(ship => {
                     return (
@@ -85,8 +86,9 @@ class Ships extends Component {
                         </div>
                     )
                 })}}
-                {noMoreShipsDiv}
             </div>
+                {noMoreShipsDiv}
+            </React.Fragment>
         )
     }
 }

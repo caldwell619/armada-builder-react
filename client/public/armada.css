@@ -428,6 +428,8 @@ crawl
 .crawl-container {
     width: 100%;
     height: 100%;
+    position: fixed;
+    z-index: 0;
 
     overflow: hidden;
 }
@@ -517,7 +519,7 @@ card display - right side
 .ship-card img {
     height: 70px;
     margin: 10px;
-    cursor: pointer;
+
 }
 
 .card img:hover { transform: scale(1.1) }
