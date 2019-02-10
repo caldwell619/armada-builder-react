@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import '../css/Landing.css';
 
 class Landing extends React.Component{
 
@@ -7,9 +8,6 @@ class Landing extends React.Component{
 
         return (
             <div className="container main">
-                <div className="row title">
-                    <h1>Choose your allegiance</h1>
-                </div>
                 <div className="row content-row">
                     <div className="col span-1-of-2">
                         <Link to='/builder/imperial'>

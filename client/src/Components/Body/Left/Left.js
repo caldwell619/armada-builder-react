@@ -27,7 +27,7 @@ class Left extends Component{
         return (
             <React.Fragment>
                 <div className={`toggle-selector-main`} onClick={this.toggleMenu}>
-                    <span className={`ion-navicon-round`}/>
+                    <span className={`far fa-bars`}/>
                 </div>
                 <div className={`selector-container ${style} span-1-of-4 desktop`}>
                     <FleetDisplay points={this.props.points} faction={this.props.faction} nameChange={this.props.nameChange} name={this.props.name}/>

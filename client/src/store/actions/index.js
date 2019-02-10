@@ -12,6 +12,8 @@ import {
     ADD_SHIP,
     CURRENT_POINTS,
     FIND_UPGRADES,
+    FLAG_TOGGLE,
+    SHOW_FLAG
 } from "./types";
 
 
@@ -59,4 +61,10 @@ export const currentPoints = ship => dispatch => {
 };
 export const findUpgrades = card => dispatch => {
     dispatch({type: FIND_UPGRADES, payload: card})
+};
+export const flagToggle = () => dispatch => {
+    dispatch({type: FLAG_TOGGLE})
+};
+export const showFlag = () => dispatch => {
+    dispatch({type: SHOW_FLAG})
 };

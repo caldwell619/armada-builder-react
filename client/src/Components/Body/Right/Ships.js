@@ -12,6 +12,7 @@ class Ships extends Component {
     reduxAddShip = ship => {
         this.props.addShip(ship);
         this.props.currentPoints(ship);
+        this.props.showFlag()
     };
     addShip = ship => {
 

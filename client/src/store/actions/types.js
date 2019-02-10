@@ -10,3 +10,5 @@ export const HIDE_LEFT_MENU = 'HIDE_LEFT_MENU';
 export const HIDE_HEADER_MENU = 'HIDE_HEADER_MENU';
 export const CURRENT_POINTS = 'CURRENT_POINTS';
 export const FIND_UPGRADES = 'FIND_UPGRADES';
+export const FLAG_TOGGLE = 'FLAG_TOGGLE';
+export const SHOW_FLAG = 'SHOW_FLAG';

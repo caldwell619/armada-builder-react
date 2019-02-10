@@ -9,6 +9,7 @@ import toggleHeaderReducer from './toggleHeaderReducer';
 import toggleLeftMenuReducer from './toggleLeftMenuReducer';
 import currentPointsReducer from './currentPointsReducer';
 import findUpgradesReducer from './availableUpgradesReducer';
+import flagToggleReducer from './flagToggleReducer';
 
 //defines global store state
 export default combineReducers({
@@ -21,6 +22,6 @@ export default combineReducers({
     headerMenuShown: toggleHeaderReducer,
     leftMenuShown: toggleLeftMenuReducer,
     currentPoints: currentPointsReducer,
-    availableUpgrades: findUpgradesReducer
-
+    availableUpgrades: findUpgradesReducer,
+    flagShown: flagToggleReducer
 })

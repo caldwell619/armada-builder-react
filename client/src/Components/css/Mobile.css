@@ -40,6 +40,19 @@
     align-items: center;
     justify-content: center;
 }
+.notify {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    position: fixed;
+    top: 65px;
+    left: 37px;
+    z-index: 101;
+    color: red;
+    font-size: 21px;
+}
+.flagToggle {
+    opacity: 1;
+}
 .mobile-card-display {
     margin-top: 70px;
 }

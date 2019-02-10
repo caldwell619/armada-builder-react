@@ -49,7 +49,7 @@ class AddPiece extends Component {
                 <div className="button-container">
                     <div className="ship-squad-add row">
                         <div className="drop-down-ship">
-                            <div onClick={this.toggleShip}>Ships / Squadrons <span id={"ship-drop-down-chev"} className={`ion-chevron-down ${shipRotate}`}/>
+                            <div onClick={this.toggleShip}>Ships / Squadrons <span id={"ship-drop-down-chev"} className={`fas fa-chevron-down ${shipRotate}`}/>
                             </div>
                         </div>
                         <div className={`ship-squad-cont ${shipShow}`}>
@@ -69,7 +69,7 @@ class AddPiece extends Component {
                 </div>
                 <div className="global-obj-cont">
                     <div className="drop-down-obj">
-                        <div onClick={this.toggleObj}>Objectives <span id={"obj-drop-down-chev"} className={`ion-chevron-down ${objRotate}`}/></div>
+                        <div onClick={this.toggleObj}>Objectives <span id={"obj-drop-down-chev"} className={`fas fa-chevron-down ${objRotate}`}/></div>
                     </div>
                     <div className={`objective-selector-container ${objShow}`}>
                         <div className="add-piece-container col">

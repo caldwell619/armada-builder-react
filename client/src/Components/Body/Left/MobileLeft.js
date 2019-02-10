@@ -12,21 +12,28 @@ class MobileLeft extends Component{
     toggleLeftMenu =() => {
         this.props.toggleLeftMenu();
         this.props.hideHeaderMenu();
+        this.props.flagToggle()
     };
 
     render(){
         let style = "";
-        let menuIcon = "ion-navicon-round";
+        let menuIcon = "fas fa-bars";
+        let flagToggle = "";
         if (this.props.leftMenuShown){
             style = "menu-show-mobile";
-            menuIcon = "ion-close-round";
-        } else {
+            menuIcon = "fas fa-times";
+            flagToggle = ""
+        } else if (this.props.flagShown){
+            flagToggle = "flagToggle";
+        }
+        else {
             style = ""
         }
 
         return (
             <React.Fragment>
                 <div className={"mobile-selector"}>
+                    <div className={`fas fa-flag notify ${flagToggle}`}/>
                     <div className={`toggle-selector-main mobile`} onClick={this.toggleLeftMenu}>
                         <span className={menuIcon}/>
                     </div>
@@ -43,7 +50,8 @@ class MobileLeft extends Component{
 const mapStateToProps = state => {
     return {
         menuShown: state.menuShown,
-        leftMenuShown: state.leftMenuShown
+        leftMenuShown: state.leftMenuShown,
+        flagShown: state.flagShown
     }
 };
 export default connect(mapStateToProps, actions)(MobileLeft);

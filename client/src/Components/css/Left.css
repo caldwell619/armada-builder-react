@@ -20,12 +20,13 @@
     width: 80%;
     margin: 0;
 }
-#fleet-total {
-    font-size: 20px;
+
+#fleet-total,
+.points-display {
+    font-size: 16px;
 }
+
+
 @media screen and (min-width: 690px){
-    #fleet-total,
-    .points-display {
-        font-size: 16px;
-    }
+
 }
