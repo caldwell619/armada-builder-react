@@ -5,11 +5,17 @@ import { Link, Redirect } from 'react-router-dom';
 import '../css/Profile.css'
 
 class Profile extends Component {
+    constructor(){
+        super();
+        this.state = {
+            reRender: false
+        }
+    }
 
     componentDidMount(){
         this.props.fetchFleet();
     }
-    fetchUser = () => {
+    displayUser = () => {
         let name = '';
         if (this.props.user != null) {
             name = this.props.user.firstName;
@@ -29,7 +35,7 @@ class Profile extends Component {
         }
     };
 
-    deleteShip = (fleet) => {
+    deleteShip = fleet => {
         fetch("/api/delete-fleet", {
             method: "DELETE",
             headers: {
@@ -40,9 +46,9 @@ class Profile extends Component {
                 "fleetId": fleet._id
             })
         }).catch(error => {console.log(error)});
-        this.forceUpdate();
+        this.forceUpdate;
     };
-    fetchFleets = () => {
+    displayFleets = () => {
         switch (this.props.ships) {
             case null:
                 return;
@@ -88,9 +94,9 @@ class Profile extends Component {
         }
         return (
             <div className={"content-container mobile-cont"}>
-                {this.fetchUser()}
+                {this.displayUser()}
                 {buildPrompt}
-                {this.fetchFleets()}
+                {this.displayFleets()}
             </div>
         )
     }
