@@ -53,9 +53,10 @@
     justify-content: space-between;
 }
 .ship-col {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
 }
 .big-ship-cont {
     width: 100%;
@@ -130,7 +131,8 @@
     margin-left: 5px;
 }
 .upgrade-col {
-    margin-left: 10%;
+    padding-left: 10% !important;
+    width: 95%;
 }
 .display-ship-name {
     text-align: center;

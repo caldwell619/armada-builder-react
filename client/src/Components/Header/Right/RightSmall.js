@@ -19,7 +19,7 @@ class Right extends Component {
             rotate = "rotate";
         }
         return (
-                <div className={"col span-1-of-2 menu-holder"}>
+                <div className={"col span-1-of-2"} id={"menu-holder"}>
                     <div className="icon" onClick={this.toggleMenu}><i className={`fas fa-chevron-down ${rotate}`}/></div>
                 </div>
         )

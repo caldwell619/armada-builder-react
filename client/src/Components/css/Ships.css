@@ -26,6 +26,9 @@
     /*font-weight: bold;*/
     font-family: 'Orbitron', sans-serif;
 }
+.ship-name {
+    padding: 5px;
+}
 
 @media screen and (min-width: 690px){
 .card-display {

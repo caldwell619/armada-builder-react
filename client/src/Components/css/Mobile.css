@@ -50,7 +50,7 @@
 
 .toggle-selector-main {
     position: fixed;
-    top: 72px;
+    top: 74px;
     left: 6px;
     height: 40px;
     width: 40px;
@@ -77,7 +77,7 @@
     opacity: 1;
 }
 .mobile-card-display {
-    margin-top: 70px;
+    padding-top: 90px;
     overflow: scroll;
     overflow-scrolling: touch;
 }
@@ -106,10 +106,11 @@
 }
 .current-points {
     font-size: 15px;
-    width: 50%;
+    width: 35%;
 }
 .functionality-buttons {
     overflow: scroll;
 }
+
 
 

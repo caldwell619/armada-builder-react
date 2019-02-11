@@ -46,7 +46,7 @@ class Profile extends Component {
                 "fleetId": fleet._id
             })
         }).catch(error => {console.log(error)});
-        this.forceUpdate;
+        this.forceUpdate();
     };
     displayFleets = () => {
         switch (this.props.ships) {

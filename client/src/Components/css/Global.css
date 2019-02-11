@@ -1,3 +1,6 @@
+
+
+
 /************************
    basic formatting
    ************************/
@@ -93,12 +96,6 @@ nav { background-color: black; }
 
 .nav-container { float: right; }
 
-/* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    /*background-color: black;*/
-    position: relative;
-}
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 
@@ -156,15 +153,7 @@ fleet display - left side
 ************************/
 .selector-container { float: left; }
 
-#fleet-name {
-    font-size: 27px;
-    margin-left: 15px;
-    width: 50%;
-    border: none;
-    border-bottom: 1px solid #cbcbcb;
-    padding-bottom: 5px;
-    text-align: center;
-}
+
 
 
 
@@ -175,20 +164,12 @@ fleet display - left side
 
 .span-3-of-4 { width: 100%; }
 
-#fleet-name {
-    font-size: 22px;
-    font-family: 'Orbitron', sans-serif;
-}
+
 
 .img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#fleet-total {
-    width: 40%;
-    font-size: 40px;
 }
 
 .drop-down-ship,
@@ -199,12 +180,7 @@ fleet display - left side
 
 .big-points-container * { font-family: 'Orbitron', sans-serif; }
 
-.points-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-}
+
 .points-display {
     display: flex;
     align-items: center;
@@ -215,11 +191,7 @@ fleet display - left side
 /************************
 Max Points
 ************************/
-.max-points {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .max-points input {
     width: 50px;
@@ -246,15 +218,6 @@ selected fleet
     max-width: 100px;
 }
 
-
-
-.ship-name p {
-    margin: 0 0 0 12px;
-    font-size: 30px;
-    width: 100%;
-    font-family: 'Orbitron', sans-serif;
-
-}
 .ship-name:hover {
     transform: scale(1.1);
     background-color: #eeeeee;
@@ -287,21 +250,6 @@ upgrade bar
     padding-bottom: 5px;
 }
 
-.upgrade-bar button {
-    border: none;
-    background-color: gray;
-    margin: 3px;
-    padding: 5px 5px 0 5px;
-    transition: all 0.3s;
-
-}
-
-.upgrade-bar button:hover {
-    background-color: black;
-    transform: scale(1.1);
-}
-
-.upgrade-bar button img { height: 20px; }
 
 /************************
 add ship
@@ -513,13 +461,6 @@ card display - right side
 
 .card img:hover { transform: scale(1.1) }
 
-.squad-card { display: inline-block; }
-
-.squad-card img {
-    height: 370px;
-    margin: 10px;
-}
-
 .assigned-upgrade {
     display: flex;
     justify-content: space-between;
@@ -554,8 +495,6 @@ textarea { float: left; }
 #message { clear: left; }
 
 #submit { clear: both; }
-
-/*.span-1-of-4 { width: 100%; }*/
 
 .selected-ship-container {
     position: relative;
@@ -682,19 +621,11 @@ Media Queries
 
     .span-1-of-3 { width: 33%; }
 
-    #fleet-total { font-size: 20px; }
-
     .ship-name p {
         margin-left: 5px;
         font-size: 10px;
     }
     .logo-container { display: block; }
-
-    .big-points-container > div { width: 100%; }
-
-    .big-points-container { padding: 5px; }
-
-    #fleet-total { width: 32%; }
 
     .max-points label {
         width: 45%;
@@ -708,22 +639,13 @@ Media Queries
 
     .nav-links { text-align: right; }
 
-    #fleet-name {
-        width: 100%;
-        margin: 0 auto;
-        padding: 10px;
-        font-size: 18px;
-    }
+
 
     .points-display {
         display: block;
         margin: 5px 10px ;
         text-align: center;
         font-size: 20px;
-    }
-    .current-points {
-        font-size: 16px;
-        margin: 5px 0 5px 10px;
     }
 
     #squad-button { font-size: 12px; }
