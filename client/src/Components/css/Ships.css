@@ -1,3 +1,8 @@
+.ship-card {
+    float: left;
+    width: 49% !important;
+}
+
 .ship-card p {
     color:white;
 }

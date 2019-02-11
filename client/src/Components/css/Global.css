@@ -450,15 +450,6 @@ card display - right side
     margin: 10px;
     transition: transform 0.3s;
 }
-
-.ship-card { display: inline-block; }
-
-.ship-card img {
-    height: 70px;
-    margin: 10px;
-
-}
-
 .card img:hover { transform: scale(1.1) }
 
 .assigned-upgrade {
