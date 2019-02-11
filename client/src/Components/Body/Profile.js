@@ -36,7 +36,7 @@ class Profile extends Component {
             body: JSON.stringify({
                 "fleetId": fleet._id
             })
-        });
+        }).catch(error => {console.log(error)});
         this.forceUpdate();
     };
     fetchFleets = () => {
