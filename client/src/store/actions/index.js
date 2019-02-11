@@ -23,7 +23,7 @@ export const fetchUser = () => async (dispatch) => {
 };
 
 export const fetchFleet = () => async (dispatch) => {
-    const res = await axios.get("/api/fleets");
+    const res = await axios.get("/api/fleets").catch(error => {console.log(error)});
     dispatch({type: FETCH_SHIPS, payload: res.data})
 };
 

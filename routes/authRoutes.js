@@ -33,7 +33,10 @@ module.exports = (app) => {
     app.get("/api/fleets", (req, res) => {
         // find returns all -- findOne returns one
         Fleet.find({owner: req.user.googleId}).then(result => res.send(result))
-            .catch(error => {console.log(error)});
+            .catch(error => {
+                console.log(error);
+                res.send("error");
+            });
     });
     app.delete("/api/delete-fleet", (req, res) => {
         shipActions.deleteFleet(req.body.fleetId);

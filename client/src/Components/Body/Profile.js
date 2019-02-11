@@ -6,6 +6,9 @@ import '../css/Profile.css'
 
 class Profile extends Component {
 
+    componentDidMount(){
+        this.props.fetchFleet();
+    }
     fetchUser = () => {
         let name = '';
         if (this.props.user != null) {
@@ -72,7 +75,7 @@ class Profile extends Component {
 
 
     render() {
-        this.props.fetchFleet();
+
         let buildPrompt = null;
         if (this.props.ships !== null && this.props.ships.length === 0){
             buildPrompt = (
