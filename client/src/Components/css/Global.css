@@ -461,8 +461,18 @@ card display - right side
     border-left: 1px solid #464646;
     width: 82%;
 }
-.equipped-upgrades {
+.temp-message {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.temp-message h1 {
+    color: white;
+}
+.arrow {
+    width:120px;
 }
 .upgrade-name {
     font-size: 15px;
@@ -579,12 +589,9 @@ Media Queries
 
 /* applies to screens 680 px and above (past mobile phone) */
 @media screen and (min-width: 500px) {
-    .ship-card img { height: 580px; }
+    .ship-card img { height: 75px; }
 
-    .squad-card img { height: 250px;}
-
-    .squad-card img { height: 550px;}
-
+    .squad-card img { height: 75px;}
 }
 
 /* applies to screens 680 px and above (past mobile phone) */
