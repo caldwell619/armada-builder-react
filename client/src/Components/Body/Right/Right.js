@@ -9,6 +9,7 @@ import Officer from './Upgrades/Officer';
 import GenericUpgrade from "./Upgrades/GenericUpgrade";
 import UniqueUpgrade from './Upgrades/UniqueUpgrade';
 import OffensiveRetroFit from "./Upgrades/OffensiveRetrofit";
+import '../../css/Cards.css';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 

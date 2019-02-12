@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Link} from "react-router-dom";
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import * as actions from '../../../store/actions';
 
-class selectedShips extends React.Component {
+class selectedShips extends Component {
     constructor(props) {
         super(props);
     }
@@ -44,7 +47,7 @@ class selectedShips extends React.Component {
                                     {Object.keys(ship.upgrades).map(upgradeType => {
                                         if (ship.upgradesShown) {
                                                     return (
-                                                        <Link to={`/builder/${this.props.faction}/${ship.id}/upgrades/${upgradeType}`}>
+                                                        <Link to={`/builder/${this.props.faction}/${ship.id}/upgrades/${upgradeType}`} onClick={this.props.hideLeftMenu}>
                                                             <button>
                                                                 <img src={`/images/icons/${upgradeType}.png`}
                                                                      alt="upgrade icon"/>
@@ -86,4 +89,10 @@ class selectedShips extends React.Component {
 
 };
 
-export default selectedShips;
+const mapStateToProps = state => {
+    return {
+        chosenShips: state.ships
+    }
+};
+
+export default withRouter(connect(mapStateToProps, actions)(selectedShips));

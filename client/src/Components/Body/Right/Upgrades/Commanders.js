@@ -46,8 +46,13 @@ class Commander extends Component {
                 {commanderCards.map(commander => {
                     return (
                         <div className="ship-card span-1-of-3" key={commander.id} onClick={this.reduxUpgrade.bind(this, commander)}>
-                            <img src={`/images/cards/upgrades/commander/small-${commander.image}`} alt={commander.title}
+                            <div className="upgrade-img-cont">
+                                <img src={`/images/cards/upgrades/commander/small-${commander.image}`} alt={commander.title}
                                  onClick={this.addUpgradeHandler.bind(this, commander)}/>
+                            </div>
+                            <div className="upgrade-name-cont">
+                                {commander.title}
+                            </div>
                         </div>
                     )
 
