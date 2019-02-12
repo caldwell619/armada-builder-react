@@ -3,6 +3,7 @@ export const FETCH_SHIPS = 'FETCH_SHIPS';
 export const UPDATE_NAME = 'UPDATE_NAME';
 export const MAX_POINTS = 'MAX_POINTS';
 export const ADD_SHIP = 'ADD_SHIP';
+export const ADD_SQUADRON = 'ADD_SQUADRON';
 export const FIND_FACTION = 'FIND_FACTION';
 export const TOGGLE_HEADER = 'TOGGLE_HEADER';
 export const LEFT_MENU_TOGGLE = 'LEFT_MENU_TOGGLE';

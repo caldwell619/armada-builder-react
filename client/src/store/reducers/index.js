@@ -4,6 +4,7 @@ import fleetReducer from './fleetsReducer'
 import updateNameReducer from './updateNameReducer';
 import maxPointsReducer from './maxPointsReducer';
 import addShipReducer from './addShipReducer';
+import addSquadronReducer from './addSquadronReducer';
 import findFaction from './factionReducer';
 import toggleHeaderReducer from './toggleHeaderReducer';
 import toggleLeftMenuReducer from './toggleLeftMenuReducer';
@@ -17,6 +18,7 @@ export default combineReducers({
     fleets: fleetReducer,
     fleetName: updateNameReducer,
     maxAllowedPoints: maxPointsReducer,
+    chosenSquadrons: addSquadronReducer,
     ships: addShipReducer,
     faction: findFaction,
     headerMenuShown: toggleHeaderReducer,

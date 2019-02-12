@@ -10,6 +10,7 @@ import {
     HIDE_LEFT_MENU,
     HIDE_HEADER_MENU,
     ADD_SHIP,
+    ADD_SQUADRON,
     CURRENT_POINTS,
     FIND_UPGRADES,
     FLAG_TOGGLE,
@@ -38,6 +39,10 @@ export const maxPoints = points => dispatch => {
 
 export const addShip = updatedSelectedShips => dispatch => {
     dispatch({type: ADD_SHIP, payload: updatedSelectedShips})
+};
+
+export const addSquad = selectedSquadron => dispatch => {
+  dispatch({type: ADD_SQUADRON, payload:selectedSquadron})
 };
 
 export const findFaction = faction => dispatch => {

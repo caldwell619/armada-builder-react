@@ -1,3 +1,7 @@
+label {
+    margin: 0 !important;
+}
+
 .squad-card {
     width: 49% !important;
     float: left;
@@ -6,5 +10,17 @@
 .squad-card img {
     height: 80px;
     border-radius: 8px;
-    margin: 10px;
+    margin: 20px 0;
+}
+
+.select-type-cont {
+    margin: 20px 0;
+    padding: 2%;
+}
+
+#squad-type-label {
+    color: white;
+}
+#squad-type {
+    color: white
 }

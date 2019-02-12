@@ -607,7 +607,7 @@ Media Queries
 
     .small-nav { display: none; }
 
-    .card-display { width: 70%; }
+    .card-display { width: 65%; }
 
     .span-1-of-2 { width: 50%; }
 
@@ -706,7 +706,7 @@ Media Queries
 
     .ship-card img { height: 60px; }
 
-    .squad-card img { height: 190px;}
+    .squad-card img { height: 100px;}
 
     .ship-name { width: 45%; }
 
@@ -727,8 +727,8 @@ Media Queries
 }
 
 @media screen and (min-width: 900px) {
-    .squad-card img { height: 220px;}
-    .ship-card img { height: 65px;}
+    .squad-card img { height: 160px;}
+    .ship-card img { height: 85px;}
 }
 
 @media screen and (min-width: 1200px) {
