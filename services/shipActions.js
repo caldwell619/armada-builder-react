@@ -14,12 +14,12 @@ module.exports=  {
             })
         },
     findShips: (payload) => {
-        Fleet.findOne({owner: payload}).then(result => console.log(result))
+        Fleet.findOne({owner: payload})
             .catch(error => {console.log(error)});
     },
     deleteFleet: (id) => {
         Fleet.findById(id).then(res => {
             res.remove()
-        })
+        }).catch(error => console.log(error))
     }
 };

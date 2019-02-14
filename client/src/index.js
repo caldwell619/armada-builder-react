@@ -10,7 +10,6 @@ import reduxThunk from 'redux-thunk';
 import './Components/css/Grid.css';
 import './Components/css/Global.css';
 
-
 const store = createStore(combineReducers, applyMiddleware(reduxThunk));
 
 ReactDOM.render(

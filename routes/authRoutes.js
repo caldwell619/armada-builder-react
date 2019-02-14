@@ -39,7 +39,7 @@ module.exports = (app) => {
             });
     });
     app.delete("/api/delete-fleet", (req, res) => {
-        shipActions.deleteFleet(req.body.fleetId);
+        setTimeout(() => shipActions.deleteFleet(req.body.fleetId), 3000);
         res.send("done");
     })
 };

@@ -8,11 +8,11 @@ class Profile extends Component {
     constructor(){
         super();
         this.state = {
-            reRender: false
+            pending: false
         }
     }
 
-    componentDidMount(){
+    componentWillMount(){
         this.props.fetchFleet();
     }
     displayUser = () => {
@@ -36,6 +36,10 @@ class Profile extends Component {
     };
 
     deleteShip = fleet => {
+        this.setState({
+            pending: true
+        });
+        
         fetch("/api/delete-fleet", {
             method: "DELETE",
             headers: {
@@ -45,10 +49,13 @@ class Profile extends Component {
             body: JSON.stringify({
                 "fleetId": fleet._id
             })
+        }).then(() => {
+            this.setState({pending: false});
+            this.props.fetchFleet();
         }).catch(error => {console.log(error)});
-        this.forceUpdate();
     };
     displayFleets = () => {
+        this.props.fetchFleet();
         switch (this.props.ships) {
             case null:
                 return;
@@ -66,7 +73,7 @@ class Profile extends Component {
                                         <div className="disp-buttons">
                                             <div className="buttons-cont">
                                                 <Link to={`/profile/edit/${fleet._id}`}><button id="show-button">Show</button></Link>
-                                                <button onClick={this.deleteShip.bind(this, fleet)} className="far fa-trash-alt" id="delete-button"/>
+                                                <button onClick={this.deleteShip.bind(this, fleet)} disabled={this.state.pending} className="far fa-trash-alt" id="delete-button"/>
                                             </div>
                                         </div>
 
