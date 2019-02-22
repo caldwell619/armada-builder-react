@@ -67,6 +67,13 @@
     transition: all 0.3s;
 
 }
+.ship-img {
+    height: 40px;
+    width: 90px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 5px;
+}
 
 .upgrade-bar button:hover {
     background-color: black;
@@ -75,13 +82,59 @@
 
 .upgrade-bar button img { height: 20px; }
 
-@media screen and (min-width: 690px){
+
+
+@media screen and (min-width: 679px){
     .save-text {
         padding: 10px;
     }
     .menu-show-mobile {
         width: 30%;
     }
+    .selector-container {
+        width: 35%;
+    }
+    #fleet-total {
+        width: 100%;
+    }
+    .current-points {
+        width: 60% !important;
+    }
+    .notify {
+        display: none;
+    }
+
+    .ship-img {
+        width: 80px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ship-img img {
+        max-width: 70px !important;
+    }
+    .delete {
+        font-size: 20px !important;
+        margin-right: 5px;
+    }
+
+    .ship-name {
+        padding: 1px !important;
+        font-size: 13px;
+    }
+    .points-display {
+        font-size: 16px !important;
+    }
+    .upgrade-bar button {
+        padding: 4px 4px 0 4px !important;
+        margin-left: 5px;
+    }
+
+    .upgrade-bar button img {
+        height: 14px !important;
+    }
+
 }
 @media screen and (min-width: 800px){
     .current-points {

@@ -33,9 +33,15 @@ class GenericUpgrade extends React.Component {
                 {selectedUpgradeCards.map(card => {
                     return (
                         <div className="ship-card span-1-of-3" key={card.id}>
-                            <img src={`/images/cards/upgrades/${upgradeType}/small-${card.image}`} alt={card.title}
-                                 onClick={this.addUpgradeHandler.bind(this, card)}/>
+                            <div className="upgrade-img-cont">
+                                <img src={`/images/cards/upgrades/${upgradeType}/small-${card.image}`} alt={card.title}
+                                     onClick={this.addUpgradeHandler.bind(this, card)}/>
+                            </div>
+                            <div className="upgrade-name-cont">
+                                {card.title}
+                            </div>
                         </div>
+
                     )
                 })
                 }

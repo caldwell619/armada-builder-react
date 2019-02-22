@@ -203,13 +203,7 @@ selected fleet
 ************************/
 .selected-ships { padding: 10px; }
 
-.ship-img {
-    height: 40px;
-    width: 90px;
-    overflow: hidden;
-    display: inline-block;
-    border-radius: 5px;
-}
+
 
 .ship > div { width: 50%; }
 
@@ -688,13 +682,6 @@ Media Queries
     }
 
     /* Ship Cards */
-
-    .ship-img {
-        width: 80px;
-        height: 38px;
-    }
-
-    .delete { font-size: 25px; }
 
     .delete-upgrade { font-size: 20px; }
 
