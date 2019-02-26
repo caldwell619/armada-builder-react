@@ -15,11 +15,6 @@ import { withRouter } from 'react-router-dom';
 
 class Right extends Component {
 
-    componentDidMount(){
-        fetch("http:/localhost:8081/api/user").then(res => console.log(res))
-    }
-
-
     render(){
         const faction = "imperial";
         return (

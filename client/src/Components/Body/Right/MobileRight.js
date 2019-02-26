@@ -9,7 +9,6 @@ import Officer from './Upgrades/Officer';
 import GenericUpgrade from "./Upgrades/GenericUpgrade";
 import UniqueUpgrade from './Upgrades/UniqueUpgrade';
 import OffensiveRetroFit from "./Upgrades/OffensiveRetrofit";
-import TempDisplay from './TempDisplay';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../../../store/actions';
@@ -29,7 +28,6 @@ class MobileRight extends Component {
                 <div className="mobile-card-display card-display span-3-of-4 mobile" onTouchStart={this.hideMenu} onScroll={this.hideMenu} onClick={this.hideMenu}>
 
                     <Switch>
-                        <Route path={`/builder/imperial/`} exact render={() => <TempDisplay/>}/>
                         <Route path={`/builder/imperial/ships`} render={() => <Ships click={this.props.click} shipInfo={this.props.shipInfo} points={this.props.points} faction={this.props.faction} upgradePoints={this.props.upgradePoints}/>} />
                         <Route path={`/builder/${faction}/squadrons`} render={() => <Squadrons faction={this.props.faction}/>}/>
                         <Route path={`/builder/${faction}/objectives/:objectiveType`} render={(routerProps) => <Objectives {...routerProps}/>}/>
