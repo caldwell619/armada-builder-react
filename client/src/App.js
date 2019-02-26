@@ -15,6 +15,7 @@ import ShowFleet from "./Components/Body/ShowFleet";
 class App extends Component {
     componentDidMount(){
         this.props.fetchUser();
+        fetch("/api/user").then(result => console.log(result))
     }
 
   render() {

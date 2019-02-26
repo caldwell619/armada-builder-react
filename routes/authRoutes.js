@@ -2,10 +2,8 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const Fleet = mongoose.model('fleets');
 const shipActions = require('../services/shipActions');
-
 var bodyParser = require("body-parser");
 var urlencodedParser = bodyParser.urlencoded({extended: false});
-
 
 module.exports = (app) => {
     app.use(bodyParser.json());

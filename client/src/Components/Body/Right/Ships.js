@@ -16,6 +16,7 @@ class Ships extends Component {
     };
     addShip = ship => {
 
+
         //define new state
         let updatedShips = [...this.props.shipInfo];
         // let currentPoints = this.props.points;
