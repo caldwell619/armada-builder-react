@@ -5,7 +5,7 @@ class Contact extends Component {
 
     render(){
         return (
-            <div onClick={this.postShips}>Hello</div>
+            <div onClick={this.postShips}>Working on it!</div>
         )
     }
 }
