@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import * as actions from '../../../store/actions';
-import '../../css/Header.css';
+import '../../../css/Header.css';
 
 class Right extends Component {
 

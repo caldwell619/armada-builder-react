@@ -7,7 +7,7 @@ import * as actions from '../../store/actions';
 import {Link} from "react-router-dom";
 import MobileLeft from "./Left/MobileLeft";
 import MobileRight from "./Right/MobileRight";
-import '../css/Mobile.css';
+import '../../css/Mobile.css';
 
 class Body extends Component {
     constructor(props) {

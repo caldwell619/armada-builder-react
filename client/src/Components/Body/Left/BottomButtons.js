@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import '../../css/ActionButtons.css';
+import '../../../css/ActionButtons.css';
 
 class BottomButtons extends Component{
     postShips = () => {

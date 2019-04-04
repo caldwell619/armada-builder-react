@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import combineReducers from './store/reducers/index';
 import reduxThunk from 'redux-thunk';
-import './Components/css/Grid.css';
-import './Components/css/Global.css';
+import './css/Grid.css';
+import './css/Global.css';
 
 const store = createStore(combineReducers, applyMiddleware(reduxThunk));
 

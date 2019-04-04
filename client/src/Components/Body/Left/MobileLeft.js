@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import FleetDisplay from './FleetDisplay';
 import Game from './Game'
-import '../../css/Left.css';
+import '../../../css/Left.css';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions';
-import '../../css/Header.css';
+import '../../../css/Header.css';
 
 class MobileLeft extends Component{
 

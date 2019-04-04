@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {shipCards} from '../../../data/cards.js'
-import '../../css/Ships.css';
+import '../../../css/Ships.css';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions';
+import SelectionCard from "../../SelectionCard";
 
 let uniqid = require('uniqid');
 
@@ -49,6 +50,15 @@ class Ships extends Component {
         });
     };
 
+
+
+
+    inputHandler = type => event => {
+        this.setState({
+            [type]: event.target.value
+        });
+    };
+
     render() {
         let noMoreShipsDiv = null;
         if (400 - this.props.points < 22) {
@@ -65,31 +75,28 @@ class Ships extends Component {
                 </div>
             )
         }
-        let empireShips = [];
-        shipCards.forEach(ship => {
-            if (ship.faction === "imperial") {
-                if (ship.points < 400 - this.props.points) {
-                    empireShips.push(ship);
-                }
-            }
-        });
+        let empireShips = shipCards.filter(ship => (
+            ship.faction === "imperial" && ship.points < 400 - this.props.points
+        ));
+
+        console.log(empireShips);
+
         return (
-            <React.Fragment>
+            <Fragment>
+                <select onChange={this.inputHandler('filterTerm')} style={{marginTop: "100px", backgroundColor: "white"}}>
+                    <option value="all">All</option>
+                    <option value="large">Large</option>
+                    <option value="medium">Medium</option>
+                    <option value="small">Small</option>
+                    <option value="other">Other</option>
+                </select>
             <div className="cards-container">
-                {empireShips.map(ship => {
-                    return (
-                        <div className="ship-card span-1-of-3" key={ship.id} onClick={this.reduxAddShip.bind(this, ship)}>
-                            <img src={`/images/cards/ship/imperial/${ship.image}`} alt={ship.title}
-                                 onClick={this.addShip.bind(this, ship)}/>
-                            <div className="add-ship-name">
-                                <div>{ship.title}</div>
-                            </div>
-                        </div>
-                    )
-                })}}
+                {empireShips.map(ship => (
+                       <SelectionCard {...ship} image={`/images/cards/ship/imperial/${ship.image}`}/>
+                ))}
             </div>
                 {noMoreShipsDiv}
-            </React.Fragment>
+            </Fragment>
         )
     }
 }

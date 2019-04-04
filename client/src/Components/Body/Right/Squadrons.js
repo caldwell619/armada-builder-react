@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {squadronCards} from '../../../data/cards.js'
-import '../../css/Squadrons.css';
+import '../../../css/Squadrons.css';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions';
 import SquadronTypeDropdown from './SquadronTypeDropdown';

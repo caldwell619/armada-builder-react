@@ -9,7 +9,7 @@ import Officer from './Upgrades/Officer';
 import GenericUpgrade from "./Upgrades/GenericUpgrade";
 import UniqueUpgrade from './Upgrades/UniqueUpgrade';
 import OffensiveRetroFit from "./Upgrades/OffensiveRetrofit";
-import '../../css/Cards.css';
+import '../../../css/Cards.css';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -21,6 +21,7 @@ class Right extends Component {
             <React.Fragment>
 
             <div className="card-display span-3-of-4 desktop">
+
                 <Switch>
                     <Route path={`/builder/imperial/ships`} render={() => <Ships click={this.props.click} shipInfo={this.props.shipInfo} points={this.props.points} faction={this.props.faction} upgradePoints={this.props.upgradePoints}/>} />
                     <Route path={`/builder/${faction}/squadrons`} render={() => <Squadrons faction={this.props.faction}/>}/>
