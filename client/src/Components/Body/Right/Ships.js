@@ -4,20 +4,13 @@ import '../../../css/Ships.css';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions';
 import SelectionCard from "../../SelectionCard";
+import OutOfPointsDisplay from "../../OutOfPointsDisplay";
 
 let uniqid = require('uniqid');
 
-
 class Ships extends Component {
-
-    reduxAddShip = ship => {
-        this.props.addShip(ship);
-        this.props.currentPoints(ship);
-        this.props.showFlag()
-    };
+    
     addShip = ship => {
-
-
         //define new state
         let updatedShips = [...this.props.shipInfo];
         // let currentPoints = this.props.points;
@@ -49,53 +42,20 @@ class Ships extends Component {
             })
         });
     };
-
-
-
-
-    inputHandler = type => event => {
-        this.setState({
-            [type]: event.target.value
-        });
-    };
-
+    
     render() {
-        let noMoreShipsDiv = null;
-        if (400 - this.props.points < 22) {
-            noMoreShipsDiv = (
-                <div className="crawl-container">
-                    <div className="fade"/>
-                    <section className="star-wars">
-                        <div className="crawl">
-                            <div className="title">
-                            </div>
-                            <p>Out of points, you are</p>
-                        </div>
-                    </section>
-                </div>
-            )
-        }
         let empireShips = shipCards.filter(ship => (
             ship.faction === "imperial" && ship.points < 400 - this.props.points
         ));
-
-        console.log(empireShips);
-
+        
         return (
             <Fragment>
-                <select onChange={this.inputHandler('filterTerm')} style={{marginTop: "100px", backgroundColor: "white"}}>
-                    <option value="all">All</option>
-                    <option value="large">Large</option>
-                    <option value="medium">Medium</option>
-                    <option value="small">Small</option>
-                    <option value="other">Other</option>
-                </select>
-            <div className="cards-container">
-                {empireShips.map(ship => (
-                       <SelectionCard {...ship} image={`/images/cards/ship/imperial/${ship.image}`}/>
-                ))}
-            </div>
-                {noMoreShipsDiv}
+                <div className="cards-container">
+                    {empireShips.map(ship => (
+                           <SelectionCard key={ship.id} {...ship} image={`/images/cards/ship/imperial/${ship.image}`} addHandler={() => this.addShip(ship)}/>
+                    ))}
+                </div>
+                <OutOfPointsDisplay maxPoints={400} currentPoints={this.props.points}/>
             </Fragment>
         )
     }
@@ -106,4 +66,10 @@ const mapStateToProps = state => {
       ships: state.ships
   }
 };
+
+Ships.propTypes = {
+    
+};
+
+
 export default connect(mapStateToProps, actions)(Ships);

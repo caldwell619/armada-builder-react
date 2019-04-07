@@ -2,13 +2,13 @@ import React from 'react';
 import Name from './Name';
 import Points from './Points'
 
-const fleetDisplay = (props) => {
+const FleetDisplay = props => {
     return (
         <div className="fleet-display">
             <Name/>
-            <Points points={props.points}/>
+            <Points {...props}/>
         </div>
     )
 };
 
-export default fleetDisplay;
+export default FleetDisplay;

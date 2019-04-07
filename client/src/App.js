@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component, Fragment } from 'react';
 import Header from './Components/Header/Header'
 import Body from './Components/Body/Body'
 import Landing from './Components/Body/Landing'
@@ -16,7 +16,6 @@ import FaceOffLanding from "./Components/Body/FaceOffLanding";
 class App extends Component {
     componentDidMount() {
         this.props.fetchUser();
-        fetch("/api/user").then(result => console.log(result))
     }
 
     render() {
@@ -24,7 +23,7 @@ class App extends Component {
         return (
             <div className="App">
                 <BrowserRouter>
-                    <React.Fragment>
+                    <Fragment>
                         <Header/>
                         <Route path='/builder/:faction' render={(routeProps) => <Body {...routeProps}/>}/>
                         <Route path='/login' render={() => <Login/>}/>
@@ -33,7 +32,7 @@ class App extends Component {
                         <Route path='/contact' render={() => <Contact/>}/>
                         <Route path='/face-off' exact render={() => <FaceOffLanding/>}/>
                         <Route path='/' exact render={(routeProps) => <Landing {...routeProps}/>}/>
-                    </React.Fragment>
+                    </Fragment>
                 </BrowserRouter>
             </div>
         );

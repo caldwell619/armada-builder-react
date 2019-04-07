@@ -39,7 +39,7 @@ const SelectionCard = props => {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary" onClick={() => console.log("clicked")}>
+                <Button size="small" color="primary" onClick={props.addHandler}>
                     Add
                 </Button>
             </CardActions>
@@ -52,6 +52,7 @@ SelectionCard.propTypes = {
     title: PropTypes.string,
     points: PropTypes.number,
     image: PropTypes.string,
+    addHandler: PropTypes.func,
 
 };
 

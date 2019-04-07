@@ -1,31 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions';
-import { UPDATE_NAME } from "../../../store/actions/types";
+import * as PropTypes from "prop-types";
 
-class Name extends Component {
-    inputValueHandler = (event) => {
-        this.props.updateName(event.target.value);
-    };
-
-
-    render() {
-
-
-        return (
-            <div className="row logo-container">
-                <div className="row img-container">
-                    <img src={`/images/home-page/${this.props.chosenFaction}-logo.png`} alt="logo"/>
-                </div>
-                <div className="name-cont">
-                    <input type="text" name="fleet-name" onChange={this.inputValueHandler} value={this.props.fleetName} placeholder="Name your Fleet" id="fleet-name"/>
-                </div>
-            </div>
-        )
-    }
-}
-
-
+const Name = ({chosenFaction, updateName, fleetName}) => (
+    <div className="row logo-container">
+        <div className="row img-container">
+            <img src={`/images/home-page/${chosenFaction}-logo.png`} alt="logo"/>
+        </div>
+        <div className="name-cont">
+            <input type="text" name="fleet-name" onChange={event => updateName(event.target.value)} value={fleetName} placeholder="Name your Fleet" id="fleet-name"/>
+        </div>
+    </div>
+);
 
 const mapStateToProps = state => {
     return {
@@ -33,4 +20,11 @@ const mapStateToProps = state => {
         chosenFaction: state.faction
     }
 };
+
+Name.propTypes = {
+    fleetName: PropTypes.string,
+    chosenFaction: PropTypes.any,
+    updateName: PropTypes.func,
+};
+
 export default connect(mapStateToProps, actions)(Name);

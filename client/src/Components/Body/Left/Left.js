@@ -2,45 +2,54 @@ import React, { Component } from 'react';
 import FleetDisplay from './FleetDisplay';
 import Game from './Game'
 import '../../../css/Left.css';
+import * as PropTypes from "prop-types";
+import axios from 'axios';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions';
-import '../../../css/Header.css';
+import { Redirect } from "react-router-dom";
 
-class Left extends Component{
-    constructor(){
-        super();
-        this.state = {
-            menuShown: false
-        }
-    }
-    toggleMenu = () => {
-
+class Left extends Component {
+    state = {
+        redirect: false
     };
-    render(){
-        let style = null;
-        if (this.props.leftMenuShown){
-            style = null;
-        } else {
-            style = "menu-hide"
-        }
 
-        return (
-            <React.Fragment>
-                <div className={`toggle-selector-main`} onClick={this.toggleMenu}>
-                    <span className={`far fa-bars`}/>
-                </div>
-                <div className={`selector-container ${style} span-1-of-4 desktop`}>
-                    <FleetDisplay points={this.props.points} faction={this.props.faction} nameChange={this.props.nameChange} name={this.props.name}/>
-                    <Game commanderCards={this.props.commanderCards} faction={this.props.faction} shipInfo={this.props.shipInfo} delete={this.props.delete} toggle={this.props.toggle} upgradeDelete={this.props.upgradeDelete}/>
-                </div>
-            </React.Fragment>
+    postShips = () => {
+        const { auth, fleetName, faction, selectedShips } = this.props;
+        axios.post("/api/post", {
+            owner: auth.googleId,
+            fleetName: fleetName,
+            faction: faction,
+            ships: selectedShips
+        }).then(() => {
+            this.setState({redirect: true})
+        }).catch(error => {
+            console.log(error)
+        });
+    };
+
+    render(){
+        return this.state.redirect ? <Redirect to="/profile"/> : (
+            <div className={`selector-container span-1-of-4 desktop`}>
+                <FleetDisplay {...this.props}/>
+                <Game {...this.props} saveFleet={this.postShips}/>
+            </div>
         )
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        leftMenuShown: state.leftMenuShown
-    }
+Left.propTypes = {
+    auth: PropTypes.object,
+    points: PropTypes.number,
+    faction: PropTypes.string,
+    nameChange: PropTypes.func,
+    name: PropTypes.string,
+    commanderCards: PropTypes.array,
+    selectedShips: PropTypes.array,
+    delete: PropTypes.func,
+    toggle: PropTypes.func,
+    upgradeDelete: PropTypes.func,
 };
-export default connect(mapStateToProps, actions)(Left);
+
+const mapStateToProps = state => ({
+   auth: state.auth
+});
+export default connect(mapStateToProps)(Left);

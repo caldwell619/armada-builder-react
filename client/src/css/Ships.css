@@ -40,7 +40,7 @@
     flex-wrap: wrap;
 }
 .cards-container > div {
-    width: 29%;
+    width: 25%;
     justify-content: space-between;
     margin: 2vh;
 }

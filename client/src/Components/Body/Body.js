@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import uniqueCards from '../../data/UniqueCards';
 import Left from './Left/Left'
 import Right from './Right/Right'
@@ -227,26 +227,21 @@ class Body extends Component {
     };
 
     render() {
-        return (
-            <React.Fragment>
-            <main>
-                <Left shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
-                      points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
-                      commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
-                <MobileLeft shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
-                            points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
-                            commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
-                <Right click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
-                       commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
-                       upgradeCards={this.state.upgrades} faction={this.state.faction}/>
-                <MobileRight click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
-                             commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
-                             upgradeCards={this.state.upgrades} faction={this.state.faction}/>
-            </main>
-            </React.Fragment>
-
-
-        )
+        return window.outerWidth < 786 ? (
+            <Fragment>
+            <MobileLeft shipInfo={this.state.selectedShips} upgradeDelete={this.deleteUpgradeHandler}
+                        points={this.state.totalPoints} delete={this.deleteShipHandler} toggle={this.upgradeToggleHandler}
+                        commanderCards={this.state.commanderCards} faction={this.state.faction} nameChange={this.nameChangeHandler} name={this.state.fleetName}/>
+            <MobileRight click={this.addShip} shipInfo={this.state.selectedShips} points={this.state.totalPoints}
+                         commanderChosen={this.state.commanderChosen} upgrade={this.upgradeAddHandler}
+                         upgradeCards={this.state.upgrades} faction={this.state.faction}/>
+            </Fragment>
+            ) : (
+                <Fragment>
+                    <Left {...this.state} />
+                    <Right {...this.state} />
+                </Fragment>
+        );
     }
 }
 

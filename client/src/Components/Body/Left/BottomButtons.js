@@ -1,66 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import '../../../css/ActionButtons.css';
+import * as PropTypes from "prop-types";
 
-class BottomButtons extends Component{
-    postShips = () => {
-            fetch("/api/post", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "owner": this.props.auth.googleId,
-                    "fleetName": this.props.fleetName,
-                    "faction": this.props.faction,
-                    "ships": this.props.shipInfo
-                })
-            }).catch(message => {
-                console.log(message)
-            })
-        };
+const BottomButtons = props => {
 
-    textRender = () => {
-        switch (this.props.auth) {
-            case null:
-                return;
-            case false:
-                return (
-                    <p>Login or sign up to save fleets</p>
-                );
-            default:
-                let button = null;
-                if (this.props.fleetName !== ""){
-                    button = (
-                        <Link to={"/profile"} onClick={this.postShips}><button id="save-button" className="save-button">Save</button></Link>
-                    )
-                } else {
-                    button = (
-                        <div className="save-button-global-cont">
-                            <div className="save-text">
-                                <p>Please name your fleet before saving</p>
-                            </div>
-                            <div className="save-button-cont">
-                                <button id="disabled-save-button" className="save-button" disabled={true}>Save</button>
-                            </div>
+    let text = "";
+    switch (props.auth) {
+        case null:
+            text = "";
+            break;
+        case false:
+            text = (
+                <p>Login or sign up to save fleets</p>
+            );
+            break;
+        default:
+            let button = null;
+            props.fleetName !== "" ?
+                button = (
+                        <button id="save-button" className="save-button" onClick={props.saveFleet}>Save</button>
+                ) :
+                button = (
+                    <div className="save-button-global-cont">
+                        <div className="save-text">
+                            <p>Please name your fleet before saving</p>
                         </div>
-                    )
-                }
-                return button;
-        }
-    };
-
-    render(){
-
-        return (
-            <div className="button-action-bar">
-                {this.textRender()}
-            </div>
-        )
+                        <div className="save-button-cont">
+                            <button id="disabled-save-button" className="save-button" disabled={true}>Save</button>
+                        </div>
+                    </div>
+                );
+            text = button;
     }
-}
+    return (
+        <div className="button-action-bar">
+            {text}
+        </div>
+    );
+};
+
+
 
 
 const mapStateToProps = state => {
@@ -70,4 +50,12 @@ const mapStateToProps = state => {
         faction: state.faction
     }
 };
+
+BottomButtons.propTypes = {
+    saveFleet: PropTypes.func,
+    auth: PropTypes.object,
+    fleetName: PropTypes.string,
+    faction: PropTypes.any,
+};
+
 export default connect(mapStateToProps)(BottomButtons);
